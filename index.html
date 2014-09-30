@@ -1,16 +1,53 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+	<script src="cloud.js"></script>
+	<script>
+	function init() {
+		var w = document.body.clientWidth, h = document.body.clientHeight;
+		var clouder = document.getElementById('clouder');
+
+		clouder.style.border = "1px solid black";
+		clouder.style.width = w * 2 / 3;
+		clouder.style.height = h * 2 / 3;
+		clouder.style.position = "absolute";
+		clouder.style.left = w / 6;
+		clouder.style.top = h / 6;
+		clouder.style.border = "1px solid black";
+
+		window.clouder = new Clouder({
+			container: clouder, 
+			tags: [{text: "please", id: "0", weight: 0.5}, {text: "work", id: "1", weight: 0.5}]
+		});
+	}
+
+	</script>
+
+</head>
+
+<body onLoad="init();">
+
+	<div id="clouder"></div>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
 <head>
 	<title>Tag Sphere Play</title>
+
 </head>
 
 <body>
 	<h1 id="header">Tweet Cloud</h1>
-	<h3>Create a Custom Tag for Your Cloud<h3>
-		<p>Your Tag:</p> <input type="text" name="tag" id="customTag"><br>
-		<button type="button" id="tagButton" onclick="">Add Tag!</button>
-		<br><br>
-		<p>Ready?</p>
-		<button type="button" id="drawCloud">Create Tag Cloud</button>
+
+	<h3>Create a Custom Tag for Your Cloud</h3>
+	<p>Your Tag:</p> <input type="text" name="tag" id="customTag"><br>
+	<button type="button" id="tagButton" onclick="">Add Tag!</button>
+	<br><br>
+	<p>Ready?</p>
+	<button type="button" id="drawCloud" onClick="init();">Create Tag Cloud</button>
 
 	<div id="clouder"></div>
 
@@ -21,6 +58,8 @@
 </body>
 
 </html>
+ -->
+
 
 
 
