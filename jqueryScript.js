@@ -32,14 +32,15 @@ $(document).ready(function() {
 		var w = document.body.clientWidth, h = document.body.clientHeight;
 		var clouder = document.getElementById('clouder');
 
-		clouder.style.border = "1px solid black";
-		clouder.style.width = w * 2 / 3;
-		clouder.style.height = h * 2 / 3;
+		clouder.style.borderTop = "1px solid black";
+		clouder.style.borderBottom = "1px solid black";
+		clouder.style.width = w * 3 / 4;
+		clouder.style.height = h * 3 / 4;
 		clouder.style.position = "absolute";
 		clouder.style.left = w / 6;
-		clouder.style.top = h / 6;
+		clouder.style.top = h / 2;
 
-		
+
 	// 	var w = $('body').width();
 	// 	var h = $('body').height();
 	// 	var clouder = $('#clouder');
@@ -62,6 +63,12 @@ $(document).ready(function() {
 		
 		init();
 	});
+
+	$('#clearAll').click(function() {
+		
+		window.clouder.kill();
+		userCloudTags = [];
+	})
 
 });
 
