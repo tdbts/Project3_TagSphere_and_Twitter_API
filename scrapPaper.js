@@ -448,6 +448,7 @@ console.log(createLittleObjects("stupid", "lil", 0.7));
 // 'checkArguments', and then I invoke that f(x) with 'valueArray' passed to it
 // Let's continue from here
 function createLittleObjects(theText, theID, theWeight) {
+	var argumentsAreArrays;
 	var argsLength = arguments.length;
 	console.log("Number of arguments passed to cLO:");
 	console.log(argsLength);
@@ -484,7 +485,11 @@ function createLittleObjects(theText, theID, theWeight) {
 					var testThirdArray = theArguments[2].every(testForNumbers);
 					if (testFirstArray && testSecondArray && testThirdArray) {
 
-						console.log("Object, array, length and type tests passed!");
+						//console.log("Valid arguments!");
+						var argumentsAreArrays = true;
+						console.log("argumentsAreArrays:");
+						console.log(argumentsAreArrays);
+            			return true;
 					}
 					else console.log("Object, array, and length tests passed, but type test failed!");
 				}
@@ -502,14 +507,46 @@ function createLittleObjects(theText, theID, theWeight) {
 				var testNumber = isNumberBetween(theArguments[2], 0, 1);
 				if (testNumber) {
 
-					console.log("Type test and number test passed!");
+					//console.log("Valid arguments!");
+					var argumentsAreArrays = false;
+					console.log("argumentsAreArrays:");
+					console.log(argumentsAreArrays);
+          			return true;
 				}
 				else console.log("Type test passed, but number test failed!");
 			}
 			else console.log("Invalid arguments!");
 		}
 	}
-	var check = checkArguments(valueArray);
+
+	function littleObjectFactoryForArrays(textValue, idValue, weightValue) {
+		var result = [];
+
+		for (var i = 0; i < textValue.length; i++) {
+			result.push({text: textValue[i], id: idValue[i], weight: weightValue[i]});
+		};
+
+		return result;
+	}
+
+	function littleObjectFactoryForSingleValues(textValue, idValue, weightValue) {
+		var result = [];
+
+		result.push({text: textValue, id: idValue, weight: weightValue});
+
+		return result; 
+	}
+
+  if (checkArguments(valueArray)) {
+    console.log("Everything checks out!");
+    if (argumentsAreArrays) {
+    	return littleObjectFactoryForArrays(theText, theID, theWeight);
+    }
+    else {
+    	return littleObjectFactoryForSingleValues(theText, theID, theWeight);
+    }
+  }
+  else return false;
 }
 
 
@@ -539,3 +576,13 @@ console.log("*****FAIL NUMBER TEST: *****");
 console.log(createLittleObjects("bitch", "ass", 3));
 console.log("*****PASS NUMBER TEST: *****");
 console.log(createLittleObjects("stupid", "lil", 0.7));
+
+// Test for creating little objects 
+console.log("*****CREATE LITTLE OBJECTS FOR ARRAYS: ****");
+var myText1 = ["I", "am", "a", "motherfuckin", "boss"];
+var myIDs1 = ["01", "02", "03", "04", "05"];
+var myWeights1 = [0.1, 0.1, 0.1, 0.1, 0.1];
+console.log(createLittleObjects(myText1, myIDs1, myWeights1));
+
+console.log("*****CREATE LITTLE OBJECTS FOR SINGLE VALUES: *****");
+console.log(createLittleObjects("pumpkinBeer", "100", 0.1));
