@@ -28,16 +28,16 @@ $(document).ready(function() {
 		}
 	});
 
-	// function init() {
-	// 	// var w = document.body.clientWidth, h = document.body.clientHeight;
-	// 	// var clouder = document.getElementById('clouder');
+	function init() {
+		var w = document.body.clientWidth, h = document.body.clientHeight;
+		var clouder = document.getElementById('clouder');
 
-	// 	// clouder.style.border = "1px solid black";
-	// 	// clouder.style.width = w * 2 / 3;
-	// 	// clouder.style.height = h * 2 / 3;
-	// 	// clouder.style.position = "absolute";
-	// 	// clouder.style.left = w / 6;
-	// 	// clouder.style.top = h / 6;
+		clouder.style.border = "1px solid black";
+		clouder.style.width = w * 2 / 3;
+		clouder.style.height = h * 2 / 3;
+		clouder.style.position = "absolute";
+		clouder.style.left = w / 6;
+		clouder.style.top = h / 6;
 
 		
 	// 	var w = $('body').width();
@@ -51,17 +51,17 @@ $(document).ready(function() {
 	// 	clouder.css('left', w / 6);
 	// 	clouder.css('top', h / 6);
 		
-	// 	window.clouder = new Clouder({
-	// 		container: clouder,
-	// 		// tags: userCloudTags
-	// 		tags: [{text: "testing", id: "0", weight: 0.5}, {text: "muthafucka", id: "1", weight: 0.5}]
-	// 	});
-	// }
+		window.clouder = new Clouder({
+			container: clouder,
+			tags: userCloudTags
+			// tags: [{text: "testing", id: "0", weight: 0.5}, {text: "muthafucka", id: "1", weight: 0.5}]
+		});
+	}
 
-	// $('#drawCloud').click(function() {
+	$('#drawCloud').click(function() {
 		
-	// 	init();
-	// });
+		init();
+	});
 
 });
 

@@ -1,19 +1,3 @@
-function init() {
-	var w = document.body.clientWidth, h = document.body.clientHeight;
-	var clouder = document.getElementById('clouder');
-
-	clouder.style.border = "1px solid black";
-	clouder.style.width = w * 2 / 3;
-	clouder.style.height = h * 2 / 3;
-	clouder.style.position = "absolute";
-	clouder.style.left = w / 6;
-	clouder.style.top = h / 6;
-
-	window.clouder = new Clouder({
-		container: clouder, 
-		tags: [{text: "please", id: "0", weight: 0.5}, {text: "work", id: "1", weight: 0.5}]
-	});
-}
 
 var userCloudTags = [];
 
@@ -60,4 +44,20 @@ function createObjectForCloud(theText, cloudTags) {
 }
 
 
+// function init() {
+// 	var w = document.body.clientWidth, h = document.body.clientHeight;
+// 	var clouder = document.getElementById('clouder');
+
+// 	clouder.style.border = "1px solid black";
+// 	clouder.style.width = w * 2 / 3;
+// 	clouder.style.height = h * 2 / 3;
+// 	clouder.style.position = "absolute";
+// 	clouder.style.left = w / 6;
+// 	clouder.style.top = h / 6;
+
+// 	window.clouder = new Clouder({
+// 		container: clouder, 
+// 		tags: [{text: "please", id: "0", weight: 0.5}, {text: "work", id: "1", weight: 0.5}]
+// 	});
+// }
 
