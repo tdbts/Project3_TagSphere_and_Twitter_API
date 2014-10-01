@@ -1,6 +1,5 @@
 $(document).ready(function() {
-	// var userCloudTags = [];
-
+	
 	$('#header').fadeOut(700).fadeIn(700);
 
 	function addTag() {
@@ -39,36 +38,46 @@ $(document).ready(function() {
 		clouder.style.position = "absolute";
 		clouder.style.left = w / 6;
 		clouder.style.top = h / 2;
-
-
-	// 	var w = $('body').width();
-	// 	var h = $('body').height();
-	// 	var clouder = $('#clouder');
-
-	// 	clouder.css('border', '1px solid black');
-	// 	clouder.width(w * 2 / 3);
-	// 	clouder.height(h * 2 / 3);
-	// 	clouder.css('position', 'absolute');
-	// 	clouder.css('left', w / 6);
-	// 	clouder.css('top', h / 6);
 		
 		window.clouder = new Clouder({
 			container: clouder,
 			tags: userCloudTags
-			// tags: [{text: "testing", id: "0", weight: 0.5}, {text: "muthafucka", id: "1", weight: 0.5}]
 		});
+	}
+
+	function scrollDownTo(elementSelector, milliseconds) {
+
+	$('html, body').animate({
+
+		scrollTop: $(elementSelector).offset().top
+	}, milliseconds);
+}
+
+	function scrollUpTo(elementSelector, milliseconds) {
+
+		$('html, body').animate({
+
+			scrollTop: $(elementSelector).offset().bottom
+		}, milliseconds);
 	}
 
 	$('#drawCloud').click(function() {
 		
 		init();
+
+		scrollDownTo('#clouder', 500);
 	});
 
 	$('#clearAll').click(function() {
 		
 		window.clouder.kill();
 		userCloudTags = [];
-	})
+
+		$('html, body').animate({
+
+			scrollTop: 0
+		}, 500)
+	});
 
 });
 

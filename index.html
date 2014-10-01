@@ -7,17 +7,21 @@
 </head>
 
 <body>
-	<h1 id="header">Tweet Cloud</h1>
+	<h1 id="header">Tag Cloud</h1>
 
-	<h3>Create a Custom Tag for Your Cloud</h3>
-	<p>Your Tag:</p> <input type="text" name="tag" id="customTag"><br>
-	<button type="button" id="tagButton" onclick="">Add Tag!</button>
-	<br><br>
-	<p>Ready?</p>
-	<button type="button" id="drawCloud" onClick="">Create Tag Cloud</button>
-	<button type="button" id="clearAll">Clear Tags</button>
+	<div id="createCloud">
+		<h3>Create a Custom Tag for Your Cloud</h3>
+		<p>Your Tag:</p> <input type="text" name="tag" id="customTag"><br>
+		<button type="button" id="tagButton" onclick="">Add Tag!</button>
+		<br><br>
+		<p>Ready?</p>
+		<button type="button" id="drawCloud" onClick="">Create Tag Cloud</button>
+		<button type="button" id="clearAll">Clear Tags</button>
+	</div>
 	
-	<div id="clouder"></div>
+	<div>
+		<div id="clouder"></div>
+	</div>
 
 	<script src="jquery-1.11.1.min.js"></script>
 	<script src="cloud.js"></script>

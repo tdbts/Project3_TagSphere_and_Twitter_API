@@ -1,3 +1,7 @@
+#clouder {
+	clear: both;
+}
+
 span {
 	word-wrap:break-word;
 	overflow:hidden;
