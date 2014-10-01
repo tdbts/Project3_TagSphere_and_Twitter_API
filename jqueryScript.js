@@ -53,11 +53,11 @@ $(document).ready(function() {
 	}, milliseconds);
 }
 
-	function scrollUpTo(elementSelector, milliseconds) {
+	function scrollUpToTop(milliseconds) {
 
 		$('html, body').animate({
 
-			scrollTop: $(elementSelector).offset().bottom
+			scrollTop: 0
 		}, milliseconds);
 	}
 
@@ -73,10 +73,7 @@ $(document).ready(function() {
 		window.clouder.kill();
 		userCloudTags = [];
 
-		$('html, body').animate({
-
-			scrollTop: 0
-		}, 500)
+		scrollUpToTop(500);
 	});
 
 });
