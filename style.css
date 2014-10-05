@@ -3,6 +3,7 @@
 }
 
 span {
-	word-wrap:break-word;
-	overflow:hidden;
+	width: 100px;
+	/*word-wrap:break-word;*/
+	/*overflow:hidden;*/
 }
