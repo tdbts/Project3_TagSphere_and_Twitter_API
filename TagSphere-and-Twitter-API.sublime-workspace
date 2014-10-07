@@ -1,0 +1,1203 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"createob",
+				"createObjectForCloud"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"lito",
+				"littleObjectFactoryForSingleValues"
+			],
+			[
+				"accumula",
+				"accumulatedValue"
+			],
+			[
+				"argumets",
+				"Arguments"
+			],
+			[
+				"init",
+				"initialValue"
+			],
+			[
+				"merge",
+				"mergeAll"
+			],
+			[
+				"proj",
+				"projectionFunctionThatReturnsArray"
+			],
+			[
+				"tar",
+				"testArray"
+			],
+			[
+				"valu",
+				"valueArray"
+			],
+			[
+				"val",
+				"valueArray"
+			],
+			[
+				"aray",
+				"arrayOfUnwanted"
+			],
+			[
+				"searcht",
+				"search_terms"
+			],
+			[
+				"sear",
+				"search_value"
+			],
+			[
+				"aja",
+				"ajax_results"
+			],
+			[
+				"value",
+				"value"
+			],
+			[
+				"set",
+				"setConfig"
+			],
+			[
+				"define",
+				"defineProperty"
+			],
+			[
+				"writ",
+				"writable"
+			],
+			[
+				"sum",
+				"sumOfSquares"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"pre",
+				"preventExtensions"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"geto",
+				"getOwnPropertyDescriptor"
+			],
+			[
+				"defin",
+				"defineProperty"
+			],
+			[
+				"get",
+				"getOwnPropertyDescriptor"
+			],
+			[
+				"acce",
+				"accessor_prop"
+			],
+			[
+				"result",
+				"result"
+			],
+			[
+				"fu",
+				"fun	Function"
+			],
+			[
+				"Poin",
+				"Point_3d"
+			],
+			[
+				"pro",
+				"prototype	SNIPPET - prototype (defining methods and properties)"
+			],
+			[
+				"myO",
+				"myObject"
+			],
+			[
+				"tell",
+				"tellHowMany"
+			],
+			[
+				"quest",
+				"questionsDiv"
+			],
+			[
+				"dis",
+				"displayQuestion"
+			],
+			[
+				"questions",
+				"questionsDiv"
+			],
+			[
+				"each",
+				"eachQuestion"
+			],
+			[
+				"mul",
+				"MultipleChoiceQuestion"
+			],
+			[
+				"Dra",
+				"DragDropQuestion"
+			],
+			[
+				"Multip",
+				"MultipleChoiceQuestion"
+			],
+			[
+				"fruit",
+				"fruitColor"
+			],
+			[
+				"sc",
+				"SCRIPT	Tag"
+			],
+			[
+				"write",
+				"writeWindow"
+			],
+			[
+				"src",
+				"srcArray"
+			],
+			[
+				"imgA",
+				"imgArray"
+			],
+			[
+				"random",
+				"randomNumberStorage"
+			],
+			[
+				"rand",
+				"randomSelection"
+			],
+			[
+				"albums",
+				"albumsNeeded"
+			],
+			[
+				"album",
+				"albumCover"
+			],
+			[
+				"jq",
+				"jqset	SNIPPET - jqset"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"albu",
+				"albumsNeeded"
+			],
+			[
+				"results",
+				"resultsHTML"
+			],
+			[
+				"al",
+				"albumsLength"
+			],
+			[
+				"resu",
+				"resultsHTML"
+			],
+			[
+				"excerp",
+				"excerptTruth"
+			],
+			[
+				"excer",
+				"excerptTruth"
+			],
+			[
+				"strin",
+				"stringLength"
+			],
+			[
+				"str",
+				"stringLength"
+			],
+			[
+				"XML",
+				"XMLHttpRequest"
+			],
+			[
+				"resul",
+				"resultsHtml"
+			],
+			[
+				"foo",
+				"fooTwo"
+			],
+			[
+				"w",
+				"whatIWant"
+			],
+			[
+				"weight",
+				"weightOrReps"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 778,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 161,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jqueryScript.js",
+			"settings":
+			{
+				"buffer_size": 1511,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "script.js",
+			"settings":
+			{
+				"buffer_size": 1091,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "cloud.js",
+			"settings":
+			{
+				"buffer_size": 14219,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 265.0,
+		"selected_items":
+		[
+			[
+				"packi",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"pcki",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"synr",
+				"Set Syntax: R"
+			],
+			[
+				"jvs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jv",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synjvs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synhtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"javs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"snippet",
+				"Snippet: html"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synhtm",
+				"Set Syntax: HTML"
+			],
+			[
+				"synht",
+				"Set Syntax: HTML"
+			],
+			[
+				"HTML",
+				"Set Syntax: HTML"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packagi",
+				"Package Control: Install Package"
+			],
+			[
+				"synjavas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"select al",
+				"Bookmarks: Select All"
+			],
+			[
+				"xml",
+				"xml2json: xml to json"
+			],
+			[
+				"fetch",
+				"Fetch: Package"
+			],
+			[
+				"syn htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"pack con i",
+				"Package Control: Install Package"
+			],
+			[
+				"packe con i",
+				"Package Control: Install Package"
+			],
+			[
+				"packet ins",
+				"Package Control: Install Package"
+			],
+			[
+				"synjaas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 378.0
+	},
+	"console":
+	{
+		"height": 111.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/jquery-1.11.1.min.js",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/cloud-min.js",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/cloud.js",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/raw_data_response.php",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/jqueryForProject.js",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/timeline_response.php",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/search_response.php",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/app_tokens.php",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/index.html",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 7 - Arrays/ECMAScript 5 Array Methods.js",
+		"/C/Users/Vincent/Documents/Hckr/jquery/Useful Scripts/scrollUpToTop.js",
+		"/C/Users/Vincent/Documents/Hckr/jquery/Useful Scripts/scrollDownTo.js",
+		"/C/Users/Vincent/Documents/Hckr/jquery/Useful Scripts/scrollDownToTop.js",
+		"/C/Users/Vincent/Documents/Hckr/OPC/JsTagSphere/test.html",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/FunctionalProgrammingFunctions.js",
+		"/C/Users/Vincent/Documents/Hckr/OPC/JsTagSphere/cloud.js",
+		"/C/Users/Vincent/Documents/Hckr/OPC/JsTagSphere/mainpage.js",
+		"/C/Users/Vincent/Documents/Hckr/OPC/JsTagSphere/README.md",
+		"/C/cygwin64/home/Vincent/bashtest/myscript",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - separator.sublime-snippet",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Functional Programming in Javascript/scrapPaper.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/PracticeCreatingFunctionalProgrammingFunctions.js",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/PlainText/SNIPPET - bashscript.sublime-snippet",
+		"/C/Users/Vincent/Documents/Hckr/Play/textScanner.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/imgAggregator/imgAggregator.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 7 - Arrays/Iterating Arrays.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 7 - Arrays/Array Methods.js",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/ajax_response.php",
+		"/C/Users/Vincent/Documents/Hckr/OpenSource/SetUp/jQueryTest.js",
+		"/C/Users/Vincent/Documents/Hckr/OpenSource/SetUp/TestHTMLPage",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/testTweets.json",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/testTweetsSep14.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/testTweets.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_09.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_08.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_07.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_06.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_05.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_04.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_03.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_02.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2014_01.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_12.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_11.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_10.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_09.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_08.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_07.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_06.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_05.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_04.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_03.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_02.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2013_01.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2012_12.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2012_11.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2012_10.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2012_09.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2012_08.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2012_07.js",
+		"/C/Users/Vincent/Documents/Hckr/R/Introduction to Statistical Thinking with R/2012_06.js",
+		"/C/Users/Vincent/Downloads/twitonomy_VRSanchez8717_vrsanchez8717.xlsx",
+		"/C/Users/Vincent/Documents/Hckr/HTML/Test HTML Page w jQuery.html",
+		"/C/Users/Vincent/Documents/Hckr/OpenSource/jQueryTestSetup.js",
+		"/C/Users/Vincent/Documents/Hckr/jquery/jquery-1.11.1.min.js",
+		"/C/Users/Vincent/Documents/Hckr/HTML/superBASIChtmlSetUp.html",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 7 - Arrays/Array-Like Objects.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 6 - Objects/Object Attributes.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 6 - Objects/Property Attributes.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 6 - Objects/Object dot create().js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 1 - Introduction to Javascript/constructor - Two-Dimensional Geometric Points.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/imgAggregator/index.html",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Implementation of the Combination Constructor-Prototype Pattern - Quiz Scores.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/Quiz HTML Implementation.html",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Implementation of the Parasitic Combination Inheritance Pattern.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/Object Play - Douglas Crockfords Object dot create method.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Instrument and JSON dot stringify.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/Object Play - inheritPrototype.js",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/tmhOAuth/README.md",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project 1 - Album Web App/jQueryForProject1.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/isArrayLike.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/union for any number of objects.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/union (obj manipulation).js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/extend (obj manipulation).js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/array - close gaps and remove undefined and null.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/dense - to close gaps in a sparse array.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/dense - to close gaps in a sparse array",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/defineProp.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 7 - Arrays/Multidimensional Arrays.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/imgAggregator/messingWith_imgAggregator.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/imgAggregator/TINKERimgAggregatorTINKER.js",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - forin.sublime-snippet",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 6 - Objects/Class Attribute.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 6 - Objects/Property Getters and Setters.js",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET- defsetter.sublime-snippet",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - defgetter.sublime-snippet",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - objprop.sublime-snippet",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - eqobj.sublime-snippet",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - eqfunc.sublime-snippet",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 6 - Objects/Utility functions to manipulate objects.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 6 - Objects/Objects as Associative Arrays.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/keys (obj manipulation)",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/intersection (obj manipulation).js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/subtract (obj manipulation)",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/restrict (obj manipulation)",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/merge (obj manipulation)",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function createObjectAtRuntime",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function inherit.js",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - createObj.sublime-snippet",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 3 - Types, Values, and Variables/function - Comparing two arrays for equality.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 3 - Types, Values, and Variables/Pattern Matching - RegExp constructor.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 1 - Introduction to Javascript/constructor - Two-Dimensional Geometric Points",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/testOutHTMLandScript.html",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - returns.sublime-snippet",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - defproto (defining methods and properties).sublime-snippet",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/Object Play - Douglas Crockfords Object dot create method",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Instrument and JSON dot stringify",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Implementation of the Combination Constructor-Prototype Pattern - Quiz Scores",
+		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Implementation of the Parasitic Combination Inheritance Pattern",
+		"/C/Users/Vincent/Documents/Hckr/Play/ObjectPlay - Instrument and JSON dot stringify",
+		"/C/Users/Vincent/Documents/Hckr/Play/ObjectPlay - Implementation of the Combination Constructor-Prototype Pattern - Quiz Scores",
+		"/C/Users/Vincent/Documents/Hckr/Play/ObjectPlay - Implementation of the Parasitic Combination Inheritance Pattern",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - setTimeout.sublime-snippet",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - quescol.sublime-snippet"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"callback",
+			"nonSense",
+			"speed",
+			"process",
+			"elems",
+			"objs",
+			"process",
+			"left",
+			"process",
+			"draw",
+			"fontSize",
+			"font",
+			"font-size",
+			"top",
+			"left",
+			"height",
+			"width",
+			"blutz",
+			"keys",
+			"alt+e",
+			"f3",
+			"f2",
+			"f1",
+			"alt+shift",
+			"shift+alt",
+			"ctrl+up",
+			"col",
+			"select",
+			"true",
+			"argumentsare",
+			"argumentsarearrays",
+			"valueArray",
+			"testf",
+			"testEach",
+			"testeache",
+			"checkob",
+			"name",
+			"category",
+			"combinor",
+			"testForArrayLengths",
+			"each",
+			"arguments",
+			"month_",
+			"[",
+			"month",
+			"}",
+			"[",
+			"month_",
+			"_201",
+			"Grailbird",
+			"grailbird",
+			"Grailbird",
+			"Grailbird.\n[",
+			"]\nGrailbird.\n[",
+			"]\nGrailbird. \n[",
+			"]\nGrailbird.",
+			"]\nGrailbird. \n[",
+			"Grailbird.",
+			"data.tweets",
+			"Grailbird",
+			"grail",
+			"	\n",
+			"return",
+			"i",
+			"tfs",
+			"o",
+			"questiontoDisplay",
+			"load",
+			"border",
+			"canvas",
+			">\n",
+			"selectedAlbum",
+			"when we",
+			"}",
+			"visiting",
+			"top",
+			"Alex",
+			"chambelain",
+			"text",
+			"<br><br>",
+			";",
+			"album",
+			"ALBUM",
+			"YEAR",
+			"GENRE",
+			"TITLE",
+			"LIFE_DETAIL",
+			"ARTIST",
+			"this",
+			"albumCover:",
+			"albumCover\"",
+			"},",
+			"\"life_Detail\"",
+			"\"genre\"",
+			"\"year\"",
+			"\"artist\"",
+			"\"title\"",
+			"making of th",
+			"  {\\n    \"titl",
+			"  {\\n    \"tit",
+			"{\\n    \"ti",
+			"{\\n",
+			"},\\n",
+			"\"life_Detail",
+			"\"genre\": ",
+			"    \"year",
+			"    \"art",
+			"itle\": \"",
+			"    \"tit",
+			"\"art",
+			"\"Fra",
+			"\"tit",
+			"\\n",
+			"{\\n",
+			"},",
+			"\"gen",
+			"\"yea",
+			"\"art",
+			"2000\"",
+			"y\",",
+			"{\n    \"t",
+			"{",
+			"'",
+			"\"",
+			"le",
+			"},",
+			"\"album\": ",
+			"					\"album"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<br>",
+			";<br>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								778,
+								778
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "jqueryScript.js",
+					"settings":
+					{
+						"buffer_size": 1511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								497,
+								497
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "script.js",
+					"settings":
+					{
+						"buffer_size": 1091,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "cloud.js",
+					"settings":
+					{
+						"buffer_size": 14219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8029,
+								8029
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1089.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.340845070423,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true
+}
