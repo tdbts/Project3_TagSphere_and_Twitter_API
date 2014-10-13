@@ -23,3 +23,5 @@ explaination of what the web app does, and how to use it.
 - Must test for what happens when user puts in bad/unexpected input (e.g. searching for '@twitter_handle')
 
 - Alter code so that user can keep getting the ten tweets before the current set of ten
+
+- Does Bootstrap require <!DOCTYPE html> declaration??  If so, what can I use to design a webpage that only works in quirks mode?
