@@ -2,6 +2,7 @@
 	
 if (!empty($_GET['q'])) {
 
+	// f(x) that validates user input
 	function test_input($data) {
 		$data = trim($data);
 		$data = stripslashes($data);
@@ -37,7 +38,7 @@ if (!empty($_GET['q'])) {
 		$tweet_stream = array();
 		
 		foreach($tweet_data as $tweet) {
-			// $tweet_stream .= $tweet['text'].'<br/><br/>';
+			
 			array_push($tweet_stream, array(
 				'text' => $tweet['text'], 
 				'date' => $tweet['created_at']

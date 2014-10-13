@@ -21,3 +21,5 @@ explaination of what the web app does, and how to use it.
 - When user creates custom tag clouds, initializes them, then presses the button again, the web app should not double the number of tags
 
 - Must test for what happens when user puts in bad/unexpected input (e.g. searching for '@twitter_handle')
+
+- Alter code so that user can keep getting the ten tweets before the current set of ten
