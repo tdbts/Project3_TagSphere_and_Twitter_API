@@ -40,6 +40,26 @@ $(document).ready(function() {
 		}
 	}
 
+	// Initialize tag cloud
+	function init(variableContainingTags) {
+		var w = document.body.clientWidth, h = document.body.clientHeight;
+		var clouder = document.getElementById('clouder');
+
+		clouder.style.borderTop = "1px solid black";
+		clouder.style.borderBottom = "1px solid black";
+		clouder.style.width = w * 3 / 4;
+		clouder.style.height = h * 3 / 4;
+		clouder.style.position = "absolute";
+		clouder.style.left = w / 6;
+		clouder.style.top = h / 2;
+		
+		window.clouder = new Clouder({
+			container: clouder,
+			tags: variableContainingTags,
+			nonSense: 0.1
+		});
+	}
+
 	// For user-generated tags
 	$('#tagButton').click(function() {
 	
@@ -59,25 +79,6 @@ $(document).ready(function() {
 	}
 	makeEnterKeyDoSomething('#customTag', addTag);
 
-	function init(variableContainingTags) {
-		var w = document.body.clientWidth, h = document.body.clientHeight;
-		var clouder = document.getElementById('clouder');
-
-		clouder.style.borderTop = "1px solid black";
-		clouder.style.borderBottom = "1px solid black";
-		clouder.style.width = w * 3 / 4;
-		clouder.style.height = h * 3 / 4;
-		clouder.style.position = "absolute";
-		clouder.style.left = w / 6;
-		clouder.style.top = h / 2;
-		
-		// Need to refactor this into a f(x)
-		window.clouder = new Clouder({
-			container: clouder,
-			tags: variableContainingTags,
-			nonSense: 0.075
-		});
-	}
 
 	function scrollDownTo(elementSelector, milliseconds) {
 
@@ -89,12 +90,11 @@ $(document).ready(function() {
 
 	function scrollUpToTop(milliseconds) {
 
-		$('html, body').animate({
-
-			scrollTop: 0
-		}, milliseconds);
+		$('html, body').animate({scrollTop: 0}, milliseconds);
 	}
 
+	// Initialize cloud when Draw Cloud button clicked, then 
+	// autoscroll down to where the cloud appears
 	$('#drawCloud').click(function() {
 		
 		init(userCloudTags);
@@ -102,6 +102,8 @@ $(document).ready(function() {
 		scrollDownTo('#clouder', 500);
 	});
 
+	// When Clear Tags button clicked, kill the cloud, reset the tag array, 
+	// then autoscroll back up to the top
 	$('#clearAll').click(function() {
 		
 		window.clouder.kill();
@@ -110,47 +112,48 @@ $(document).ready(function() {
 		scrollUpToTop(500);
 	});
 
+	// AJAX request to Twitter for tweet data
 	function search(searchTerms, searchURL) {
-
-		// $('#ajax_results').html('Searching Twitter...');
-
-		// var search_value = encodeURIComponent($('input[name=search_terms]').val());
-		console.log("Searching for @" + searchTerms + ".");
 
 		$.ajax({
 
-			// Create URL
+			// Create URL for tweet search
 			url: searchURL + "?q=" + searchTerms, 
 
 			success: function(data) {
 				
-				console.log("Search for " + searchTerms + " was successful!");
-				// Display the results
-				// $('#ajax_results').html(data);
+				// Take returned string and parse into queryable JSON
+				// The server will have already cut the data down to 
+				// only what I need for the cloud
 				var parsedData = JSON.parse(data);
-				console.log(parsedData);
+				
 				addTweetTags(parsedData, twitterCloudTags);
-				console.log("twitterCloudTags: ");
-				console.log(twitterCloudTags);
 				init(twitterCloudTags);
 			},
 
 			error: function() {
-				// $('#ajax_results').html('Ajax request failed');
-				console.log('Ajax request failed!');
+				$('#clouder').html('Search for Tweets failed!');
 			}
 		});
 	}
 
+	function getTwitterHandle() {
+		return $('#twitterHandle').val();
+	}
+
 	$('#createTweetCloud').click(function() {
 
-		var search_value = $('#twitterHandle').val();
+		var search_value = getTwitterHandle();
 		search(search_value, 'twitter_cloud_search.php');
-
-		// addTweetTags(data, twitterCloudTags);
-
-		// init(twitterCloudTags);
 	});
+
+	makeEnterKeyDoSomething('#twitterHandle', function() {
+		
+		var search_value = getTwitterHandle();
+		search(search_value, 'twitter_cloud_search.php');
+	});
+
+
 
 });
 

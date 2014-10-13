@@ -11,3 +11,13 @@ explaination of what the web app does, and how to use it.
 - script.js --> change hardcoded weight value?
 
 - Have to add the ability to use the 'enter' key for the twitter tag generator like I've added to the field for the custom tags
+
+- Have to read the related Licenses for using the cloud tag template and credit / alter my code accordingly
+
+- Have to alter the callback f(x) for the tags
+  ~ Would like to make it so that the browser asks the user if he/she would like to navigate to the link contained in the tweet -- or in cases where the tweet has no link, the browser simply alerts something else (tweet text most likely)
+  ~ On the same note, a quick Google search shows that if I want to make it more likely that a page will open in a new tab rather than a whole new window, I should set the 'target' attribute of the 'a' element to something unique for each link...thus, I could set it to the IDs belonging to each tweet
+
+- When user creates custom tag clouds, initializes them, then presses the button again, the web app should not double the number of tags
+
+- Must test for what happens when user puts in bad/unexpected input (e.g. searching for '@twitter_handle')
