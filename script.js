@@ -1,7 +1,12 @@
 var userCloudTags = [];
+var twitterCloudTags = [];
 
+// Have to document this (and all of my code) much better so after
+// prolonged periods away from this project I can easily remember 
+// how everything works
 function createObjectForCloud(theText, cloudTags) {
 	var theID;
+	console.log(theText);
 
 	function createID() {
 		var tagLength = cloudTags.length;
