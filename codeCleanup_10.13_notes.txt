@@ -1,0 +1,11 @@
+* 10/13/2014 3:42:41 PM *  Going through some code cleanup.  Here are just
+some random  notes I feel like jotting down during the process.
+
+- Should display the custom tags user creates before cloud tag initialized
+  ~ Create way for user to click on these words to remove them
+  ~ If I create a way for user to remove words like this, I'll need to rewrite my 'createID' f(x) to avoid creating objects with the same tag IDs   
+
+- When I get the bootstrapped site going, need to write a better
+explaination of what the web app does, and how to use it.
+
+- script.js --> change hardcoded weight value?

@@ -1,15 +1,11 @@
 #clouder {
-	clear: both;
-	border: 25px;
-	padding: 25px;
+
 }
 
 span {
 	width: 250px;
 	background-color: #a9e2f3;
-	color: #FE642E;
 	padding: 5px;
 	border-radius: 10px;
 	word-wrap: initial;	
-	/*overflow:hidden;*/
 }
