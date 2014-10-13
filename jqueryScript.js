@@ -1,49 +1,63 @@
 $(document).ready(function() {
 	
-	$('#header').fadeOut(700).fadeIn(700);
+	// Check to make sure jQuery loaded properly
+	function jqueryCheckLoad(selector, milliseconds) {
 
+		$(selector).fadeOut(milliseconds).fadeIn(milliseconds);
+	}
+	// Invoke the check
+	jqueryCheckLoad('#header', 700);
+
+	// Creates tag object for the given tag and pushes it to the 
+	// array of cloud tags
 	function addTag() {
 
+		// Get user text input
 		var userText = $('#customTag').val();
-		console.log("Adding '" + userText + "' to the cloud.");
 
+		// Create object for user tag and push to array
 		var newUserLittleObject = createObjectForCloud(userText, userCloudTags);
 		userCloudTags.push(newUserLittleObject);
-		console.log(userCloudTags);
 
+		// Erase contents of the input field
 		$('#customTag').val('');
 	}
 
+	// Takes an array of JSON data for each individual tweet and gets the 
+	// tweet text and date for each, then formats everything for the tags
 	function addTweetTags(arrayOfTweetObjects, variableToSaveTo) {
-		// console.log("addTweetTags: received data - ");
-		// console.log(arrayOfTweetObjects[0]);
 
 		for (i = 0; i < arrayOfTweetObjects.length; i++) {
+			
+			// Get the text and (modified) date information, then format them
 			var tweetText = arrayOfTweetObjects[i].text;
-			console.log("tweetText: " + tweetText);
 			var tweetDate = arrayOfTweetObjects[i].date.slice(0, 10);
-			console.log("tweetDate: " + tweetDate);
 			var displayText = tweetText + " \n" + tweetDate;
-			console.log("displayText: " + displayText);
-
+			
+			// Create "little object" using the extracted text and push to array of objects
 			var newTweetTagObject = createObjectForCloud(displayText, variableToSaveTo);
-			twitterCloudTags.push(newTweetTagObject);
+			variableToSaveTo.push(newTweetTagObject);
 		}
 	}
 
+	// For user-generated tags
 	$('#tagButton').click(function() {
 	
 		addTag();
 	});
 
-	// Need to activate keycode '13' for all other input locations
-	$('#customTag').keydown(function(e) {
-		
-		if (e.keyCode == 13) {
+	// Make custom tag field responsive to enter key
+	function makeEnterKeyDoSomething(selector, func) {
 
-			addTag();
-		}
-	});
+		$(selector).keydown(function(e) {
+			
+			if (e.keyCode === 13) {
+
+				func();
+			}
+		});
+	}
+	makeEnterKeyDoSomething('#customTag', addTag);
 
 	function init(variableContainingTags) {
 		var w = document.body.clientWidth, h = document.body.clientHeight;

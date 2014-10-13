@@ -9,3 +9,5 @@ some random  notes I feel like jotting down during the process.
 explaination of what the web app does, and how to use it.
 
 - script.js --> change hardcoded weight value?
+
+- Have to add the ability to use the 'enter' key for the twitter tag generator like I've added to the field for the custom tags
