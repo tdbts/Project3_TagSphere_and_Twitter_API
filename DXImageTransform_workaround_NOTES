@@ -1,0 +1,7 @@
+* 10/14/2014 10:28:42 AM * 
+  
+  Upon closer inspection of 'cloud.js', it seems that the author didn't rely on DXImageTransform, but rather implemented it as a backup in case the browser doesn't support modern CSS3 opacity...which means that the author probably didn't use quirks mode for this reason, but rather, probably used it for certain geometrical purposes.
+
+  My guess is that the author used it as a half-ass hack to manipulate the spans that contain the tag text in some particular way.
+
+  After working with the debugger, it seems to be a problem with the way the browser is parsing the values for the spans' 'width', 'height', 'left', 'top' and 'font-size' values.  I know I'm getting closer to figuring out what the hell is going on.
