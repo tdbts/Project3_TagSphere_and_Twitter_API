@@ -10,4 +10,4 @@
 
   Okay, I think I'm on to something here.  I emulated the author's example for calculating the clouder div's height, width, left and top properties relative to the user's screen size.  The problem with these mathematical operations, however, is that they will return numbers, when there should be a string value with 'px' at the end -- something like clouder.style.width = "700px".  Let's see what I can do to fix this.  
 
-  
+  Okay!  I got the CSS errors to go away by wrapping the operations in parens, calling the 'toString' method, and concatenating the result with 'px' at the end.  However, the tags are not rendering at all, which means that there's something else causing problems.  

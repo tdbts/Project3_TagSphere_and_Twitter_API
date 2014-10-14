@@ -47,11 +47,11 @@ $(document).ready(function() {
 
 		clouder.style.borderTop = "1px solid black";
 		clouder.style.borderBottom = "1px solid black";
-		clouder.style.width = w * 3 / 4;
-		clouder.style.height = h * 3 / 4;
+		clouder.style.width = (w * 3 / 4).toString() + "px";
+		clouder.style.height = (h * 3 / 4).toString() + "px";
 		clouder.style.position = "absolute";
-		clouder.style.left = w / 6;
-		clouder.style.top = h / 2;
+		clouder.style.left = (w / 6).toString() + "px";
+		clouder.style.top = (h / 2).toString() + "px";
 		
 		window.clouder = new Clouder({
 			container: clouder,
