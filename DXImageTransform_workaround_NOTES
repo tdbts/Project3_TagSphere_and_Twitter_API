@@ -11,3 +11,7 @@
   Okay, I think I'm on to something here.  I emulated the author's example for calculating the clouder div's height, width, left and top properties relative to the user's screen size.  The problem with these mathematical operations, however, is that they will return numbers, when there should be a string value with 'px' at the end -- something like clouder.style.width = "700px".  Let's see what I can do to fix this.  
 
   Okay!  I got the CSS errors to go away by wrapping the operations in parens, calling the 'toString' method, and concatenating the result with 'px' at the end.  However, the tags are not rendering at all, which means that there's something else causing problems.  
+
+  Nice, I fixed the problem and got the tags to render!  I was right, when the author set the properties for height, width, top and left, he was setting them to numbers when they needed to be strings with 'px' at the end.  However, when I fixed this, it broke other parts of the code that relied on those values being numbers in order to perform certain mathematical operations.  So, I fixed this by slicing the string values from the beginning until the second to last character, thus getting rid of the 'px', and then converting this string into a number with Number().  Lo and behold, it worked!
+
+  However, the cloud still has problems parsing the 'font-size' CSS property value.  As a result, the font in the tag cloud won't become smaller as it moves "further away".  Let's see if I can figure this one out.    

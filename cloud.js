@@ -270,9 +270,9 @@ function Clouder(params) {
             } // if
             o.span.style.fontSize = Math.round(size);
             o.screenX = w * (o.x * xScale + 1) / 2;
-            o.span.style.left = (o.screenX - (o.width).slice(0, -2) * o.factor / 2).toString() + "px";
+            o.span.style.left = (o.screenX - Number((o.width).slice(0, -2)) * o.factor / 2).toString() + "px";
             o.screenY = h * (o.y * yScale + 1) / 2;
-            o.span.style.top = (o.screenY - (o.height).slice(0, -2) * o.factor / 2).toString() + "px";
+            o.span.style.top = (o.screenY - Number((o.height).slice(0, -2)) * o.factor / 2).toString() + "px";
             o.span.style.zIndex = o.z >= 0 ? 10 : 5;
             var opa = (Math.sin(o.z * Math.PI / 2) / 2 + 0.5) * (1 - opaque) + opaque;
             if (!filters) {
