@@ -202,7 +202,7 @@ function Clouder(params) {
             var dx = 0, dy = 0, dz = 0;
             var o = objs[i];
             for (var j in objs) {
-                if (i == j) {
+                if (i === j) {
                     continue;
                 } // if
                 var diffX = o.x - objs[j].x;
@@ -242,7 +242,7 @@ function Clouder(params) {
     
     
     function draw() {
-        var filters = (typeof(document.body.filters) == "object");
+        var filters = (typeof(document.body.filters) === "object");
 
         process(function(o) {
             
@@ -264,7 +264,7 @@ function Clouder(params) {
             
             var size = fontSize + o.z * fontShift;
             o.factor = size / fontSize;
-            if (o.width == 0) {
+            if (o.width === 0) {
                 o.width = o.span.clientWidth / o.factor;
                 o.height = o.span.clientHeight / o.factor;
             } // if
@@ -311,16 +311,16 @@ function Clouder(params) {
     
     function setClosest(obj) {
         
-        if (closest == obj) {
+        if (closest === obj) {
             return;
         } // if
         
-        if (closest != null) {
+        if (closest !== null) {
             closest.span.style.border = "";
         } // if
         closest = obj;
         
-        if (closest != null) {
+        if (closest !== null) {
             closest.span.style.border = "1px solid black";
         } // if
         
@@ -367,7 +367,7 @@ function Clouder(params) {
     
     function onClick(event) {
         
-        if (closest == null || closest.id == null) {
+        if (closest === null || closest.id === null) {
             return;
         } // if
         
@@ -404,20 +404,20 @@ function Clouder(params) {
         
         callback = p.callback ? p.callback : function(id) { alert(id); };
         fontSize = p.fontSize ? p.fontSize : 14;
-        fontShift = typeof(p.fontShift) != "undefined" ? p.fontShift : fontSize / 2;
+        fontShift = typeof(p.fontShift) !== "undefined" ? p.fontShift : fontSize / 2;
         colorMax = p.colorMax ? parseColor(p.colorMax) : parseColor("#000000");
         colorMin = p.colorMin ? parseColor(p.colorMin) : parseColor("#C0C0C0");
         colorBgr = p.colorBgr ? p.colorBgr : null;
-        interval = typeof(p.interval) != "undefined" ? p.interval : interval;
-        stepAngle = typeof(p.stepAngle) != "undefined" ? p.stepAngle : stepAngle;
-        idleMotion = typeof(p.idleMotion) != "undefined" ? p.idleMotion : idleMotion;
-        opaque = typeof(p.opaque) != "undefined" ? p.opaque : opaque;
-        nonSense = typeof(p.nonSense) != "undefined" ? p.nonSense : nonSense;
-        if (typeof(p.scale) != "undefined") {
+        interval = typeof(p.interval) !== "undefined" ? p.interval : interval;
+        stepAngle = typeof(p.stepAngle) !== "undefined" ? p.stepAngle : stepAngle;
+        idleMotion = typeof(p.idleMotion) !== "undefined" ? p.idleMotion : idleMotion;
+        opaque = typeof(p.opaque) !== "undefined" ? p.opaque : opaque;
+        nonSense = typeof(p.nonSense) !== "undefined" ? p.nonSense : nonSense;
+        if (typeof(p.scale) !== "undefined") {
             xScale = yScale = p.scale;
         } // if
-        xScale = typeof(p.xScale) != "undefined" ? p.xScale : xScale;
-        yScale = typeof(p.yScale) != "undefined" ? p.yScale : yScale;
+        xScale = typeof(p.xScale) !== "undefined" ? p.xScale : xScale;
+        yScale = typeof(p.yScale) !== "undefined" ? p.yScale : yScale;
     } // parametrize
     
     
