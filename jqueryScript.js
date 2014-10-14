@@ -44,14 +44,16 @@ $(document).ready(function() {
 	function init(variableContainingTags) {
 		var w = document.body.clientWidth, h = document.body.clientHeight;
 		var clouder = document.getElementById('clouder');
+		var parent = document.getElementById('cloudParent');
+		var parentRect = parent.getBoundingClientRect();
 
 		clouder.style.borderTop = "1px solid black";
 		clouder.style.borderBottom = "1px solid black";
 		clouder.style.width = (w * 3 / 4).toString() + "px";
-		clouder.style.height = (h * 3 / 4).toString() + "px";
+		clouder.style.height = (h * 1.5).toString() + "px";
 		clouder.style.position = "absolute";
 		clouder.style.left = (w / 6).toString() + "px";
-		clouder.style.top = (h / 2).toString() + "px";
+		clouder.style.top = (parentRect.y + 50).toString() + "px";
 		
 		window.clouder = new Clouder({
 			container: clouder,
@@ -129,6 +131,7 @@ $(document).ready(function() {
 				
 				addTweetTags(parsedData, twitterCloudTags);
 				init(twitterCloudTags);
+				scrollDownTo('#clouder', 500);
 			},
 
 			error: function() {
