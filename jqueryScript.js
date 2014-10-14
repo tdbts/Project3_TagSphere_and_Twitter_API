@@ -58,7 +58,7 @@ $(document).ready(function() {
 		window.clouder = new Clouder({
 			container: clouder,
 			tags: variableContainingTags,
-			nonSense: 0.1
+			nonSense: 0.3
 		});
 	}
 
