@@ -25,3 +25,5 @@ explaination of what the web app does, and how to use it.
 - Alter code so that user can keep getting the ten tweets before the current set of ten
 
 - Does Bootstrap require <!DOCTYPE html> declaration??  If so, what can I use to design a webpage that only works in quirks mode?
+  --> Bootstrap uses HTML5 implementations, and thus DOES require this declaration at the beginning of the html.  Thus, I need to figure out a way to work around this.
+  --> The author may have used quirks mode because he used the deprecated DXImageTransform.Microsoft.Alpha -- try modern CSS3 filters (opacity) as an alternative
