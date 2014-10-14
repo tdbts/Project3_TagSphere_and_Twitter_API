@@ -5,3 +5,9 @@
   My guess is that the author used it as a half-ass hack to manipulate the spans that contain the tag text in some particular way.
 
   After working with the debugger, it seems to be a problem with the way the browser is parsing the values for the spans' 'width', 'height', 'left', 'top' and 'font-size' values.  I know I'm getting closer to figuring out what the hell is going on.
+
+  Also, in Chrome when I declare the doctype, the same problem happens, but sometimes instead I get an 'unexpected end of input' error in my jQuery script where I parse the data returned from the ajax call, which is pretty strange.  
+
+  Okay, I think I'm on to something here.  I emulated the author's example for calculating the clouder div's height, width, left and top properties relative to the user's screen size.  The problem with these mathematical operations, however, is that they will return numbers, when there should be a string value with 'px' at the end -- something like clouder.style.width = "700px".  Let's see what I can do to fix this.  
+
+  
