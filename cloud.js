@@ -268,7 +268,7 @@ function Clouder(params) {
                 o.width = (o.span.clientWidth / o.factor).toString() + "px";
                 o.height = (o.span.clientHeight / o.factor).toString() + "px";
             } // if
-            o.span.style.fontSize = Math.round(size);
+            o.span.style.fontSize = (Math.round(size)).toString() + "px";
             o.screenX = w * (o.x * xScale + 1) / 2;
             o.span.style.left = (o.screenX - Number((o.width).slice(0, -2)) * o.factor / 2).toString() + "px";
             o.screenY = h * (o.y * yScale + 1) / 2;
