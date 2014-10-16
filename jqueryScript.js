@@ -157,6 +157,18 @@ $(document).ready(function() {
 		search(search_value, 'twitter_cloud_search.php');
 	});
 
+	// function selectRandomColor() {
+	// 	return "#" + (~~(Math.random()*(1<<24))).toString(16);
+	// }
+
+	// $('span').hover(
+	// 	function() {
+	// 		$(this).css("background-color", selectRandomColor());
+	// 	},
+	// 	function() {
+	// 		$(this).css("background-color", "#a9e2f3");
+	// 	}
+	// );
 
 
 });

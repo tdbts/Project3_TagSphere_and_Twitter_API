@@ -239,7 +239,47 @@ function Clouder(params) {
         theta = Math.atan2(y, x);
         rho = Math.sqrt(x * x + y * y);
     } // setPos
+
+    function selectRandomColor() {
+        var randomHex = (~~(Math.random()*(1<<24))).toString(16);
+        if (randomHex.length !== 6) {
+            return selectRandomColor();
+        } else {
+            return randomHex;
+        }
+    }
     
+    function invertHex(hexnum){
+        if (hexnum.length != 6) {
+            console.error("Hex color must be six hex numbers in length.");
+            return false;
+        }
+
+        hexnum = hexnum.toUpperCase();
+        var splitnum = hexnum.split("");
+        var resultnum = "";
+        var simplenum = "FEDCBA9876".split("");
+        var complexnum = [];
+        complexnum.A = "5";
+        complexnum.B = "4";
+        complexnum.C = "3";
+        complexnum.D = "2";
+        complexnum.E = "1";
+        complexnum.F = "0";
+
+        for (i=0; i<6; i++){
+            if (!isNaN(splitnum[i])) {
+                resultnum += simplenum[splitnum[i]]; 
+            } else if (complexnum[splitnum[i]]) {
+                resultnum += complexnum[splitnum[i]]; 
+            } else {
+                console.error("Hex colors must only include hex numbers 0-9, and A-F");
+                return false;
+            }
+        }
+
+        return resultnum;
+    }
     
     function draw() {
         var filters = (typeof(document.body.filters) === "object");
@@ -257,7 +297,10 @@ function Clouder(params) {
                 for (var i in colorMax) {
                     c = c * 256 + Math.floor((colorMax[i] - colorMin[i]) * o.weight + colorMin[i]);
                 } // for
-                o.span.style.color = "#" + c.toString(16).substr(1);
+                // o.span.style.color = "#" + c.toString(16).substr(1);
+                var randomColor = selectRandomColor();
+                o.span.style.backgroundColor = "#" + randomColor;
+                o.span.style.color = "#" + invertHex(randomColor);
                 container.appendChild(o.span);
                 o.span.descriptor = o;
             } // if
