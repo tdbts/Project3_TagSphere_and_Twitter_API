@@ -22,7 +22,7 @@
 			</div>
 			<div style="height: 1px;" class="navbar-collapse collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Home</a></li>
+					<li><a href="../index.html">Home</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret bootstrapSpan"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">Bio</a></li>
@@ -42,7 +42,7 @@
 		</div>
 	</nav>
 
-	<h1 id="header">Tag Cloud</h1>
+<!-- 	<h1 id="header">Tag Cloud</h1>
 
 	<div id="createCloud">
 		<h3>Create a Custom Tag for Your Cloud</h3>		
@@ -61,6 +61,37 @@
 		<button type="button" id="createTweetCloud">Create Tweet Cloud</button>
 	</div>
 	
+	<div id="cloudParent">
+		<div id="clouder"></div>
+	</div> -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				
+				<h1 id="header">Tag Cloud</h1>
+
+				<p id="cloudExplain">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores soluta, laudantium dignissimos. Maiores sequi architecto veritatis ad nihil porro ratione. Quo, quas facilis dolorem molestiae non beatae soluta placeat asperiores. Aliquam quidem voluptate molestias tempore totam sapiente officia accusamus, eligendi quisquam libero at dicta inventore qui, iusto repudiandae veniam ab.</p>
+			</div>
+			<div class="col-md-4">
+				<h4 class="cloudTitle">Create a Custom Tag for Your Cloud</h4>		
+		
+				<p>Your Tag:</p> <input type="text" name="tag" id="customTag"><br>
+				<button type="button" id="tagButton">Add Tag!</button>
+				<br><br>
+		
+				<p>Ready?</p>
+				<button type="button" id="drawCloud">Create Tag Cloud</button>
+				<button type="button" id="clearAll">Clear Tags</button>
+			</div>
+			<div class="col-md-4">
+				<h4 class="cloudTitle">Create a Cloud From Your Twitter Feed</h4>
+				<p>Enter Your Twitter Handle: </p> <input type="text" name="twitterName" id="twitterHandle">
+				<button type="button" id="createTweetCloud">Create Tweet Cloud</button>
+			</div>
+		</div>
+	</div>
+
 	<div id="cloudParent">
 		<div id="clouder"></div>
 	</div>

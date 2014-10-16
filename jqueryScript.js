@@ -110,6 +110,7 @@ $(document).ready(function() {
 		
 		window.clouder.kill();
 		userCloudTags = [];
+		twitterCloudTags = [];	
 
 		scrollUpToTop(500);
 	});
