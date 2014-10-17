@@ -47,8 +47,6 @@ $(document).ready(function() {
 		var parent = document.getElementById('cloudParent');
 		var parentRect = parent.getBoundingClientRect();
 
-		// clouder.style.borderTop = "1px solid black";
-		// clouder.style.borderBottom = "1px solid black";
 		clouder.style.width = (w * 3 / 4).toString() + "px";
 		clouder.style.height = (h * 1.5).toString() + "px";
 		clouder.style.position = "absolute";
@@ -157,18 +155,6 @@ $(document).ready(function() {
 		search(search_value, 'twitter_cloud_search.php');
 	});
 
-	// function selectRandomColor() {
-	// 	return "#" + (~~(Math.random()*(1<<24))).toString(16);
-	// }
-
-	// $('span').hover(
-	// 	function() {
-	// 		$(this).css("background-color", selectRandomColor());
-	// 	},
-	// 	function() {
-	// 		$(this).css("background-color", "#a9e2f3");
-	// 	}
-	// );
 
 
 });
