@@ -242,6 +242,7 @@ function Clouder(params) {
 
     function selectRandomColor() {
         var randomHex = (~~(Math.random()*(1<<24))).toString(16);
+        
         if (randomHex.length !== 6) {
             return selectRandomColor();
         } else {
@@ -297,7 +298,6 @@ function Clouder(params) {
                 for (var i in colorMax) {
                     c = c * 256 + Math.floor((colorMax[i] - colorMin[i]) * o.weight + colorMin[i]);
                 } // for
-                // o.span.style.color = "#" + c.toString(16).substr(1);
                 var randomColor = selectRandomColor();
                 o.span.style.backgroundColor = "#" + randomColor;
                 o.span.style.color = "#" + invertHex(randomColor);

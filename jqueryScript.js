@@ -47,8 +47,8 @@ $(document).ready(function() {
 		var parent = document.getElementById('cloudParent');
 		var parentRect = parent.getBoundingClientRect();
 
-		clouder.style.borderTop = "1px solid black";
-		clouder.style.borderBottom = "1px solid black";
+		// clouder.style.borderTop = "1px solid black";
+		// clouder.style.borderBottom = "1px solid black";
 		clouder.style.width = (w * 3 / 4).toString() + "px";
 		clouder.style.height = (h * 1.5).toString() + "px";
 		clouder.style.position = "absolute";
