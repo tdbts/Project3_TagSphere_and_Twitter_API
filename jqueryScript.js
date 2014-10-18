@@ -143,16 +143,20 @@ $(document).ready(function() {
 		return $('#twitterHandle').val();
 	}
 
-	$('#createTweetCloud').click(function() {
+	function executeTwitterSearch() {
 
 		var search_value = getTwitterHandle();
 		search(search_value, 'twitter_cloud_search.php');
+	}
+
+	$('#createTweetCloud').click(function() {
+
+		executeTwitterSearch();
 	});
 
 	makeEnterKeyDoSomething('#twitterHandle', function() {
 		
-		var search_value = getTwitterHandle();
-		search(search_value, 'twitter_cloud_search.php');
+		executeTwitterSearch();
 	});
 
 

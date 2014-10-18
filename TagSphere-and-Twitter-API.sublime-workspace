@@ -271,23 +271,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 778,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "style.css",
-			"settings":
-			{
-				"buffer_size": 161,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "jqueryScript.js",
-			"settings":
-			{
-				"buffer_size": 1511,
+				"buffer_size": 4064,
 				"line_ending": "Windows"
 			}
 		},
@@ -295,7 +279,23 @@
 			"file": "script.js",
 			"settings":
 			{
-				"buffer_size": 1091,
+				"buffer_size": 2076,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 154,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jqueryScript.js",
+			"settings":
+			{
+				"buffer_size": 4093,
 				"line_ending": "Windows"
 			}
 		},
@@ -303,7 +303,15 @@
 			"file": "cloud.js",
 			"settings":
 			{
-				"buffer_size": 14219,
+				"buffer_size": 15708,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "twitter_cloud_search.php",
+			"settings":
+			{
+				"buffer_size": 1413,
 				"line_ending": "Windows"
 			}
 		}
@@ -311,12 +319,28 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 265.0,
+		"height": 150.0,
 		"selected_items":
 		[
 			[
+				"jvs",
+				"Set Syntax: JavaScript"
+			],
+			[
 				"packi",
 				"Package Control: Install Package"
+			],
+			[
+				"synpla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"synhtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
 			],
 			[
 				"color",
@@ -343,10 +367,6 @@
 				"Set Syntax: R"
 			],
 			[
-				"jvs",
-				"Set Syntax: JavaScript"
-			],
-			[
 				"jv",
 				"Set Syntax: JavaScript"
 			],
@@ -355,16 +375,8 @@
 				"Set Syntax: JavaScript"
 			],
 			[
-				"synhtml",
-				"Set Syntax: HTML"
-			],
-			[
 				"javs",
 				"Set Syntax: JavaScript"
-			],
-			[
-				"php",
-				"Set Syntax: PHP"
 			],
 			[
 				"snippet",
@@ -439,7 +451,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 378.0
+		"width": 464.0
 	},
 	"console":
 	{
@@ -456,12 +468,26 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function selectRandomHexValue.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function invertHex.js",
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function selectRandomColor",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/fixDiv_NOTES.txt",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/quirksMode_workaround_NOTES.txt",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/codeCleanup_10.13_notes.txt",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/InsertDate/README.md",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/timeline_response.php",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/search_response.php",
+		"/C/Users/Vincent/Documents/Hckr/jquery/Useful Scripts/makeEnterKeyDoSomething.js",
+		"/C/Users/Vincent/Documents/Hckr/Play/tweets/tweetPlay/jqueryForPlay.js",
+		"/C/Users/Vincent/Documents/Hckr/Server-Side Stuff/Useful Scripts/test_input.php",
+		"/C/Users/Vincent/Documents/Hckr/Server-Side Stuff/Useful Scripts/Validation_EmailFormat.php",
+		"/C/Users/Vincent/Documents/Hckr/Server-Side Stuff/Useful Scripts/Validation_URL.php",
+		"/C/Users/Vincent/Documents/Hckr/Server-Side Stuff/Useful Scripts/Validation_LettersAndWhiteSpacesOnly.php",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/jquery-1.11.1.min.js",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/cloud-min.js",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/cloud.js",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/raw_data_response.php",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/jqueryForProject.js",
-		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/timeline_response.php",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/search_response.php",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/app_tokens.php",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project2_Twitter_API/index.html",
@@ -569,21 +595,7 @@
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function createObjectAtRuntime",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function inherit.js",
 		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - createObj.sublime-snippet",
-		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 3 - Types, Values, and Variables/function - Comparing two arrays for equality.js",
-		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 3 - Types, Values, and Variables/Pattern Matching - RegExp constructor.js",
-		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 1 - Introduction to Javascript/constructor - Two-Dimensional Geometric Points",
-		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/testOutHTMLandScript.html",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - returns.sublime-snippet",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - defproto (defining methods and properties).sublime-snippet",
-		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/Object Play - Douglas Crockfords Object dot create method",
-		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Instrument and JSON dot stringify",
-		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Implementation of the Combination Constructor-Prototype Pattern - Quiz Scores",
-		"/C/Users/Vincent/Documents/Hckr/Play/Object Play/ObjectPlay - Implementation of the Parasitic Combination Inheritance Pattern",
-		"/C/Users/Vincent/Documents/Hckr/Play/ObjectPlay - Instrument and JSON dot stringify",
-		"/C/Users/Vincent/Documents/Hckr/Play/ObjectPlay - Implementation of the Combination Constructor-Prototype Pattern - Quiz Scores",
-		"/C/Users/Vincent/Documents/Hckr/Play/ObjectPlay - Implementation of the Parasitic Combination Inheritance Pattern",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - setTimeout.sublime-snippet",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - quescol.sublime-snippet"
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 3 - Types, Values, and Variables/function - Comparing two arrays for equality.js"
 	],
 	"find":
 	{
@@ -601,6 +613,44 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"containerTop",
+			"offsetTop",
+			"body",
+			"colorbgr",
+			"parsecolor",
+			"color",
+			"3",
+			"rotat",
+			"speed",
+			"nonsense",
+			"font",
+			"size",
+			"top",
+			"width",
+			"height",
+			"width",
+			"size",
+			"fontsize",
+			"descriptor",
+			"xScale",
+			"opa",
+			"!=",
+			"==",
+			"!=",
+			"==",
+			"opa",
+			"addTweetTags",
+			"arrayOfTweetObjects",
+			"callback",
+			"addTweetTags",
+			"window.clouder",
+			"addTweetTags",
+			"init",
+			"createObjectForCloud",
+			"date",
+			"offsetTop",
+			"container",
+			"closest",
 			"callback",
 			"nonSense",
 			"speed",
@@ -690,45 +740,7 @@
 			"LIFE_DETAIL",
 			"ARTIST",
 			"this",
-			"albumCover:",
-			"albumCover\"",
-			"},",
-			"\"life_Detail\"",
-			"\"genre\"",
-			"\"year\"",
-			"\"artist\"",
-			"\"title\"",
-			"making of th",
-			"  {\\n    \"titl",
-			"  {\\n    \"tit",
-			"{\\n    \"ti",
-			"{\\n",
-			"},\\n",
-			"\"life_Detail",
-			"\"genre\": ",
-			"    \"year",
-			"    \"art",
-			"itle\": \"",
-			"    \"tit",
-			"\"art",
-			"\"Fra",
-			"\"tit",
-			"\\n",
-			"{\\n",
-			"},",
-			"\"gen",
-			"\"yea",
-			"\"art",
-			"2000\"",
-			"y\",",
-			"{\n    \"t",
-			"{",
-			"'",
-			"\"",
-			"le",
-			"},",
-			"\"album\": ",
-			"					\"album"
+			"albumCover:"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -736,6 +748,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"!==",
+			"===",
 			"<br>",
 			";<br>"
 		],
@@ -756,15 +770,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 778,
+						"buffer_size": 4064,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								778,
-								778
+								15,
+								15
 							]
 						],
 						"settings":
@@ -828,18 +842,93 @@
 				},
 				{
 					"buffer": 1,
-					"file": "style.css",
+					"file": "script.js",
 					"settings":
 					{
-						"buffer_size": 161,
+						"buffer_size": 2076,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								87,
-								87
+								2076,
+								2076
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 253.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								117
 							]
 						],
 						"settings":
@@ -903,98 +992,23 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "jqueryScript.js",
 					"settings":
 					{
-						"buffer_size": 1511,
+						"buffer_size": 4093,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "script.js",
-					"settings":
-					{
-						"buffer_size": 1091,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								4084,
+								4084
 							]
 						],
 						"settings":
@@ -1061,15 +1075,15 @@
 					"file": "cloud.js",
 					"settings":
 					{
-						"buffer_size": 14219,
+						"buffer_size": 15708,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8029,
-								8029
+								3842,
+								3842
 							]
 						],
 						"settings":
@@ -1127,7 +1141,82 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1089.0,
+						"translation.y": 3669.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "twitter_cloud_search.php",
+					"settings":
+					{
+						"buffer_size": 1413,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								209
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1163,7 +1252,7 @@
 		"cols":
 		[
 			0.0,
-			0.340845070423,
+			0.489652623799,
 			1.0
 		],
 		"rows":
@@ -1198,6 +1287,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 50.0,
+	"side_bar_width": 247.0,
 	"status_bar_visible": true
 }
