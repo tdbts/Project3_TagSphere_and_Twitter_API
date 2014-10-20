@@ -271,7 +271,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4064,
+				"buffer_size": 4182,
 				"line_ending": "Windows"
 			}
 		},
@@ -295,7 +295,7 @@
 			"file": "jqueryScript.js",
 			"settings":
 			{
-				"buffer_size": 4093,
+				"buffer_size": 4092,
 				"line_ending": "Windows"
 			}
 		},
@@ -613,6 +613,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sm",
+			"success",
+			"button",
 			"containerTop",
 			"offsetTop",
 			"body",
@@ -737,10 +740,7 @@
 			"YEAR",
 			"GENRE",
 			"TITLE",
-			"LIFE_DETAIL",
-			"ARTIST",
-			"this",
-			"albumCover:"
+			"LIFE_DETAIL"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -770,15 +770,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 4064,
+						"buffer_size": 4182,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								3305,
+								3305
 							]
 						],
 						"settings":
@@ -835,7 +835,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1228.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -988,27 +988,21 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 3,
 					"file": "jqueryScript.js",
 					"settings":
 					{
-						"buffer_size": 4093,
+						"buffer_size": 4092,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4084,
-								4084
+								4077,
+								4077
 							]
 						],
 						"settings":
@@ -1065,11 +1059,17 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1775.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
 					"buffer": 4,
 					"file": "cloud.js",
@@ -1141,7 +1141,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3669.0,
+						"translation.y": 3385.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1216,7 +1216,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 211.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1252,7 +1252,7 @@
 		"cols":
 		[
 			0.0,
-			0.489652623799,
+			0.628603104213,
 			1.0
 		],
 		"rows":
