@@ -12,7 +12,7 @@ var twitterCloudTags = [];
 // As part of its input, the Clouder class accepts an array of 
 // "little objects" of the form: {text: theText, id: theID, weight: theWeight}
 // This f(x) creates a single "little object" for the cloud
-function createObjectForCloud(theText, cloudTags) {
+function createObjectForCloud(theText, theURL, cloudTags) {
 	var theID;
 
 	// Generates an ID for the new object based upon the number of tags already 
@@ -56,6 +56,6 @@ function createObjectForCloud(theText, cloudTags) {
 	theID = createID(cloudTags);
 
 	// Hardcoded weight value...may want to change this
-	return {text: theText, id: theID, weight: 0.1};
+	return {text: theText, id: theID, weight: 0.1, url: theURL};
 }
 

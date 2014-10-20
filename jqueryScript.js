@@ -34,8 +34,12 @@ $(document).ready(function() {
 			var tweetDate = arrayOfTweetObjects[i].date.slice(0, 10);
 			var displayText = tweetText + " \n" + tweetDate;
 			
-			// Create "little object" using the extracted text and push to array of objects
-			var newTweetTagObject = createObjectForCloud(displayText, variableToSaveTo);
+			// Get URL from JSON data
+			var url = arrayOfTweetObjects[i].url;
+
+			// Create "little object" using the extracted information and push to array of objects
+			var newTweetTagObject = createObjectForCloud(displayText, url, variableToSaveTo);
+			console.log(newTweetTagObject);
 			variableToSaveTo.push(newTweetTagObject);
 		}
 	}
@@ -56,8 +60,30 @@ $(document).ready(function() {
 		window.clouder = new Clouder({
 			container: clouder,
 			tags: variableContainingTags,
-			nonSense: 0.3
+			nonSense: 0.3,
+			callback: urlCallback
 		});
+	}
+
+	var urlCallback = function(id) {
+		if (twitterCloudTags.length !== 0) {
+			for (var i = 0; i < twitterCloudTags.length; i++) {
+				if (twitterCloudTags[i].id === id) {
+					if (twitterCloudTags[i].url) {
+						urlConfirmAssignment(twitterCloudTags[i].url);
+					} else 
+					alert(twitterCloudTags[i].text);
+				}
+			}
+		}
+	};
+
+	function urlConfirmAssignment(theURL) {
+		var question = confirm("Are you sure you navigate to the link contained in the outlined tweet?");
+
+		if (question) {
+			window.open(theURL);
+		} else return;
 	}
 
 	// For user-generated tags
@@ -127,6 +153,7 @@ $(document).ready(function() {
 				// The server will have already cut the data down to 
 				// only what I need for the cloud
 				var parsedData = JSON.parse(data);
+				console.log(parsedData);
 				
 				addTweetTags(parsedData, twitterCloudTags);
 				init(twitterCloudTags);
@@ -158,6 +185,7 @@ $(document).ready(function() {
 		
 		executeTwitterSearch();
 	});
+
 
 
 

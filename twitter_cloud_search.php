@@ -36,12 +36,30 @@ if (!empty($_GET['q'])) {
 
 		// Accumulate tweets from results
 		$tweet_stream = array();
+
+		// Create f(x) to get a particular property from each object 
+		// in an array of objects
+		function getPropFromAll($arr, $prop) {
+			$results = array();
+			
+			foreach ($arr as $innerObj) {
+				array_push($results, $innerObj[$prop]);
+			}
+
+			echo $results;
+		}
 		
+		// Take tweet data, loop through tweets and create an associative array 
+		// containing 'text', 'date', and 'url' keys
 		foreach($tweet_data as $tweet) {
 			
+			$url_array = $tweet['entities']['urls'][0];
+			$urlKey = 'expanded_url';
+
 			array_push($tweet_stream, array(
 				'text' => $tweet['text'], 
-				'date' => $tweet['created_at']
+				'date' => $tweet['created_at'],
+				'url' => $url_array['expanded_url']
 				));
 		}
 
