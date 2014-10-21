@@ -65,20 +65,29 @@ $(document).ready(function() {
 		});
 	}
 
+	// Callback f(x) for when tweet tags are clicked upon
+	// Checks to see whether tags exist, and if so, loops through the tag array 
+	// until it finds the "little object" with the matching id, and then invokes 
+	// 'urlConfirmAssignment', passing to the tweet text and url
 	var urlCallback = function(id) {
 		if (twitterCloudTags.length !== 0) {
 			for (var i = 0; i < twitterCloudTags.length; i++) {
-				if (twitterCloudTags[i].id === id) {
-					if (twitterCloudTags[i].url) {
-						urlConfirmAssignment(twitterCloudTags[i].text, twitterCloudTags[i].url);
+				
+				var theTweet = twitterCloudTags[i];
+
+				if (theTweet.id === id) {
+					if (theTweet.url) {
+						urlConfirmAssignment(theTweet.text, theTweet.url);
 					} else {
-						alert(twitterCloudTags[i].text);
+						alert(theTweet.text);
 					}
 				}
 			}
 		}
 	};
 
+	// Display dialog box showing tweet text and asking user if they would like to 
+	// navigate to the link contained within the tweet
 	function urlConfirmAssignment(theText, theURL) {
 		var question = confirm(theText + 
 			"\n\n Are you sure you navigate to the link contained in the outlined tweet?");
