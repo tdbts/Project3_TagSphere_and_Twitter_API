@@ -70,7 +70,7 @@ $(document).ready(function() {
 			for (var i = 0; i < twitterCloudTags.length; i++) {
 				if (twitterCloudTags[i].id === id) {
 					if (twitterCloudTags[i].url) {
-						urlConfirmAssignment(twitterCloudTags[i].url);
+						urlConfirmAssignment(twitterCloudTags[i].text, twitterCloudTags[i].url);
 					} else {
 						alert(twitterCloudTags[i].text);
 					}
@@ -79,8 +79,9 @@ $(document).ready(function() {
 		}
 	};
 
-	function urlConfirmAssignment(theURL) {
-		var question = confirm("Are you sure you navigate to the link contained in the outlined tweet?");
+	function urlConfirmAssignment(theText, theURL) {
+		var question = confirm(theText + 
+			"\n\n Are you sure you navigate to the link contained in the outlined tweet?");
 
 		if (question) {
 			window.open(theURL);
