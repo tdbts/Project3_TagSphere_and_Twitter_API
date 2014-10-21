@@ -71,8 +71,9 @@ $(document).ready(function() {
 				if (twitterCloudTags[i].id === id) {
 					if (twitterCloudTags[i].url) {
 						urlConfirmAssignment(twitterCloudTags[i].url);
-					} else 
-					alert(twitterCloudTags[i].text);
+					} else {
+						alert(twitterCloudTags[i].text);
+					}
 				}
 			}
 		}
