@@ -8,21 +8,6 @@ $(document).ready(function() {
 	// Invoke the check
 	jqueryCheckLoad('#header', 700);
 
-	// Creates tag object for the given tag and pushes it to the 
-	// array of cloud tags
-	function addTag() {
-
-		// Get user text input
-		var userText = $('#customTag').val();
-
-		// Create object for user tag and push to array
-		var newUserLittleObject = createObjectForCloud(userText, userCloudTags);
-		userCloudTags.push(newUserLittleObject);
-
-		// Erase contents of the input field
-		$('#customTag').val('');
-	}
-
 	// Takes an array of JSON data for each individual tweet and gets the 
 	// tweet text and date for each, then formats everything for the tags
 	function addTweetTags(arrayOfTweetObjects, variableToSaveTo) {
@@ -97,12 +82,6 @@ $(document).ready(function() {
 		} else return;
 	}
 
-	// For user-generated tags
-	$('#tagButton').click(function() {
-	
-		addTag();
-	});
-
 	// Make custom tag field responsive to enter key
 	function makeEnterKeyDoSomething(selector, func) {
 
@@ -114,8 +93,6 @@ $(document).ready(function() {
 			}
 		});
 	}
-	makeEnterKeyDoSomething('#customTag', addTag);
-
 
 	function scrollDownTo(elementSelector, milliseconds) {
 
@@ -130,28 +107,29 @@ $(document).ready(function() {
 		$('html, body').animate({scrollTop: 0}, milliseconds);
 	}
 
-	// Initialize cloud when Draw Cloud button clicked, then 
-	// autoscroll down to where the cloud appears
-	$('#drawCloud').click(function() {
-		
-		init(userCloudTags);
-
-		scrollDownTo('#clouder', 500);
-	});
+	function killCloud() {
+		window.clouder.kill();
+		twitterCloudTags = [];
+	}
 
 	// When Clear Tags button clicked, kill the cloud, reset the tag array, 
 	// then autoscroll back up to the top
-	$('#clearAll').click(function() {
+	$('.clearAll').click(function() {
 		
-		window.clouder.kill();
-		userCloudTags = [];
-		twitterCloudTags = [];	
+		$('.options').fadeOut(1000);
+		
+		killCloud();	
 
 		scrollUpToTop(500);
 	});
 
 	// AJAX request to Twitter for tweet data
 	function search(searchTerms, searchURL) {
+
+		if ($('#clouder').children().length > 0) {
+			
+			killCloud();
+		}
 
 		$.ajax({
 
@@ -177,28 +155,63 @@ $(document).ready(function() {
 		});
 	}
 
-	function getTwitterHandle() {
-		return $('#twitterHandle').val();
+	function getTwitterSearchTerm(searchFieldID) {
+		return $(searchFieldID).val();
 	}
 
-	function executeTwitterSearch() {
-
-		var search_value = getTwitterHandle();
-		search(search_value, 'twitter_cloud_search.php');
-	}
-
-	$('#createTweetCloud').click(function() {
-
-		executeTwitterSearch();
-	});
-
-	makeEnterKeyDoSomething('#twitterHandle', function() {
+	// Abstraction of general search process
+	function executeSearch(searchTermField, url, optionsDiv) {
 		
-		executeTwitterSearch();
-	});
+		var twitterSearchTerm;
+		var input = $.trim($(searchTermField).val());
 
+		// Execute the search only if there is something in the input field
+		if (input.length > 0) {
 
+			twitterSearchTerm = getTwitterSearchTerm(searchTermField);
+			eraseAllFieldsButOne('.inputField', searchTermField);
+			displayOptions(optionsDiv);
+			search(twitterSearchTerm, url);
+		}
+		
+	}
 
+	var executeTwitterAccountSearch = function() {
+		executeSearch('#twitterHandle', 'twitter_cloud_search.php', '#feedCloudOptions');
+	}
+
+	var executeTwitterTermSearch = function() {
+		executeSearch('#search_term', '#', '#searchCloudOptions');
+	}
+
+	// Activates button and input field so that their respective events 
+	// trigger the given f(x)
+	function activateSearchField(buttonID, inputID, func) {
+
+			$(buttonID).click(function() {
+				func();
+			});
+
+			makeEnterKeyDoSomething(inputID, function() {
+				func();
+			});
+	}
+	activateSearchField('#createTwitterFeedCloud', '#twitterHandle', executeTwitterAccountSearch);
+	activateSearchField('#createTweetSearchCloud', '#search_term', executeTwitterTermSearch);
+
+	function hideAllButOne(theClass, theID) {
+		$(theClass).not(theID).fadeOut();
+	}
+
+	function eraseAllFieldsButOne(theClass, theID) {
+		$(theClass).not(theID).val('');
+	}
+
+	function displayOptions(optionsID) {
+		
+		hideAllButOne('.options', optionsID);
+		$(optionsID).fadeIn(3000);
+	}
 
 });
 

@@ -12,3 +12,11 @@ span:not(.bootstrapSpan) {
 .cloudTitle {
 	padding-top: 20px;
 }
+
+#feedCloudOptions {
+	display: none;
+}
+
+#searchCloudOptions {
+	display: none;
+}

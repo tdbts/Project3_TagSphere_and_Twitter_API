@@ -6,7 +6,7 @@
 // They are outside of any f(x)'s so that they can be accessed by 
 // Other f(x)'s and code in other files -- I know there is a better 
 // way to do this
-var userCloudTags = [];
+
 var twitterCloudTags = [];
 
 // As part of its input, the Clouder class accepts an array of 
