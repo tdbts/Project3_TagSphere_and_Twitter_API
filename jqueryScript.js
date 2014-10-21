@@ -8,6 +8,9 @@ $(document).ready(function() {
 	// Invoke the check
 	jqueryCheckLoad('#header', 700);
 
+	// Font-Awesome Icons
+	$('.bar-icon-right').tooltip();
+
 	// Takes an array of JSON data for each individual tweet and gets the 
 	// tweet text and date for each, then formats everything for the tags
 	function addTweetTags(arrayOfTweetObjects, variableToSaveTo) {
