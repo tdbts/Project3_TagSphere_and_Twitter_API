@@ -36,19 +36,7 @@ if (!empty($_GET['q'])) {
 
 		// Accumulate tweets from results
 		$tweet_stream = array();
-
-		// Create f(x) to get a particular property from each object 
-		// in an array of objects
-		function getPropFromAll($arr, $prop) {
-			$results = array();
-			
-			foreach ($arr as $innerObj) {
-				array_push($results, $innerObj[$prop]);
-			}
-
-			echo $results;
-		}
-		
+	
 		// Take tweet data, loop through tweets and create an associative array 
 		// containing 'text', 'date', and 'url' keys
 		foreach($tweet_data as $tweet) {
