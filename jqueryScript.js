@@ -120,6 +120,7 @@ $(document).ready(function() {
 	$('.clearAll').click(function() {
 		
 		$('.options').fadeOut(1000);
+		eraseAllFields('.inputField');
 		
 		killCloud();	
 
@@ -208,6 +209,10 @@ $(document).ready(function() {
 
 	function eraseAllFieldsButOne(theClass, theID) {
 		$(theClass).not(theID).val('');
+	}
+
+	function eraseAllFields(theClass) {
+		$(theClass).val('');
 	}
 
 	function displayOptions(optionsID) {
