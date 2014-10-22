@@ -59,3 +59,68 @@ function createObjectForCloud(theText, theURL, cloudTags) {
 	return {text: theText, id: theID, weight: 0.1, url: theURL};
 }
 
+// Module that is initialized with the array of "little tweet objects"
+// The module takes that array and breaks the objects up into arrays 
+// of length ten, and pushes them to an array which holds them all
+// The module then returns 10 tweet objects at a time, and when it has 
+// returned all of them, the counter resets to 0.
+var setOfTenTweets = (function() {
+
+	var counter;
+	var arrayOfSetsOfTen;
+
+	function incrementCounter() {
+		return counter++;
+	}
+
+	function resetCounter() {
+		counter = 0;
+		console.log("Counter reset to 0.");
+	}
+
+	// Takes an array of elements, and breaks it up into sets of a 
+	// given size, and then groups all these sets into a new array
+	function createArrayOfArrays(source, setSize) {
+		var i, j;
+		var arrayOfArrays = [];
+
+		for (var i = 0, j = source.length; i < j; i += setSize) {
+			
+			tempArray = source.slice(i, i + setSize);
+			arrayOfArrays.push(tempArray);
+		}
+
+		return arrayOfArrays;
+	}
+
+	// Initializes the module with the array of tweet objects
+	function init(arrayOfTweetObjects) {
+
+		arrayOfSetsOfTen = createArrayOfArrays(arrayOfTweetObjects, 10);
+    	counter = 0;
+	}
+
+	// Returns 10 of the tweet objects at a time
+	// If the counter has reached the length of the array of arrays, 
+	// the counter resets to 0 and indicates this in the console
+	function returnTenTweets() {
+
+		var setOfTen;
+
+		setOfTen = arrayOfSetsOfTen[counter];
+		incrementCounter();
+  
+	    if (!(counter < arrayOfSetsOfTen.length)) {
+	      resetCounter();
+	    }
+    
+		return setOfTen;
+	}
+
+	return {
+		init: init,
+		returnTenTweets: returnTenTweets,
+		resetCounter: resetCounter
+	};
+
+})();

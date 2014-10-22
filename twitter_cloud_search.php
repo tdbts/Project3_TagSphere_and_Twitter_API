@@ -26,7 +26,7 @@ if (!empty($_GET['q'])) {
 	// Get the 10 most recent tweets using Twitter API
 	$http_code = $connection->request('GET',$connection->url('1.1/statuses/user_timeline'),
 		array('screen_name'=>$twitter_handle,
-			'count'=>10));
+			'count'=>200));
 
 	// Request was successful
 	if ($http_code == 200) {

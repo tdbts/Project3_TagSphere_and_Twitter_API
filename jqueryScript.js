@@ -27,13 +27,16 @@ $(document).ready(function() {
 
 			// Create "little object" using the extracted information and push to array of objects
 			var newTweetTagObject = createObjectForCloud(displayText, url, variableToSaveTo);
-			console.log(newTweetTagObject);
+			
 			variableToSaveTo.push(newTweetTagObject);
 		}
 	}
 
 	// Initialize tag cloud
 	function init(variableContainingTags) {
+
+		checkIfCloudExists();
+		
 		var w = document.body.clientWidth, h = document.body.clientHeight;
 		var clouder = document.getElementById('clouder');
 		var parent = document.getElementById('cloudParent');
@@ -58,6 +61,7 @@ $(document).ready(function() {
 	// until it finds the "little object" with the matching id, and then invokes 
 	// 'urlConfirmAssignment', passing to the tweet text and url
 	var urlCallback = function(id) {
+		
 		if (twitterCloudTags.length !== 0) {
 			for (var i = 0; i < twitterCloudTags.length; i++) {
 				
@@ -65,7 +69,9 @@ $(document).ready(function() {
 
 				if (theTweet.id === id) {
 					if (theTweet.url) {
+						
 						urlConfirmAssignment(theTweet.text, theTweet.url);
+					
 					} else {
 						alert(theTweet.text);
 					}
@@ -112,6 +118,9 @@ $(document).ready(function() {
 
 	function killCloud() {
 		window.clouder.kill();
+	}
+
+	function clearTweetTags() {
 		twitterCloudTags = [];
 	}
 
@@ -122,18 +131,28 @@ $(document).ready(function() {
 		$('.options').fadeOut(1000);
 		eraseAllFields('.inputField');
 		
-		killCloud();	
+		killCloud();
+		clearTweetTags();	
 
 		scrollUpToTop(500);
 	});
 
+	// Check to see if tags are already displayed from a 
+	// previous search.  If so, kill that cloud.
+	function checkIfCloudExists() {
+
+		if ($('#clouder').children().length > 0) {
+
+			killCloud();
+		}
+	}
+
 	// AJAX request to Twitter for tweet data
 	function search(searchTerms, searchURL) {
 
-		if ($('#clouder').children().length > 0) {
-			
-			killCloud();
-		}
+		// If cloud tags already, kill cloud before 
+		// running the AJAX request
+		checkIfCloudExists();
 
 		$.ajax({
 
@@ -149,7 +168,8 @@ $(document).ready(function() {
 				console.log(parsedData);
 				
 				addTweetTags(parsedData, twitterCloudTags);
-				init(twitterCloudTags);
+				setOfTenTweets.init(twitterCloudTags);
+				init(setOfTenTweets.returnTenTweets());
 				scrollDownTo('#clouder', 500);
 			},
 
@@ -220,6 +240,16 @@ $(document).ready(function() {
 		hideAllButOne('.options', optionsID);
 		$(optionsID).fadeIn(3000);
 	}
+
+	function getTenMoreTweets() {
+
+		init(setOfTenTweets.returnTenTweets());
+	}
+
+	$('#getTenPreviousTweets').on('click', function() {
+		
+		getTenMoreTweets();
+	});
 
 });
 
