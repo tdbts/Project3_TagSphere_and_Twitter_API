@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"twitter_",
+				"twitter_search_term"
+			],
+			[
+				"twit",
+				"twitterSearchTerm"
+			],
+			[
+				"exec",
+				"executeTwitterTermSearch"
+			],
+			[
+				"twist",
+				"twitterSearchTerm"
+			],
+			[
 				"createob",
 				"createObjectForCloud"
 			],
@@ -271,15 +287,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4182,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "script.js",
-			"settings":
-			{
-				"buffer_size": 2076,
+				"buffer_size": 4855,
 				"line_ending": "Windows"
 			}
 		},
@@ -287,15 +295,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 154,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "jqueryScript.js",
-			"settings":
-			{
-				"buffer_size": 4092,
+				"buffer_size": 234,
 				"line_ending": "Windows"
 			}
 		},
@@ -303,7 +303,23 @@
 			"file": "cloud.js",
 			"settings":
 			{
-				"buffer_size": 15708,
+				"buffer_size": 15710,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "script.js",
+			"settings":
+			{
+				"buffer_size": 3692,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jqueryScript.js",
+			"settings":
+			{
+				"buffer_size": 6491,
 				"line_ending": "Windows"
 			}
 		},
@@ -311,7 +327,7 @@
 			"file": "twitter_cloud_search.php",
 			"settings":
 			{
-				"buffer_size": 1413,
+				"buffer_size": 1653,
 				"line_ending": "Windows"
 			}
 		}
@@ -468,6 +484,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET ifor loop.sublime-snippet",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - jfor loop.sublime-snippet",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function selectRandomHexValue.js",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function invertHex.js",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function selectRandomColor",
@@ -593,13 +611,11 @@
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/restrict (obj manipulation)",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/merge (obj manipulation)",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function createObjectAtRuntime",
-		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function inherit.js",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - createObj.sublime-snippet",
-		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 3 - Types, Values, and Variables/function - Comparing two arrays for equality.js"
+		"/C/Users/Vincent/Documents/Hckr/JavaScript/useful scripts/function inherit.js"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -613,6 +629,36 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console",
+			"twittercloudtags",
+			"killCloud",
+			"twitterCloudTags",
+			"closest",
+			"callback",
+			"init",
+			"clearall",
+			"scrollupto",
+			"pSpan",
+			"hide",
+			"show",
+			"deprecated",
+			"click",
+			"hide",
+			"clearAl",
+			"dOptions",
+			"CloudOptions",
+			"Options",
+			"drawcloud",
+			"executeTwitterFeedSearch",
+			"executeTwitterSearch",
+			"getTwitterHandle",
+			"createTweetCloud",
+			"containerTop",
+			"func",
+			"class",
+			"createTweetCloud",
+			"twitterCloudTags[i]",
+			"callback",
 			"sm",
 			"success",
 			"button",
@@ -710,37 +756,7 @@
 			"]\nGrailbird.\n[",
 			"]\nGrailbird. \n[",
 			"]\nGrailbird.",
-			"]\nGrailbird. \n[",
-			"Grailbird.",
-			"data.tweets",
-			"Grailbird",
-			"grail",
-			"	\n",
-			"return",
-			"i",
-			"tfs",
-			"o",
-			"questiontoDisplay",
-			"load",
-			"border",
-			"canvas",
-			">\n",
-			"selectedAlbum",
-			"when we",
-			"}",
-			"visiting",
-			"top",
-			"Alex",
-			"chambelain",
-			"text",
-			"<br><br>",
-			";",
-			"album",
-			"ALBUM",
-			"YEAR",
-			"GENRE",
-			"TITLE",
-			"LIFE_DETAIL"
+			"]\nGrailbird. \n["
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -762,7 +778,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -770,15 +786,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 4182,
+						"buffer_size": 4855,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3305,
-								3305
+								3908,
+								3908
 							]
 						],
 						"settings":
@@ -835,100 +851,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1228.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "script.js",
-					"settings":
-					{
-						"buffer_size": 2076,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2076,
-								2076
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 253.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 154,
+						"buffer_size": 234,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								117
+								177,
+								177
 							]
 						],
 						"settings":
@@ -990,100 +931,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "jqueryScript.js",
-					"settings":
-					{
-						"buffer_size": 4092,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4077,
-								4077
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1775.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 4,
+					"buffer": 2,
 					"file": "cloud.js",
 					"settings":
 					{
-						"buffer_size": 15708,
+						"buffer_size": 15710,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3842,
-								3842
+								13473,
+								13473
 							]
 						],
 						"settings":
@@ -1141,7 +1001,163 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3385.0,
+						"translation.y": 5835.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "script.js",
+					"settings":
+					{
+						"buffer_size": 3692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3180,
+								3180
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1250.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "jqueryScript.js",
+					"settings":
+					{
+						"buffer_size": 6491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1054,
+								1054
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 82.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1151,15 +1167,15 @@
 					"file": "twitter_cloud_search.php",
 					"settings":
 					{
-						"buffer_size": 1413,
+						"buffer_size": 1653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								773,
+								773
 							]
 						],
 						"settings":
@@ -1216,7 +1232,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 211.0,
+						"translation.y": 311.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1252,7 +1268,7 @@
 		"cols":
 		[
 			0.0,
-			0.628603104213,
+			0.443281566509,
 			1.0
 		],
 		"rows":
@@ -1287,6 +1303,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 247.0,
+	"side_bar_width": 119.0,
 	"status_bar_visible": true
 }
