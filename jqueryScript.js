@@ -202,7 +202,7 @@ $(document).ready(function() {
 	}
 
 	var executeTwitterAccountSearch = function() {
-		executeSearch('#twitterHandle', 'twitter_cloud_search.php', '#feedCloudOptions');
+		executeSearch('#twitterHandle', 'twitter_timeline_search.php', '#feedCloudOptions');
 	}
 
 	var executeTwitterTermSearch = function() {
