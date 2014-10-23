@@ -11,23 +11,90 @@ $(document).ready(function() {
 	// Font-Awesome Icons
 	$('.bar-icon-right').tooltip();
 
-	// Takes an array of JSON data for each individual tweet and gets the 
-	// tweet text and date for each, then formats everything for the tags
-	function addTweetTags(arrayOfTweetObjects, variableToSaveTo) {
+	// Takes military time and formats it into clock time	
+	function formatAMPM(date) {
 
-		for (i = 0; i < arrayOfTweetObjects.length; i++) {
-			
-			// Get the text and (modified) date information, then format them
-			var tweetText = arrayOfTweetObjects[i].text;
-			var tweetDate = arrayOfTweetObjects[i].date.slice(0, 10);
-			var displayText = tweetText + " \n" + tweetDate;
-			
-			// Get URL from JSON data
-			var url = arrayOfTweetObjects[i].url;
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
+		var AMorPM = hours >= 12 ? 'pm' : 'am';
+		
+		hours = hours % 12;
+		hours = hours ? hours : 12;
+		
+		minutes = minutes < 10 ? '0' + minutes : minutes;
+		
+		var strTime = hours + ':' + minutes + ' ' + AMorPM;
+		
+		return strTime;
+	}
 
-			// Create "little object" using the extracted information and push to array of objects
+	// Takes 'created_at' values from tweet objects and turns it 
+	// into a format I can use for the tags
+	// If 'withTime' is true, it adds the time to the result
+	function createDate(theGivenDate, withTime) {
+		var tempDate, date;
+		var ms = Date.parse(theGivenDate);
+
+		tempDate = new Date(ms);
+		date = tempDate.toString().slice(0, 10);
+		
+		if (withTime) {
+			
+			time = formatAMPM(tempDate);
+			date += " " + time;
+		}
+
+		return date;
+	}
+
+	// // Takes an array of JSON data for each individual tweet and gets the 
+	// // tweet text and date for each, then formats everything for the tags
+	// function addTweetTags(arrayOfTweetObjects, variableToSaveTo) {
+
+	// 	for (i = 0; i < arrayOfTweetObjects.length; i++) {
+			
+	// 		// Get the text and (modified) date information, then format them
+	// 		var tweetText = arrayOfTweetObjects[i].text;
+	// 		var tweetDate = arrayOfTweetObjects[i].date.slice(0, 10);
+	// 		var displayText = tweetText + " \n" + tweetDate;
+			
+	// 		// Get URL from JSON data
+	// 		var url = arrayOfTweetObjects[i].url;
+
+	// 		// Create "little object" using the extracted information and push to array of objects
+	// 		var newTweetTagObject = createObjectForCloud(displayText, url, variableToSaveTo);
+			
+	// 		variableToSaveTo.push(newTweetTagObject);
+	// 	}
+	// }
+
+	function addTweetTags(arrayOfTweetObjects, variableToSaveTo, whichResults) {
+		var tweetText, tweetDate, url, displayText; 
+
+		for (var i = 0; i < arrayOfTweetObjects.length; i++) {
+			
+			var tweet = arrayOfTweetObjects[i];
+
+			tweetText = tweet.text;
+			url = tweet.url;
+
+			if (whichResults === "twitter_timeline_search.php") {
+				
+				tweetDate = createDate(tweet.date, false);
+
+				displayText = tweetText + " \n" + tweetDate;
+			}
+
+			if (whichResults === "twitter_keyword_search.php") {
+
+				var userName = "- @" + tweet.screen_name;
+				tweetDate = createDate(tweet.date, true);
+
+				displayText = "\n" + tweetText + "\n" + userName + "\n" + tweetDate;
+			}
+
 			var newTweetTagObject = createObjectForCloud(displayText, url, variableToSaveTo);
-			
+
 			variableToSaveTo.push(newTweetTagObject);
 		}
 	}
@@ -167,7 +234,7 @@ $(document).ready(function() {
 				var parsedData = JSON.parse(data);
 				console.log(parsedData);
 				
-				addTweetTags(parsedData, twitterCloudTags);
+				addTweetTags(parsedData, twitterCloudTags, searchURL);
 				setOfTenTweets.init(twitterCloudTags);
 				init(setOfTenTweets.returnTenTweets());
 				scrollDownTo('#clouder', 500);
