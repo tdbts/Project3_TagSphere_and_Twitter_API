@@ -46,7 +46,7 @@ $(document).ready(function() {
 		clouder.style.height = (h * 1.5).toString() + "px";
 		clouder.style.position = "absolute";
 		clouder.style.left = (w / 6).toString() + "px";
-		clouder.style.top = (parentRect.y + 50).toString() + "px";
+		clouder.style.top = (parentRect.y + window.pageYOffset).toString() + "px";
 		
 		window.clouder = new Clouder({
 			container: clouder,
