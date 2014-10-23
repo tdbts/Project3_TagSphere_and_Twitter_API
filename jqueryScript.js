@@ -192,6 +192,7 @@ $(document).ready(function() {
 		// Execute the search only if there is something in the input field
 		if (input.length > 0) {
 
+			clearTweetTags();
 			twitterSearchTerm = getTwitterSearchTerm(searchTermField);
 			eraseAllFieldsButOne('.inputField', searchTermField);
 			displayOptions(optionsDiv);
