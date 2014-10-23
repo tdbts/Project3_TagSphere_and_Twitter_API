@@ -47,27 +47,6 @@ $(document).ready(function() {
 		return date;
 	}
 
-	// // Takes an array of JSON data for each individual tweet and gets the 
-	// // tweet text and date for each, then formats everything for the tags
-	// function addTweetTags(arrayOfTweetObjects, variableToSaveTo) {
-
-	// 	for (i = 0; i < arrayOfTweetObjects.length; i++) {
-			
-	// 		// Get the text and (modified) date information, then format them
-	// 		var tweetText = arrayOfTweetObjects[i].text;
-	// 		var tweetDate = arrayOfTweetObjects[i].date.slice(0, 10);
-	// 		var displayText = tweetText + " \n" + tweetDate;
-			
-	// 		// Get URL from JSON data
-	// 		var url = arrayOfTweetObjects[i].url;
-
-	// 		// Create "little object" using the extracted information and push to array of objects
-	// 		var newTweetTagObject = createObjectForCloud(displayText, url, variableToSaveTo);
-			
-	// 		variableToSaveTo.push(newTweetTagObject);
-	// 	}
-	// }
-
 	function addTweetTags(arrayOfTweetObjects, variableToSaveTo, whichResults) {
 		var tweetText, tweetDate, url, displayText; 
 
