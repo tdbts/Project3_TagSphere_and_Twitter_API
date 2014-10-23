@@ -36,18 +36,39 @@ if (!empty($_GET['q'])) {
 
 		// Accumulate tweets from results
 		$tweet_stream = array();
-	
+
+		// Checks tweet object for urls, and if one exists, 
+		// returns it.  Else, it checks for media urls, and 
+		// if one exists, it returns it.  Else, null.
+		function getURL($theTweet) {
+
+			$url_location = $theTweet['entities']['urls'][0];
+			$media_location = $theTweet['entities']['media'][0];
+
+			if (!(empty($url_location))) {
+
+				return $url_location['expanded_url'];
+
+			} else if (!(empty($media_location))) {
+
+				return $media_location['media_url'];
+
+			} else {
+
+				return NULL;
+			}
+		}
+
 		// Take tweet data, loop through tweets and create an associative array 
 		// containing 'text', 'date', and 'url' keys
 		foreach($tweet_data as $tweet) {
-			
-			$url_array = $tweet['entities']['urls'][0];
-			$urlKey = 'expanded_url';
+
+			$url = getURL($tweet);
 
 			array_push($tweet_stream, array(
 				'text' => $tweet['text'], 
 				'date' => $tweet['created_at'],
-				'url' => $url_array['expanded_url']
+				'url' => $url
 				));
 		}
 
