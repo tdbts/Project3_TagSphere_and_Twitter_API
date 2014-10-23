@@ -206,7 +206,7 @@ $(document).ready(function() {
 	}
 
 	var executeTwitterTermSearch = function() {
-		executeSearch('#search_term', '#', '#searchCloudOptions');
+		executeSearch('#search_term', 'twitter_keyword_search.php', '#searchCloudOptions');
 	}
 
 	// Activates button and input field so that their respective events 
