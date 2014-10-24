@@ -130,7 +130,7 @@ $(document).ready(function() {
 	// navigate to the link contained within the tweet
 	function urlConfirmAssignment(theText, theURL) {
 		var question = confirm(theText + 
-			"\n\n Are you sure you navigate to the link contained in the outlined tweet?");
+			"\n\n Are you sure you sure you want to navigate to the link contained in the outlined tweet?");
 
 		if (question) {
 			window.open(theURL);
@@ -151,11 +151,11 @@ $(document).ready(function() {
 
 	function scrollDownTo(elementSelector, milliseconds) {
 
-	$('html, body').animate({
+		$('html, body').animate({
 
-		scrollTop: $(elementSelector).offset().top
-	}, milliseconds);
-}
+			scrollTop: $(elementSelector).offset().top
+		}, milliseconds);
+	}
 
 	function scrollUpToTop(milliseconds) {
 

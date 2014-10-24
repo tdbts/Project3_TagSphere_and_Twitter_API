@@ -1,0 +1,45 @@
+Refactoring to make Twitter Cloud app more object-oriented
+
+f(x)'s in the app:
+
+*** DOM-related *** [domModule]
+jqueryCheckLoad 
+.tooltip() 
+makeEnterKeyDoSomething
+activateSearchField
+scrollDownTo
+scrollUpToTop
+hideAllButOne
+eraseAllFieldsButOne
+eraseAllFields
+displayOptions
+
+*** Search *** [searchModule]
+getTwitterSearchTerm
+search [!!!This f(x) has so many dependencies, I may need to 
+do something special with it!!!]
+executeSearch
+executeTwitterAccountSearch
+executeTwitterTermSearch
+
+*** Tags *** [tagModule]
+formatAMPM
+createDate
+createObjectForCloud [!!! will split up into 'createID' and 'createObjectForCloud' !!!]
+addTweetTags
+clearTweetTags
+
+*** Cloud *** [cloudModule]
+urlConfirmAssignment
+urlCallback
+killCloud [!!!defined outside module!!!]
+checkIfCloudExists [!!!defined outside module!!!]
+init
+getTenMoreTweets
+$('#getTenPreviousTweets').on('click'...) [!!! putting into own method - activateTenMoreTweetsButton !!!]
+
+setOfTenTweets [module]
+
+$('.clearAll').click... [own f(x)]
+
+
