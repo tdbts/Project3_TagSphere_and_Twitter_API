@@ -1,22 +1,24 @@
 $(document).ready(function() {
 
+	// Array that will hold the tags used to generate the cloud
 	var twitterCloudTags = [];
 
 	var domModule = (function() {
 		
 		return {
-			// INVOKE with domModule.jqueryCheckLoad('#header', 700)
+			
+			// Check to make sure jQuery loaded properly
 			jqueryCheckLoad: function(selector, milliseconds) {
 
 				$(selector).fadeOut(milliseconds).fadeIn(milliseconds);
 			},
 
-			// INVOKE with domModule.activateTooltip('.bar-icon-right')
 			activateTooltip: function(selector) {
 				
 				$(selector).tooltip(); 
 			},
 
+			// Make input fields responsive to enter key
 			makeEnterKeyDoSomething: function(selector, func) {
 				
 				$(selector).keydown(function(e) {
@@ -28,6 +30,8 @@ $(document).ready(function() {
 				});
 			},
 
+			// Activates button and input field so that their respective events 
+			// trigger the given f(x)
 			activateSearchField: function(buttonID, inputID, func) {
 				
 				$(buttonID).on('click', function() {
@@ -82,6 +86,7 @@ $(document).ready(function() {
 	
 		return {
 
+			// Takes military time and formats it into clock time
 			formatAMPM: function(date) {
 				
 				var hours = date.getHours();
@@ -98,6 +103,9 @@ $(document).ready(function() {
 				return strTime;
 			},
 
+			// Takes 'created_at' values from tweet objects and turns them 
+			// into a date format that the tags can use
+			// If 'withTime' is true, it adds the time to the result as well
 			createDate: function(theGivenDate, withTime) {
 				
 				var tempDate, date;
@@ -115,17 +123,25 @@ $(document).ready(function() {
 				return date;
 			},
 
+			// Generates an ID for the new object based upon the number of tags already 
+			// in the tag array.  The first ten tags take thenumbers (as strings) 0-9, 
+			// the next ten 00, 01, 02...09, the next ten 000, 001, 002...009, and so on.
 			createID: function(arr) {
 				
 				var tagLength = arr.length;
 				var subtractor = 0;
 
+				// Starting from zero, subtract from the number of elements in the array, 
+				// until the result is evenly divisible by 10
 				while ((tagLength - subtractor)%10 > 0) {
 					subtractor++;
 				}
 
+				// The first digit of the tag is equal to the amount that had to be 
+				// subtracted to get a number evenly divisible by 10
 				var myFirstDigit = subtractor;
-				
+				// The number of zeroes is equal to the amount of times 10 goes 
+				// into the result of tagLength minus the subtractor
 				var myNumberOfZeroes = (tagLength - subtractor)/10;
 
 				function output(firstDigit, numberOfZeroes) {
@@ -143,10 +159,13 @@ $(document).ready(function() {
 						return firstDigit.toString() + zeroes;
 					}
 				}
-
+				// Invoke the 'output' f(x)
 				return output(myFirstDigit, myNumberOfZeroes); 	
 			},
 
+			// For input, instantiations of the Clouder class accept an array 
+			// of "little objects" of the form: {text: theText, id: theID, weight: theWeight}.
+			// This f(x) creates a single "little object" for the cloud
 			createObjectForCloud: function(theText, theURL, cloudTags) {
 				
 				var theID = this.createID(cloudTags);
@@ -154,6 +173,8 @@ $(document).ready(function() {
 				return {text: theText, id: theID, weight: 0.1, url: theURL};
 			},
 
+			// Adds tweet tag objects to the array of tweet tags
+			// Formatting of the text depends upon which search URL is invoked
 			addTweetTags: function(arrayOfTweetObjects, variableToSaveTo, whichResults) {
 				
 				var tweetText, tweetDate, url, displayText;
@@ -199,6 +220,8 @@ $(document).ready(function() {
 	
 		return {
 
+			// Displays dialog box that shows tweet text and asks the user if they would 
+			// like to navigate to the link contained within the tweet 
 			urlConfirmAssignment: function(theText, theURL) {
 				
 				var question = confirm(theText + 
@@ -209,6 +232,10 @@ $(document).ready(function() {
 				} else return;
 			},
 
+			// Callback f(x) for when tweet tags are clicked upon
+			// Checks to see whether tags exist, and if so, loops through the tag array 
+			// until it finds the "little object" with the matching id, and then invokes 
+			// 'urlConfirmAssignment', passing it the tweet text and url
 			urlCallback: function(id) {
 				
 				if (twitterCloudTags.length !== 0) {
@@ -233,6 +260,8 @@ $(document).ready(function() {
 				window.clouder.kill();
 			},
 
+			// Check to see if tags are already displayed from a previous search.
+			// If so, kill that cloud.
 			checkIfCloudExists: function() {
 				
 				if ($('#clouder').children().length > 0) {
@@ -241,6 +270,7 @@ $(document).ready(function() {
 				}
 			},
 
+			// Initialize tag cloud
 			init: function(variableContainingTags) {
 				
 				this.checkIfCloudExists();
@@ -285,16 +315,23 @@ $(document).ready(function() {
 				return $(searchFieldID).val();
 			},
 
+			// AJAX request to Twitter for tweet data
 			search: function(searchTerms, searchURL) {
 				
+				// If cloud tags already exist, kill cloud before
+				// running the AJAX request
 				cloudModule.checkIfCloudExists();
 
 				$.ajax({
 
+					// Create URL for tweet search
 					url: searchURL + "?q=" + searchTerms,
 
 					success: function(data) {
 						
+						// Take the returned string and parse into queryable JSON
+						// The server will have already cut the data down to 
+						// only what is needed for the cloud
 						var parsedData = JSON.parse(data);
 						console.log(parsedData);
 
@@ -311,11 +348,13 @@ $(document).ready(function() {
 				});
 			},
 
+			// Abstraction of general search process
 			executeSearch: function(searchTermField, url, optionsDiv) {
 				
 				var twitterSearchTerm;
 				var input = $.trim($(searchTermField).val());
 
+				// Execute the search only if there is something in the input field
 				if (input.length > 0) {
 
 					tagModule.clearTweetTags();
@@ -340,6 +379,8 @@ $(document).ready(function() {
 	
 	})();
 
+	// When 'Clear Tags' button clicked, kill the cloud, reset the tag array, 
+	// then autoscroll back up to the top
 	function activateClearTagsButton() {
 
 		$('.clearAll').click(function() {
@@ -354,6 +395,11 @@ $(document).ready(function() {
 		});
 	}
 
+	// Module that is initialized with the array of "little tweetobjects"
+	// The module takes that array and breaks the objects up into arrays
+	// of length 10, and pushes them to an array which holds them all.
+	// The module then returns 10 tweet objects at a time, and when it has 
+	// returned all of them, the counter resets to 0.
 	var setOfTenTweets = (function() {
 
 		var counter;
@@ -416,7 +462,10 @@ $(document).ready(function() {
 	})();
 
 	// IMPLEMENTATION
+
+	// Check that jQuery is working properly
 	domModule.jqueryCheckLoad('#header', 700);
+	// Bootstrap tooltips
 	domModule.activateTooltip('.bar-icon-right');
 
 	activateClearTagsButton();
