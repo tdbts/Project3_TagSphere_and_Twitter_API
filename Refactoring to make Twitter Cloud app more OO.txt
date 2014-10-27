@@ -36,10 +36,79 @@ killCloud [!!!defined outside module!!!]
 checkIfCloudExists [!!!defined outside module!!!]
 init
 getTenMoreTweets
-$('#getTenPreviousTweets').on('click'...) [!!! putting into own method - activateTenMoreTweetsButton !!!]
+$('#getTenPreviousTweets').on('click'...) [!!! putting into method - activateTenMoreTweetsButton !!!]
 
 setOfTenTweets [module]
 
 $('.clearAll').click... [own f(x)]
 
 
+****************
+Okay, so first try in -- not a complete 
+disaster.  Some parts are working, some are not.  
+
+The jQuery is showing that it's loaded.  
+If I append a () to invoke the execute search f(x) for the timeline search, 
+the tags show up and the callback f(x)'s work.
+
+The cleartags button works.
+
+However, a bunch of things aren't working:
+- The search field buttons/enter key responses don't work.
+- Even appending a () to the end of the execute search f(x) for the keyword search doesn't make the tags show up.  It executes the ajax request just fine, but the tags don't show up.
+
+Let's go down the list of f(x)'s, and see what appears to be working and not working.  Maybe then I can see what the broken f(x)'s have in common so I can fix them.
+
+
+*** DOM-related *** [domModule]
+jqueryCheckLoad - [works]
+.tooltip() - [works]
+makeEnterKeyDoSomething - BROKEN 
+activateSearchField - BROKEN
+scrollDownTo - [works]
+scrollUpToTop - [works]
+hideAllButOne - ~~~not sure~~~
+eraseAllFieldsButOne - [works]
+eraseAllFields - [works]
+displayOptions - [works]
+
+*** Search *** [searchModule]
+getTwitterSearchTerm - [works]
+search - [works]
+executeSearch - [works]
+executeTwitterAccountSearch - [works]
+executeTwitterTermSearch - [works]
+
+*** Tags *** [tagModule]
+formatAMPM - [works]
+createDate - [works]
+createID - [works]
+createObjectForCloud - [works] 
+addTweetTags ***may be key *** - [works] for timeline search, but BROKEN for keyword search
+clearTweetTags - [works]
+
+*** Cloud *** [cloudModule]
+urlConfirmAssignment - BROKEN
+urlCallback - *** may be key ***  - [works] for tweets without urls, but BROKEN for tweets with urls
+killCloud - [works]
+checkIfCloudExists - [works]
+init - [works]
+getTenMoreTweets ~~~ can't tell ~~~
+$('#getTenPreviousTweets').on('click'...) - BROKEN
+
+setOfTenTweets [module] - ~~~Seems to work, but I also got an error that counter is undefined ~~~
+
+$('.clearAll').click... - [works]
+
+
+
+***********************************************************
+The problem definitely has to do with the 'this' keyword.  To be honest, I've never 
+worked so extensively with it, and I can see my ignorance on the subject is poking 
+through, causing some problems.  But this means this (NPI) is a really great 
+opportunity to learn something valuable.  
+
+I've noticed that all the f(x)'s that don't use 'this' work just fine.  Moreover, 
+f(x)'s which use 'this' but save it to a variable work fine as well (e.g. 
+'createIDForCloud').  I imagine .bind, .call and .apply are going to be needed to 
+help me solve these issues.

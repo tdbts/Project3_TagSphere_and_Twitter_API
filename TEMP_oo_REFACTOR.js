@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 				if (withTime) {
 
-					time = formatAMPM(tempDate);
+					time = this.formatAMPM.call(tagModule, tempDate);
 					date += " " + time;
 				}
 
@@ -181,6 +181,7 @@ $(document).ready(function() {
 					}
 
 					var newTweetTagObject = this.createObjectForCloud(displayText, url, variableToSaveTo);
+					console.log(newTweetTagObject);
 
 					variableToSaveTo.push(newTweetTagObject);
 				}
@@ -259,21 +260,17 @@ $(document).ready(function() {
 					container: clouder,
 					tags: variableContainingTags,
 					nonSense: 0.3,
-					callback: this.urlCallback
+					callback: this.urlCallback.bind(cloudModule)
 				});
 			},
 
 			getTenMoreTweets: function() {
 				
-				this.init(setOfTenTweets.returnTenTweets());
+				this.init.call(cloudModule, setOfTenTweets.returnTenTweets.call(setOfTenTweets));
 			},
 
 			activateTenMoreTweetsButton: function() {
-				
-				$('#getTenPreviousTweets').on('click', function() {
-					
-					this.getTenMoreTweets();
-				});
+				$('#getTenPreviousTweets').click(this.getTenMoreTweets.bind(cloudModule));
 			}
 		}
 	
@@ -281,60 +278,64 @@ $(document).ready(function() {
 
 	var searchModule = (function() {
 	
-		getTwitterSearchTerm: function(searchFieldID) {
-			
-			return $(searchFieldID).val();
-		},
+		return {
 
-		search: function(searchTerms, searchURL) {
-			
-			cloudModule.checkIfCloudExists();
+			getTwitterSearchTerm: function(searchFieldID) {
+				
+				return $(searchFieldID).val();
+			},
 
-			$.ajax({
+			search: function(searchTerms, searchURL) {
+				
+				cloudModule.checkIfCloudExists();
 
-				url: searchURL + "?q=" + searchTerms,
+				$.ajax({
 
-				success: function(data) {
-					
-					var parsedData = JSON.parse(data);
-					console.log(parsedData);
+					url: searchURL + "?q=" + searchTerms,
 
-					tagModule.addTweetTags(parsedData, twitterCloudTags, searchURL);
-					setOfTenTweets.init(twitterCloudTags);
-					cloudModule.init(setOfTenTweets.returnTenTweets());
-					domModule.scrollDownTo('#clouder', 500);
-				},
+					success: function(data) {
+						
+						var parsedData = JSON.parse(data);
+						console.log(parsedData);
 
-				error: function() {
-					
-					$('#clouder').html('Search for Tweets failed!');
+						tagModule.addTweetTags(parsedData, twitterCloudTags, searchURL);
+						setOfTenTweets.init(twitterCloudTags);
+						cloudModule.init(setOfTenTweets.returnTenTweets());
+						domModule.scrollDownTo('#clouder', 500);
+					},
+
+					error: function() {
+						
+						$('#clouder').html('Search for Tweets failed!');
+					}
+				});
+			},
+
+			executeSearch: function(searchTermField, url, optionsDiv) {
+				
+				var twitterSearchTerm;
+				var input = $.trim($(searchTermField).val());
+
+				if (input.length > 0) {
+
+					tagModule.clearTweetTags();
+					twitterSearchTerm = this.getTwitterSearchTerm(searchTermField);
+					domModule.eraseAllFieldsButOne('.inputField', searchTermField);
+					domModule.displayOptions(optionsDiv);
+					this.search(twitterSearchTerm, url);
 				}
-			});
-		},
+			},
 
-		executeSearch: function(searchTermField, url, optionsDiv) {
-			
-			var twitterSearchTerm;
-			var input = $.trim($(searchTermField).val());
+			executeTwitterAccountSearch: function() {
+				
+				this.executeSearch.call(searchModule, '#twitterHandle', 'twitter_timeline_search.php', '#feedCloudOptions');
+			},
 
-			if (input.length > 0) {
-
-				tagModule.clearTweetTags();
-				twitterSearchTerm = this.getTwitterSearchTerm(searchTermField);
-				domModule.eraseAllFieldsButOne('.inputField', searchTermField);
-				domModule.displayOptions(optionsDiv);
-				this.search(twitterSearchTerm, url);
+			executeTwitterTermSearch: function() {
+				
+				this.executeSearch.call(searchModule, '#search_term', 'twitter_keyword_search.php', '#searchCloudOptions');
 			}
-		},
 
-		executeTwitterAccountSearch: function() {
-			
-			this.executeSearch('#twitterHandle', 'twitter_timeline_search.php', '#feedCloudOptions');
-		},
-
-		executeTwitterTermSearch: function() {
-			
-			this.executeSearch('#search_term', 'twitter_keyword_search.php', '#searchCloudOptions');
 		}
 	
 	})();
@@ -420,9 +421,9 @@ $(document).ready(function() {
 
 	activateClearTagsButton();
 
-	domModule.activateSearchField('#createTwitterFeedCloud', '#twitterHandle', executeTwitterAccountSearch);
-	domModule.activateSearchField('#createTweetSearchCloud', '#search_term', executeTwitterTermSearch);
+	domModule.activateSearchField.call(domModule, '#createTwitterFeedCloud', '#twitterHandle', searchModule.executeTwitterAccountSearch.bind(searchModule));
+	domModule.activateSearchField.call(domModule, '#createTweetSearchCloud', '#search_term', searchModule.executeTwitterTermSearch.bind(searchModule));
 
-	cloudModule.activateTenMoreTweetsButton();
+	cloudModule.activateTenMoreTweetsButton.call(cloudModule);
 
 });
