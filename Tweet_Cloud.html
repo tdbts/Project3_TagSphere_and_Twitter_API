@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<title>Twitter Tag Cloud</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">tdbts</a>
+			</div>
+			<div style="height: 1px;" class="navbar-collapse collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="../index.html" class="text_link">Home</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle text_link" data-toggle="dropdown">About <span class="caret bootstrapSpan"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Bio</a></li>
+							<li><a href="#">Resume</a></li>
+							<li><a href="#">FFs</a></li>
+						</ul>
+					</li>
+					<li class="active"><a href="#" class="dropdown-toggle text_link" data-toggle="dropdown">Portfolio<span class="caret bootstrapSpan"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="Tweet_Cloud.html">Tweet Cloud</a></li>
+							<li><a href="#"><em>Project 2</em></a></li>
+							<li><a href="#"><em>Project 3</em></a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="text_link">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#emailModal" role="button" data-toggle="modal" id="mail_icon" class="link_icon"><span class="fa fa-envelope fa-2x bar-icon bootstrapSpan" data-toggle="tooltip" data-placement="bottom" title="Email"></span></a>
+					<div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title">Contact Form</h4>
+								</div>
+								<div class="modal-body">
+									<form action="send_form_email.php" name="commentform" method="post" class="form-horizontal">
+										<div class="form-group">
+											<label for="first_name" class="control-label col-md-4">First Name</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="last_name" class="control-label col-md-4">Last Name</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="email" class="control-label col-md-4">Email Address</label>
+											<div class="col-md-6 input-group" id="email_input">
+												<span class="input-group-addon bootstrapSpan">@</span>
+												<input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="comment" class="control-label col-md-4">Question or Comment</label>
+											<div class="col-md-6">
+												<textarea name="comments" id="comments" rows="6" class="form-control" placeholder="Your question or comment here"></textarea>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-md-6">
+												<button class="btn btn-primary pull-right" type="submit" value="Submit" id="send_email_btn">Send</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li><a href="#" id="twitter_icon" class="link_icon"><span class="fa fa-twitter fa-2x bar-icon bootstrapSpan" data-toggle="tooltip" data-placement="bottom" title="Twitter"></span></a></li>
+					<li><a href="#" id="github_icon" class="link_icon"><span class="fa fa-github fa-2x bar-icon bootstrapSpan" data-toggle="tooltip" data-placement="bottom" title="Github"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				
+				<h1 id="header">Tag Cloud</h1>
+
+				<p id="cloudExplain">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores soluta, laudantium dignissimos. Maiores sequi architecto veritatis ad nihil porro ratione. Quo, quas facilis dolorem molestiae non beatae soluta placeat asperiores. Aliquam quidem voluptate molestias tempore totam sapiente officia accusamus, eligendi quisquam libero at dicta inventore qui, iusto repudiandae veniam ab.</p>
+			</div>
+			<div class="col-md-4">
+				<h4 class="cloudTitle">Create a Cloud From Your Twitter Feed</h4>
+				<p>Enter Your Twitter Handle: </p>
+				<div class="input-group">
+					<input type="text" name="twitterName" class="inputField" id="twitterHandle">
+					<button type="button" id="createTwitterFeedCloud" class="btn btn-primary btn-xs">Create Tweet Cloud</button>
+				</div>
+				<br>
+				
+				<div class="options" id="feedCloudOptions">
+					<p>Options:</p>
+					<button type="button" id="getTenPreviousTweets" class="btn btn-primary btn-xs">Get Ten Previous Tweets</button>
+					<button type="button" class="btn btn-primary btn-xs clearAll">Clear Tags</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h4 class="cloudTitle">Create a Cloud From Your Twitter Search</h4>
+				<p>Enter Your Search Term: </p> <input type="text" name="twitter_search_term" class="inputField" id="search_term">
+				<button type="button" id="createTweetSearchCloud" class="btn btn-primary btn-xs">Create Tweet Cloud</button>
+				<br><br>
+				
+				<div class="options" id="searchCloudOptions">
+					<p>Options:</p>
+					<button type="button" id="pauseCloudAutoRefresh" class="btn btn-primary btn-xs">Pause Cloud Auto Refresh</button>
+					<button type="button" class="btn btn-primary btn-xs clearAll">Clear Tags</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="cloudParent">
+		<div id="clouder"></div>
+	</div>
+
+
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="cloud.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
