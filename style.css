@@ -2,11 +2,31 @@
 	
 }
 
+.navbar {
+	margin-bottom: 0px;
+	background-color: #333;
+	border: 0px;
+}
+
+.navbar-nav {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.nav > li > a:not(.text_link) {
+	padding: 10px 15px;
+}
+
 span:not(.bootstrapSpan) {
 	width: 250px;
 	padding: 5px;
 	border-radius: 10px;
 	word-wrap: normal;
+}
+
+#email_input {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .cloudTitle {

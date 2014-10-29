@@ -14,29 +14,80 @@
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar bootstrapSpan"></span>
-					<span class="icon-bar bootstrapSpan"></span>
-					<span class="icon-bar bootstrapSpan"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
 				<a href="#" class="navbar-brand">tdbts</a>
 			</div>
 			<div style="height: 1px;" class="navbar-collapse collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="../index.html">Home</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret bootstrapSpan"></span></a>
+					<li><a href="../index.html" class="text_link">Home</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle text_link" data-toggle="dropdown">About <span class="caret bootstrapSpan"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">Bio</a></li>
 							<li><a href="#">Resume</a></li>
 							<li><a href="#">FFs</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">Contact</a></li>
+					<li class="active"><a href="#" class="dropdown-toggle text_link" data-toggle="dropdown">Portfolio<span class="caret bootstrapSpan"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">Tweet Cloud</a></li>
+							<li><a href="#"><em>Project 2</em></a></li>
+							<li><a href="#"><em>Project 3</em></a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="text_link">Contact</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="fa fa-envelope fa-2x bootstrapSpan bar-icon-right" data-toggle="tooltip" data-placement="bottom" title="Email"></span></a></li>
-					<li><a href="#"><span class="fa fa-twitter fa-2x bootstrapSpan bar-icon-right" data-toggle="tooltip" data-placement="bottom" title="Twitter"></span></a></li>
-					<li><a href="#"><span class="fa fa-github fa-2x bootstrapSpan bar-icon-right" data-toggle="tooltip" data-placement="bottom" title="Github"></span></a></li>
+					<li><a href="#emailModal" role="button" data-toggle="modal" id="mail_icon" class="link_icon"><span class="fa fa-envelope fa-2x bar-icon bootstrapSpan" data-toggle="tooltip" data-placement="bottom" title="Email"></span></a>
+					<div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title">Contact Form</h4>
+								</div>
+								<div class="modal-body">
+									<form action="send_form_email.php" name="commentform" method="post" class="form-horizontal">
+										<div class="form-group">
+											<label for="first_name" class="control-label col-md-4">First Name</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="last_name" class="control-label col-md-4">Last Name</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="email" class="control-label col-md-4">Email Address</label>
+											<div class="col-md-6 input-group" id="email_input">
+												<span class="input-group-addon bootstrapSpan">@</span>
+												<input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="comment" class="control-label col-md-4">Question or Comment</label>
+											<div class="col-md-6">
+												<textarea name="comments" id="comments" rows="6" class="form-control" placeholder="Your question or comment here"></textarea>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-md-6">
+												<button class="btn btn-primary pull-right" type="submit" value="Submit" id="send_email_btn">Send</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li><a href="#" id="twitter_icon" class="link_icon"><span class="fa fa-twitter fa-2x bar-icon bootstrapSpan" data-toggle="tooltip" data-placement="bottom" title="Twitter"></span></a></li>
+					<li><a href="#" id="github_icon" class="link_icon"><span class="fa fa-github fa-2x bar-icon bootstrapSpan" data-toggle="tooltip" data-placement="bottom" title="Github"></span></a></li>
 				</ul>
 			</div>
 		</div>
