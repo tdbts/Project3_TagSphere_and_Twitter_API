@@ -2,6 +2,7 @@
 	
 }
 
+/* NAVBAR CSS */
 .navbar {
 	margin-bottom: 0px;
 	background-color: #333;
@@ -17,16 +18,17 @@
 	padding: 10px 15px;
 }
 
+#email_input {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/* END OF NAVBAR CSS */
+
 span:not(.bootstrapSpan) {
 	width: 250px;
 	padding: 5px;
 	border-radius: 10px;
 	word-wrap: normal;
-}
-
-#email_input {
-	padding-left: 15px;
-	padding-right: 15px;
 }
 
 .cloudTitle {
