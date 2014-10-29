@@ -80,8 +80,6 @@ $(document).ready(function() {
 	
 	})();
 
-
-
 	var tagModule = (function() {
 	
 		return {
