@@ -303,7 +303,7 @@
 			"file": "script.js",
 			"settings":
 			{
-				"buffer_size": 12510,
+				"buffer_size": 12790,
 				"line_ending": "Windows"
 			}
 		},
@@ -794,7 +794,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -867,7 +867,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2000.0,
+						"translation.y": 390.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -877,15 +877,15 @@
 					"file": "script.js",
 					"settings":
 					{
-						"buffer_size": 12510,
+						"buffer_size": 12790,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11228,
-								11228
+								12785,
+								12785
 							]
 						],
 						"settings":
@@ -942,7 +942,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1811.0,
+						"translation.y": 6136.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1169,7 +1169,8 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
