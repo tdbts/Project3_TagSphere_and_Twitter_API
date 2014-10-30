@@ -75,6 +75,14 @@ $(document).ready(function() {
 				
 				this.hideAllButOne('.options', optionsID);
 				$(optionsID).fadeIn(3000);
+			},
+
+			attachLink: function(selector, url) {
+				
+				$(selector).on('click', function() {
+			
+					window.open(url);
+				});
 			}			
 		}
 	
@@ -472,5 +480,8 @@ $(document).ready(function() {
 	domModule.activateSearchField.call(domModule, '#createTweetSearchCloud', '#search_term', searchModule.executeTwitterTermSearch.bind(searchModule));
 
 	cloudModule.activateTenMoreTweetsButton.call(cloudModule);
+
+	domModule.attachLink('#twitter_icon', 'http://www.twitter.com/VRSanchez8717');
+	domModule.attachLink('#github_icon', 'http://www.github.com/tdbts');
 
 });
