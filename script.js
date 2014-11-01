@@ -468,7 +468,6 @@ $(document).ready(function() {
 	})();
 
 	// IMPLEMENTATION
-
 	// Check that jQuery is working properly
 	domModule.jqueryCheckLoad('#header', 700);
 	// Bootstrap tooltips
