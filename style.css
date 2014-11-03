@@ -43,4 +43,7 @@ span:not(.bootstrapSpan) {
 	display: none;
 }
 
+.inputField {
+	margin-right: 5px;
+}
 

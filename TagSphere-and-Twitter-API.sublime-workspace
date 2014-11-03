@@ -295,7 +295,7 @@
 			"file": "Tweet_Cloud.html",
 			"settings":
 			{
-				"buffer_size": 6791,
+				"buffer_size": 6812,
 				"line_ending": "Windows"
 			}
 		},
@@ -303,7 +303,7 @@
 			"file": "script.js",
 			"settings":
 			{
-				"buffer_size": 12790,
+				"buffer_size": 12789,
 				"line_ending": "Windows"
 			}
 		},
@@ -794,7 +794,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -802,15 +802,15 @@
 					"file": "Tweet_Cloud.html",
 					"settings":
 					{
-						"buffer_size": 6791,
+						"buffer_size": 6812,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1703,
-								1703
+								6360,
+								6360
 							]
 						],
 						"settings":
@@ -867,7 +867,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 390.0,
+						"translation.y": 2111.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -877,15 +877,15 @@
 					"file": "script.js",
 					"settings":
 					{
-						"buffer_size": 12790,
+						"buffer_size": 12789,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12785,
-								12785
+								12083,
+								12083
 							]
 						],
 						"settings":
@@ -942,7 +942,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6136.0,
+						"translation.y": 440.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

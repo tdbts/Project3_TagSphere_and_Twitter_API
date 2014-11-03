@@ -14,9 +14,9 @@
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<span class="icon-bar bootstrapSpan"></span>
+					<span class="icon-bar bootstrapSpan"></span>
+					<span class="icon-bar bootstrapSpan"></span>
 				</button>
 				<a href="#" class="navbar-brand">tdbts</a>
 			</div>
@@ -118,8 +118,11 @@
 			</div>
 			<div class="col-md-4">
 				<h4 class="cloudTitle">Create a Cloud From Your Twitter Search</h4>
-				<p>Enter Your Search Term: </p> <input type="text" name="twitter_search_term" class="inputField" id="search_term">
-				<button type="button" id="createTweetSearchCloud" class="btn btn-primary btn-xs">Create Tweet Cloud</button>
+				<p>Enter Your Search Term: </p> 
+				<div class="input-group">
+					<input type="text" name="twitter_search_term" class="inputField" id="search_term">
+					<button type="button" id="createTweetSearchCloud" class="btn btn-primary btn-xs">Create Tweet Cloud</button>
+				</div>
 				<br><br>
 				
 				<div class="options" id="searchCloudOptions">
