@@ -83,6 +83,47 @@ $(document).ready(function() {
 			
 					window.open(url);
 				});
+			},
+
+			getVal: function(selector) {
+				
+				return $(selector).val();
+			},
+
+			emailModalAJAX: function() {
+				
+				$('#send_email_btn').on('click', function(event) {
+					
+					var firstName = domModule.getVal.call(domModule, '#first_name');
+					var lastName = domModule.getVal.call(domModule, '#last_name');
+					var email = domModule.getVal.call(domModule, '#email');
+					var comments = domModule.getVal.call(domModule, '#comments');
+					var url = 'send_form_email.php';
+
+					var request = $.ajax({
+
+						type: "POST",
+						url: url,
+						data: {
+							first_name: firstName,
+							last_name: lastName,
+							email: email,
+							comments: comments
+						}
+					});
+
+					request.done(function() {
+						
+						$('#emailModal').modal('hide');
+					});
+
+					request.fail(function() {
+						
+						alert('Sorry, AJAX was unable to process that request!');
+					});
+
+					event.preventDefault();
+				});
 			}			
 		}
 	
@@ -482,5 +523,8 @@ $(document).ready(function() {
 
 	domModule.attachLink('#twitter_icon', 'http://www.twitter.com/VRSanchez8717');
 	domModule.attachLink('#github_icon', 'http://www.github.com/tdbts');
+
+	domModule.emailModalAJAX.call(domModule);
+	$('#send_email_btn').popover({content: 'Thanks for reaching out!'}, 'click');
 
 });

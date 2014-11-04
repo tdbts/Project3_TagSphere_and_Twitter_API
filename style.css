@@ -22,6 +22,17 @@
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
+.popover {
+	background-color: #E74C3C;
+	color: #ECF0F1;
+	width: 120px;
+}
+
+.popover.right .arrow:after {
+	border-right-color: #E74C3C;
+}
+
 /* END OF NAVBAR CSS */
 
 span:not(.bootstrapSpan) {
