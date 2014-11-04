@@ -2,7 +2,7 @@
 
 if(isset($_POST['email'])) {
 
-	require 'test_input.php';
+	require '/shared/test_input.php';
 
 	$email_to = "VinnySanchez87@gmail.com";
 	$email_subject = "New Message From a Visitor to Your Homepage";

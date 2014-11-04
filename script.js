@@ -98,7 +98,7 @@ $(document).ready(function() {
 					var lastName = domModule.getVal.call(domModule, '#last_name');
 					var email = domModule.getVal.call(domModule, '#email');
 					var comments = domModule.getVal.call(domModule, '#comments');
-					var url = 'send_form_email.php';
+					var url = '/shared/send_form_email.php';
 
 					var request = $.ajax({
 
