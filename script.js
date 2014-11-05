@@ -71,8 +71,20 @@ $(document).ready(function() {
 				$(theClass).val('');
 			},
 
+			deactivateToggleForAccordion: function(selector) {
+				
+				$(selector).collapse({toggle: false});
+			},
+
+			revealOptionsCollapse: function() {
+				
+				$('.collapse:not(#collapseThree)').collapse('hide');
+				$('#collapseThree').collapse('show');
+			},
+
 			displayOptions: function(optionsID) {
 				
+				this.revealOptionsCollapse();
 				this.hideAllButOne('.options', optionsID);
 				$(optionsID).fadeIn(3000);
 			},
@@ -328,7 +340,7 @@ $(document).ready(function() {
 				var parentRect = parent.getBoundingClientRect();
 
 				clouder.style.width = (w * 3 / 4).toString() + "px";
-				clouder.style.height = (h * 1.75).toString() + "px";
+				clouder.style.height = (h * 1.25).toString() + "px";
 				clouder.style.position = "absolute";
 				clouder.style.left = (w / 6).toString() + "px";
 				clouder.style.top = (parentRect.y + window.pageYOffset).toString() + "px";
@@ -336,7 +348,7 @@ $(document).ready(function() {
 				window.clouder = new Clouder({
 					container: clouder,
 					tags: variableContainingTags,
-					nonSense: 0.3,
+					nonSense: 0.4,
 					callback: this.urlCallback.bind(cloudModule)
 				});
 			},
@@ -510,9 +522,12 @@ $(document).ready(function() {
 
 	// IMPLEMENTATION
 	// Check that jQuery is working properly
-	domModule.jqueryCheckLoad('#header', 700);
+	domModule.jqueryCheckLoad('#header', 1000);
 	// Bootstrap tooltips
 	domModule.activateTooltip('.bar-icon-right');
+
+	domModule.deactivateToggleForAccordion('.collapse');
+	$('#collapseOne').collapse('show');
 
 	activateClearTagsButton();
 

@@ -46,13 +46,13 @@ span:not(.bootstrapSpan) {
 	padding-top: 20px;
 }
 
-#feedCloudOptions {
+#feedCloudOptions, #searchCloudOptions {
 	display: none;
 }
 
-#searchCloudOptions {
+/*#searchCloudOptions {
 	display: none;
-}
+}*/
 
 .inputField {
 	margin-right: 5px;
