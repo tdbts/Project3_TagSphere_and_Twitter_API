@@ -363,7 +363,7 @@ $(document).ready(function() {
 				var parentRect = parent.getBoundingClientRect();
 
 				clouder.style.width = (w * 3 / 4).toString() + "px";
-				clouder.style.height = (h * 1.25).toString() + "px";
+				clouder.style.height = (h * 1.1).toString() + "px";
 				clouder.style.position = "absolute";
 				clouder.style.left = (w / 6).toString() + "px";
 				clouder.style.top = (parentRect.y + window.pageYOffset).toString() + "px";
