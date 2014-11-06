@@ -372,7 +372,7 @@ $(document).ready(function() {
 					container: clouder,
 					tags: variableContainingTags,
 					nonSense: 0.3,
-					interval: 50,
+					interval: 10,
 					callback: this.urlCallback.bind(cloudModule)
 				});
 			},

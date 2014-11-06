@@ -375,7 +375,7 @@ function Clouder(params) {
         
         var move = function(o) {
             spin(o, -theta);
-            step(o, (rho*0.2) * stepAngle);
+            step(o, (rho*0.05) * stepAngle);
             spin(o, theta);
         }; // move
         
