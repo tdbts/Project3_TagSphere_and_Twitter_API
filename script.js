@@ -102,6 +102,14 @@ $(document).ready(function() {
 				return $(selector).val();
 			},
 
+			clearField: function(selectors) {
+				
+				selectors.forEach(function(fieldID) {
+					
+					$(fieldID).val("");
+				});
+			},
+
 			emailModalAJAX: function() {
 				
 				$('#send_email_btn').on('click', function(event) {
@@ -127,6 +135,8 @@ $(document).ready(function() {
 					request.done(function() {
 						
 						$('#emailModal').modal('hide');
+						domModule.clearField(['#first_name', '#last_name', '#email', '#comments']);
+						$('#send_email_btn').popover('hide');
 					});
 
 					request.fail(function() {

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"hide",
+				"hide"
+			],
+			[
 				"too",
 				"activateTooltip"
 			],
@@ -292,18 +296,21 @@
 	"buffers":
 	[
 		{
-			"file": "Tweet_Cloud.html",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 6812,
+				"buffer_size": 10418,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "script.js",
+			"contents": "Welcome to the Tag Cloud.  This simple web app uses Twitter's API to get tweets from Twitter's database.  But instead of displaying the tweets in a vertical \"timeline\" as you may be used to seeing, the tag cloud renders the tweets as a collection of floating <span> elements.  \n\nThe tweet cloud responds to the movements of your mouse (mobile interactivity will be coming soon), and will highlight one tweet at a time depending on the position of the cursor.  When you click the screen, the page will alert the text located in the highlighted tag, and if there is a link contained in the tweet, the page will ask you whether you'd like to navigate to the location of the URL.  \n\nCurrently, there are two kinds of tweet clouds you can create.  With the search field on the left, you can create a tweet cloud with your (or anyone's) twitter screen name.  On the right, you can create a cloud by searching for any term you desire.  The tag cloud will display ten tweets at any given time, and the Feed Cloud will allow you to manually refresh the cloud with the ten previous tweets, while the Search Cloud will automatically refresh with more tweets.  Have fun! \n",
+			"file": "summary_paragraph_brainstorm.txt",
+			"file_size": 68,
+			"file_write_time": 130596163157820718,
 			"settings":
 			{
-				"buffer_size": 12789,
+				"buffer_size": 1160,
 				"line_ending": "Windows"
 			}
 		},
@@ -319,7 +326,23 @@
 			"file": "send_form_email.php",
 			"settings":
 			{
-				"buffer_size": 2323,
+				"buffer_size": 2258,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app_tokens.php",
+			"settings":
+			{
+				"buffer_size": 287,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "script.js",
+			"settings":
+			{
+				"buffer_size": 14227,
 				"line_ending": "Windows"
 			}
 		},
@@ -327,7 +350,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 527,
+				"buffer_size": 726,
 				"line_ending": "Windows"
 			}
 		},
@@ -500,9 +523,12 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/TEMP_oo_REFACTOR.js",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/Refactoring to make Twitter Cloud app more OO.txt",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/REFACTOR_bugfix_HUNT.js",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/TEMP_oo_REFACTOR.js",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/OLD_PRErefactor_jqueryScript.js",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/jqueryScript.js",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript Is Sexy/Javascript_Is_Sexy_PROJECT.sublime-workspace",
@@ -545,10 +571,7 @@
 		"/C/Users/Vincent/Documents/Hckr/OPC/JsTagSphere/mainpage.js",
 		"/C/Users/Vincent/Documents/Hckr/OPC/JsTagSphere/README.md",
 		"/C/cygwin64/home/Vincent/bashtest/myscript",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - separator.sublime-snippet",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/Functional Programming in Javascript/scrapPaper.js",
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/PracticeCreatingFunctionalProgrammingFunctions.js",
@@ -645,6 +668,33 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"jquery",
+			"activatetoggle",
+			"activatetogglefor",
+			"ajax",
+			"deactivate",
+			"accordianThree",
+			"accordian",
+			"collapse",
+			"accordian-group",
+			"show",
+			"collapse",
+			"display",
+			"displayoptions",
+			"tag_",
+			"/a",
+			".call",
+			"this",
+			"domModule",
+			".bind(domModule)",
+			");",
+			"domModule, ",
+			"al",
+			"this",
+			"get",
+			"activatecleartags",
+			"alt",
+			"keys",
 			"tag",
 			"caret",
 			"activatesearchf",
@@ -745,34 +795,7 @@
 			"colorbgr",
 			"parsecolor",
 			"color",
-			"3",
-			"rotat",
-			"speed",
-			"nonsense",
-			"font",
-			"size",
-			"top",
-			"width",
-			"height",
-			"width",
-			"size",
-			"fontsize",
-			"descriptor",
-			"xScale",
-			"opa",
-			"!=",
-			"==",
-			"!=",
-			"==",
-			"opa",
-			"addTweetTags",
-			"arrayOfTweetObjects",
-			"callback",
-			"addTweetTags",
-			"window.clouder",
-			"addTweetTags",
-			"init",
-			"createObjectForCloud"
+			"3"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -799,18 +822,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Tweet_Cloud.html",
+					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 6812,
+						"buffer_size": 10418,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6360,
-								6360
+								6055,
+								6055
 							]
 						],
 						"settings":
@@ -867,25 +890,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2111.0,
+						"translation.y": 6518.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "script.js",
+					"file": "summary_paragraph_brainstorm.txt",
 					"settings":
 					{
-						"buffer_size": 12789,
+						"buffer_size": 1160,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12083,
-								12083
+								1159,
+								679
 							]
 						],
 						"settings":
@@ -938,11 +961,10 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 440.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1027,15 +1049,15 @@
 					"file": "send_form_email.php",
 					"settings":
 					{
-						"buffer_size": 2323,
+						"buffer_size": 2258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2301,
-								2301
+								56,
+								56
 							]
 						],
 						"settings":
@@ -1092,7 +1114,81 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 508.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app_tokens.php",
+					"settings":
+					{
+						"buffer_size": 287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								287
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1100,23 +1196,98 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "style.css",
+					"buffer": 5,
+					"file": "script.js",
 					"settings":
 					{
-						"buffer_size": 527,
+						"buffer_size": 14227,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								281,
-								281
+								8915,
+								8915
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4553.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
 							]
 						],
 						"settings":
@@ -1179,7 +1350,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "twitter_keyword_search.php",
 					"settings":
 					{
@@ -1190,8 +1361,8 @@
 						"selection":
 						[
 							[
-								1490,
-								1490
+								775,
+								775
 							]
 						],
 						"settings":
@@ -1255,7 +1426,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "cloud.js",
 					"settings":
 					{
@@ -1361,7 +1532,7 @@
 		"cols":
 		[
 			0.0,
-			0.546368657154,
+			0.33,
 			1.0
 		],
 		"rows":
@@ -1396,6 +1567,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 299.0,
+	"side_bar_width": 81.0,
 	"status_bar_visible": true
 }
