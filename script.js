@@ -76,6 +76,19 @@ $(document).ready(function() {
 				$(selector).collapse({toggle: false});
 			},
 
+			customToggleForAccordion: function(selector) {
+				
+				$(selector).on('click', function() {
+					
+					$('div').removeClass('do_not_close');
+
+					$(this).closest('.panel-heading').next().addClass('do_not_close');
+
+					$('.collapse:not(.do_not_close)').collapse('hide');
+
+				});
+			},
+
 			revealOptionsCollapse: function() {
 				
 				$('.collapse:not(#collapseThree)').collapse('hide');
@@ -538,6 +551,7 @@ $(document).ready(function() {
 
 	domModule.deactivateToggleForAccordion('.collapse');
 	$('#collapseOne').collapse('show');
+	domModule.customToggleForAccordion('.accordion_header');
 
 	activateClearTagsButton();
 
