@@ -299,7 +299,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 10418,
+				"buffer_size": 9395,
 				"line_ending": "Windows"
 			}
 		},
@@ -342,7 +342,7 @@
 			"file": "script.js",
 			"settings":
 			{
-				"buffer_size": 14227,
+				"buffer_size": 14851,
 				"line_ending": "Windows"
 			}
 		},
@@ -366,7 +366,7 @@
 			"file": "cloud.js",
 			"settings":
 			{
-				"buffer_size": 15710,
+				"buffer_size": 15717,
 				"line_ending": "Windows"
 			}
 		}
@@ -374,9 +374,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 150.0,
+		"height": 265.0,
 		"selected_items":
 		[
+			[
+				"packi",
+				"Package Control: Install Package"
+			],
 			[
 				"jvs",
 				"Set Syntax: JavaScript"
@@ -384,10 +388,6 @@
 			[
 				"php",
 				"Set Syntax: PHP"
-			],
-			[
-				"packi",
-				"Package Control: Install Package"
 			],
 			[
 				"synpla",
@@ -506,7 +506,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 464.0
+		"width": 496.0
 	},
 	"console":
 	{
@@ -523,10 +523,11 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Vincent/Documents/Hckr/Server-Side Stuff/Nearly Free Speech/Shared/send_form_email.php",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/Refactoring to make Twitter Cloud app more OO.txt",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/REFACTOR_bugfix_HUNT.js",
 		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/TEMP_oo_REFACTOR.js",
 		"/C/Users/Vincent/Documents/Hckr/Projects/Project3_TagSphere_and_Twitter_API/OLD_PRErefactor_jqueryScript.js",
@@ -649,8 +650,7 @@
 		"/C/Users/Vincent/Documents/Hckr/JavaScript/Javascript the Definitive Guide/Chapter 6 - Objects/Property Getters and Setters.js",
 		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET- defsetter.sublime-snippet",
 		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - defgetter.sublime-snippet",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - objprop.sublime-snippet",
-		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - eqobj.sublime-snippet"
+		"/C/Users/Vincent/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/SNIPPET - objprop.sublime-snippet"
 	],
 	"find":
 	{
@@ -668,6 +668,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rho",
+			"header",
+			"j",
+			"date",
+			"chunk",
+			"rho",
+			"stepAngle",
+			"z",
+			"(",
+			"interval",
+			"onTimer",
+			"spin",
+			"theta",
+			"xscale",
+			"nonsense",
+			"lastX",
+			"setPos",
+			"customToggleForAccordion",
+			"accordion_one",
+			"customToggleForAccordion",
+			"<a ",
+			"accordion",
+			"modal",
+			"tooltip",
 			"jquery",
 			"activatetoggle",
 			"activatetogglefor",
@@ -771,31 +795,7 @@
 			"deprecated",
 			"click",
 			"hide",
-			"clearAl",
-			"dOptions",
-			"CloudOptions",
-			"Options",
-			"drawcloud",
-			"executeTwitterFeedSearch",
-			"executeTwitterSearch",
-			"getTwitterHandle",
-			"createTweetCloud",
-			"containerTop",
-			"func",
-			"class",
-			"createTweetCloud",
-			"twitterCloudTags[i]",
-			"callback",
-			"sm",
-			"success",
-			"button",
-			"containerTop",
-			"offsetTop",
-			"body",
-			"colorbgr",
-			"parsecolor",
-			"color",
-			"3"
+			"clearAl"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -825,15 +825,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 10418,
+						"buffer_size": 9395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6055,
-								6055
+								5547,
+								5547
 							]
 						],
 						"settings":
@@ -890,7 +890,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6518.0,
+						"translation.y": 1581.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1056,8 +1056,8 @@
 						"selection":
 						[
 							[
-								56,
-								56
+								409,
+								409
 							]
 						],
 						"settings":
@@ -1114,7 +1114,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 273.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1196,7 +1196,7 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -1204,15 +1204,15 @@
 					"file": "script.js",
 					"settings":
 					{
-						"buffer_size": 14227,
+						"buffer_size": 14851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8915,
-								8915
+								14015,
+								14019
 							]
 						],
 						"settings":
@@ -1269,7 +1269,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4553.0,
+						"translation.y": 6607.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1286,8 +1286,8 @@
 						"selection":
 						[
 							[
-								12,
-								12
+								279,
+								279
 							]
 						],
 						"settings":
@@ -1430,15 +1430,15 @@
 					"file": "cloud.js",
 					"settings":
 					{
-						"buffer_size": 15710,
+						"buffer_size": 15717,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11937,
-								11937
+								12383,
+								12383
 							]
 						],
 						"settings":
@@ -1496,7 +1496,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1441.0,
+						"translation.y": 4923.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1532,7 +1532,7 @@
 		"cols":
 		[
 			0.0,
-			0.33,
+			0.95,
 			1.0
 		],
 		"rows":
