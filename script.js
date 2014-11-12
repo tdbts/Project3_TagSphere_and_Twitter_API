@@ -248,11 +248,11 @@ $(document).ready(function() {
 			// For input, instantiations of the Clouder class accept an array 
 			// of "little objects" of the form: {text: theText, id: theID, weight: theWeight}.
 			// This f(x) creates a single "little object" for the cloud
-			createObjectForCloud: function(theText, theURL, cloudTags) {
+			createObjectForCloud: function(theText, theURL, cloudTags, imageInTweet) {
 				
 				var theID = this.createID(cloudTags);
 
-				return {text: theText, id: theID, weight: 0.1, url: theURL};
+				return {text: theText, id: theID, weight: 0.1, url: theURL, isImage: imageInTweet};
 			},
 
 			// Adds tweet tag objects to the array of tweet tags
@@ -267,6 +267,7 @@ $(document).ready(function() {
 
 					tweetText = tweet.text;
 					url = tweet.url;
+					imageInTweet = tweet.isImage;
 
 					if (whichResults === "twitter_timeline_search.php") {
 
@@ -283,7 +284,7 @@ $(document).ready(function() {
 						displayText = "\n" + tweetText + "\n" + userName + "\n" + tweetDate;
 					}
 
-					var newTweetTagObject = this.createObjectForCloud(displayText, url, variableToSaveTo);
+					var newTweetTagObject = this.createObjectForCloud(displayText, url, variableToSaveTo, imageInTweet);
 					console.log(newTweetTagObject);
 
 					variableToSaveTo.push(newTweetTagObject);

@@ -42,7 +42,8 @@ if (!empty($_GET['q'])) {
 
 		// Checks tweet object for urls, and if one exists, 
 		// returns it.  Else, it checks for media urls, and 
-		// if one exists, it returns it.  Else, null.
+		// if one exists, it returns it.  Else null.  Specifies 
+		// whether URL is an image or not via boolean.  Else, null.
 		function getURL($theTweet) {
 
 			$url_location = $theTweet['entities']['urls'][0];
@@ -50,15 +51,24 @@ if (!empty($_GET['q'])) {
 
 			if (!(empty($url_location))) {
 
-				return $url_location['expanded_url'];
+				// return $url_location['expanded_url'];
+				return array(
+					'theURL' => $url_location['expanded_url'], 
+					'isImage' => false);
 
 			} else if (!(empty($media_location))) {
 
-				return $media_location['media_url'];
+				// return $media_location['media_url'];
+				return array(
+					'theURL' => $media_location['media_url'], 
+					'isImage' => true
+					);
 
 			} else {
 
-				return NULL;
+				return array(
+					'theURL' => null, 
+					'isImage' => null);
 			}
 		}
 
@@ -71,7 +81,8 @@ if (!empty($_GET['q'])) {
 			array_push($tweet_stream, array(
 				'text' => $tweet['text'],
 				'date' => $tweet['created_at'],
-				'url' => $url,
+				'url' => $url['theURL'],
+				'isImage' => $url['isImage'],
 				'tweet_id' => $tweet['id_str'],
 				'screen_name' => $tweet['user']['screen_name']
 				));

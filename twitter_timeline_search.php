@@ -47,15 +47,24 @@ if (!empty($_GET['q'])) {
 
 			if (!(empty($url_location))) {
 
-				return $url_location['expanded_url'];
+				// return $url_location['expanded_url'];
+				return array(
+					'theURL' => $url_location['expanded_url'], 
+					'isImage' => false);
 
 			} else if (!(empty($media_location))) {
 
-				return $media_location['media_url'];
+				// return $media_location['media_url'];
+				return array(
+					'theURL' => $media_location['media_url'], 
+					'isImage' => true
+					);
 
 			} else {
 
-				return NULL;
+				return array(
+					'theURL' => null, 
+					'isImage' => null);
 			}
 		}
 
@@ -68,7 +77,8 @@ if (!empty($_GET['q'])) {
 			array_push($tweet_stream, array(
 				'text' => $tweet['text'], 
 				'date' => $tweet['created_at'],
-				'url' => $url
+				'url' => $url['theURL'],
+				'isImage' => $url['isImage']
 				));
 		}
 
