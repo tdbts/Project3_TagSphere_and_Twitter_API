@@ -315,6 +315,21 @@ $(document).ready(function() {
 				} else return;
 			},
 
+			displayImageModal: function(imageModalID, options) {
+
+				$(imageModalID).modal(options);
+			},
+
+			setImageSource: function(imgID, url) {
+				
+				$(imgID).attr('src', url);
+			},
+
+			setImageModalTitle: function(titlePlacementID, theText) {
+				
+				$(titlePlacementID).text(theText);
+			},
+
 			// Callback f(x) for when tweet tags are clicked upon
 			// Checks to see whether tags exist, and if so, loops through the tag array 
 			// until it finds the "little object" with the matching id, and then invokes 
@@ -327,10 +342,20 @@ $(document).ready(function() {
 						var theTweet = twitterCloudTags[i];
 
 						if (theTweet.id === id) {
-							if (theTweet.url) {
+							if (theTweet.url && theTweet.isImage) {
+								
+								this.setImageModalTitle('#imageModalLabel', theTweet.text);
+
+								this.setImageSource('#tweet_image', theTweet.url);
+
+								this.displayImageModal('#imageModal', {
+									keyboard: true
+								});
+							
+							} else if (theTweet.url && !theTweet.isImage) {
 
 								this.urlConfirmAssignment(theTweet.text, theTweet.url);
-
+							
 							} else {
 								alert(theTweet.text);
 							}

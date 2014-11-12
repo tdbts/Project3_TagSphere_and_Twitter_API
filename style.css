@@ -58,3 +58,8 @@ span:not(.bootstrapSpan) {
 	margin-right: 5px;
 }
 
+#tweet_image {
+	display: block;
+	margin: auto;
+	max-height: 500px;
+}
