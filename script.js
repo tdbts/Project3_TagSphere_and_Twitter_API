@@ -330,6 +330,18 @@ $(document).ready(function() {
 				$(titlePlacementID).text(theText);
 			},
 
+			clearImageModal: function(labelID, imageID) {
+				
+				$(labelID).text("");
+
+				$(imageID).attr('src', "#");
+			},
+
+			activateModalCloseButtons: 	function(modalCloseButtonClass) {
+				
+				$(modalCloseButtonClass).on('click', cloudModule.clearImageModal.bind(cloudModule, '#imageModalLabel', '#tweet_image'));
+			},
+
 			// Callback f(x) for when tweet tags are clicked upon
 			// Checks to see whether tags exist, and if so, loops through the tag array 
 			// until it finds the "little object" with the matching id, and then invokes 
@@ -586,6 +598,7 @@ $(document).ready(function() {
 	domModule.activateSearchField.call(domModule, '#createTweetSearchCloud', '#search_term', searchModule.executeTwitterTermSearch.bind(searchModule));
 
 	cloudModule.activateTenMoreTweetsButton.call(cloudModule);
+	cloudModule.activateModalCloseButtons.call(cloudModule, '.modal_close');
 
 	domModule.attachLink('#twitter_icon', 'http://www.twitter.com/VRSanchez8717');
 	domModule.attachLink('#github_icon', 'http://www.github.com/tdbts');
