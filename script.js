@@ -5,6 +5,11 @@ $(document).ready(function() {
 
 	var domModule = (function() {
 		
+		function getVal(selector) {
+
+			return $(selector).val();
+		}
+
 		return {
 			
 			// Check to make sure jQuery loaded properly
@@ -123,11 +128,6 @@ $(document).ready(function() {
 				$(popoverID).popover({content: 'Thanks for reaching out!'}, 'click');
 			},
 
-			getVal: function(selector) {
-				
-				return $(selector).val();
-			},
-
 			clearField: function(selectors) {
 				
 				selectors.forEach(function(fieldID) {
@@ -139,11 +139,11 @@ $(document).ready(function() {
 			emailModalAJAX: function() {
 				
 				$('#send_email_btn').on('click', function(event) {
-					
-					var firstName = domModule.getVal.call(domModule, '#first_name');
-					var lastName = domModule.getVal.call(domModule, '#last_name');
-					var email = domModule.getVal.call(domModule, '#email');
-					var comments = domModule.getVal.call(domModule, '#comments');
+
+					var firstName = getVal('#first_name');
+					var lastName = getVal('#last_name');
+					var email = getVal('#email');
+					var comments = getVal('#comments');
 					var url = '/shared/send_form_email.php';
 
 					var request = $.ajax({
