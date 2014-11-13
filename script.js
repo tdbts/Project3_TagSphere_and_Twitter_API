@@ -113,6 +113,11 @@ $(document).ready(function() {
 				});
 			},
 
+			activatePopover: function(popoverID) {
+
+				$(popoverID).popover({content: 'Thanks for reaching out!'}, 'click');
+			},
+
 			getVal: function(selector) {
 				
 				return $(selector).val();
@@ -592,7 +597,8 @@ $(document).ready(function() {
 	domModule.jqueryCheckLoad('#header', 1000);
 	// Bootstrap tooltips
 	domModule.activateTooltip('.bar-icon-right');
-	$('#send_email_btn').popover({content: 'Thanks for reaching out!'}, 'click');
+	// $('#send_email_btn').popover({content: 'Thanks for reaching out!'}, 'click');
+	domModule.activatePopover('#send_email_btn');
 
 	domModule.deactivateToggleForAccordion('.collapse');
 	domModule.customToggleForAccordion('.accordion_header');
