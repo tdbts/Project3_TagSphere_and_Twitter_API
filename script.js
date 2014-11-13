@@ -597,30 +597,62 @@ $(document).ready(function() {
 
 	})();
 
+	function createArrayOfSameElement(param, length) {
+
+		var result = [];
+
+		for (var i = 0; i < length; i++) {
+			
+			result[i] = param;
+		}
+
+		return result;
+	}
+
+	function callModuleMethod(module, method, param) {
+
+		return module[method](param);
+	}
+
+	function invokeMultipleModuleMethods(objectOfParams) {
+
+		var modules = objectOfParams.modules,
+			methods = objectOfParams.methods,
+			params = objectOfParams.params;
+
+		var guageOfLength = modules.length;
+		
+		if (guageOfLength === methods.length && guageOfLength === params.length) {
+
+			for (var i = 0; i < guageOfLength; i++) {
+				
+				callModuleMethod(modules[i], methods[i], params[i]);
+			}
+		}
+
+	}
+
+	var methodInvocationObj = {
+		modules: createArrayOfSameElement(domModule, 6),
+		methods: ['activateTooltip', 'activatePopover', 'deactivateToggleForAccordion', 'customToggleForAccordion', 'openAccordionSegment', 'attachLinks'],
+		params: ['.bar-icon-right', '#send_email_btn', '.collapse', '.accordion_header', '#collapseOne', [
+			{selector: '#twitter_icon', url: 'http://www.twitter.com/VRSanchez8717'}, 
+			{selector: '#github_icon', url: 'http://www.github.com/tdbts'}
+			]]
+	};
+
+	invokeMultipleModuleMethods(methodInvocationObj);
+
 	// IMPLEMENTATION
 	// Check that jQuery is working properly
 	domModule.jqueryCheckLoad('#header', 1000);
-	// Bootstrap tooltips
-	domModule.activateTooltip('.bar-icon-right');
-	domModule.activatePopover('#send_email_btn');
-
-	domModule.deactivateToggleForAccordion('.collapse');
-	domModule.customToggleForAccordion('.accordion_header');
-	domModule.openAccordionSegment('#collapseOne');
-
-
+	
 	activateClearTagsButton();
 	domModule.activateSearchField.call(domModule, '#createTwitterFeedCloud', '#twitterHandle', searchModule.executeTwitterAccountSearch.bind(searchModule));
 	domModule.activateSearchField.call(domModule, '#createTweetSearchCloud', '#search_term', searchModule.executeTwitterTermSearch.bind(searchModule));
 	cloudModule.activateTenMoreTweetsButton.call(cloudModule);
 	cloudModule.activateModalCloseButtons.call(cloudModule, '.modal_close');
 	domModule.emailModalAJAX.call(domModule);
-	domModule.attachLinks([
-		{selector: '#twitter_icon', url: 'http://www.twitter.com/VRSanchez8717'}, 
-		{selector: '#github_icon', url: 'http://www.github.com/tdbts'}
-		]);
-
-
 
 
 
