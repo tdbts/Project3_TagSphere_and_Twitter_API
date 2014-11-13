@@ -102,11 +102,14 @@ $(document).ready(function() {
 				$(optionsID).fadeIn(3000);
 			},
 
-			attachLink: function(selector, url) {
+			attachLinks: function(selectorsAndURLs) {
 				
-				$(selector).on('click', function() {
-			
-					window.open(url);
+				selectorsAndURLs.forEach(function(obj) {
+					
+					$(obj.selector).on('click', function() {
+						
+						window.open(obj.url);
+					});
 				});
 			},
 
@@ -589,23 +592,26 @@ $(document).ready(function() {
 	domModule.jqueryCheckLoad('#header', 1000);
 	// Bootstrap tooltips
 	domModule.activateTooltip('.bar-icon-right');
+	$('#send_email_btn').popover({content: 'Thanks for reaching out!'}, 'click');
 
 	domModule.deactivateToggleForAccordion('.collapse');
-	$('#collapseOne').collapse('show');
 	domModule.customToggleForAccordion('.accordion_header');
+	$('#collapseOne').collapse('show');
+
 
 	activateClearTagsButton();
-
 	domModule.activateSearchField.call(domModule, '#createTwitterFeedCloud', '#twitterHandle', searchModule.executeTwitterAccountSearch.bind(searchModule));
 	domModule.activateSearchField.call(domModule, '#createTweetSearchCloud', '#search_term', searchModule.executeTwitterTermSearch.bind(searchModule));
-
 	cloudModule.activateTenMoreTweetsButton.call(cloudModule);
 	cloudModule.activateModalCloseButtons.call(cloudModule, '.modal_close');
-
-	domModule.attachLink('#twitter_icon', 'http://www.twitter.com/VRSanchez8717');
-	domModule.attachLink('#github_icon', 'http://www.github.com/tdbts');
-
 	domModule.emailModalAJAX.call(domModule);
-	$('#send_email_btn').popover({content: 'Thanks for reaching out!'}, 'click');
+	domModule.attachLinks([
+		{selector: '#twitter_icon', url: 'http://www.twitter.com/VRSanchez8717'}, 
+		{selector: '#github_icon', url: 'http://www.github.com/tdbts'}
+		]);
+
+
+
+
 
 });
