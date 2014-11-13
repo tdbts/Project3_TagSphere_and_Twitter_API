@@ -401,7 +401,7 @@ $(document).ready(function() {
 				var parentRect = parent.getBoundingClientRect();
 
 				clouder.style.width = (w * 3 / 4).toString() + "px";
-				clouder.style.height = (h * 0.9).toString() + "px";
+				clouder.style.height = (h * 0.8).toString() + "px";
 				clouder.style.position = "relative";
 				clouder.style.left = (w / 6).toString() + "px";
 				clouder.style.top = "0px";
@@ -412,7 +412,7 @@ $(document).ready(function() {
 					tags: variableContainingTags,
 					nonSense: 0.3,
 					interval: 10,
-					yScale: 0.7,
+					yScale: 0.9,
 					callback: this.urlCallback.bind(cloudModule)
 				});
 			},
