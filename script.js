@@ -89,6 +89,11 @@ $(document).ready(function() {
 				});
 			},
 
+			openAccordionSegment: function(segmentID) {
+				
+				$(segmentID).collapse('show');
+			},
+
 			revealOptionsCollapse: function() {
 				
 				$('.collapse:not(#collapseThree)').collapse('hide');
@@ -597,12 +602,11 @@ $(document).ready(function() {
 	domModule.jqueryCheckLoad('#header', 1000);
 	// Bootstrap tooltips
 	domModule.activateTooltip('.bar-icon-right');
-	// $('#send_email_btn').popover({content: 'Thanks for reaching out!'}, 'click');
 	domModule.activatePopover('#send_email_btn');
 
 	domModule.deactivateToggleForAccordion('.collapse');
 	domModule.customToggleForAccordion('.accordion_header');
-	$('#collapseOne').collapse('show');
+	domModule.openAccordionSegment('#collapseOne');
 
 
 	activateClearTagsButton();
