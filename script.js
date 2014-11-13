@@ -6,6 +6,7 @@ $(document).ready(function() {
 	var domModule = (function() {
 		
 		// Private f(x)'s
+
 		var getVal = function(selector) {
 
 			return $(selector).val();
@@ -42,139 +43,160 @@ $(document).ready(function() {
 			});
 		};
 
-		return {
+		// Public Methods
+
+		// Check to make sure jQuery loaded properly
+		var jqueryCheckLoad = function(selector, milliseconds) {
+
+			$(selector).fadeOut(milliseconds).fadeIn(milliseconds);
+		};
+
+		var activateTooltip = function(selector) {
 			
-			// Check to make sure jQuery loaded properly
-			jqueryCheckLoad: function(selector, milliseconds) {
+			$(selector).tooltip(); 
+		};
 
-				$(selector).fadeOut(milliseconds).fadeIn(milliseconds);
-			},
+		// Activates button and input field so that their respective events 
+		// trigger the given f(x)
+		var activateSearchField = function(buttonID, inputID, func) {
+			
+			$(buttonID).on('click', function() {
+				func();
+			});
 
-			activateTooltip: function(selector) {
+			makeEnterKeyDoSomething(inputID, function() {
+				func();
+			});
+		};
+
+		var scrollDownTo = function(selector, milliseconds) {
+			
+			$('html, body').animate({
+
+				scrollTop: $(selector).offset().top
+			}, milliseconds);
+		};
+
+		var scrollUpToTop = function(milliseconds) {
+			
+			$('html, body').animate({scrollTop: 0}, milliseconds);
+		};
+
+		var eraseAllFieldsButOne = function(theClass, theID) {
+			
+			$(theClass).not(theID).val('');
+		};
+
+		var eraseAllFields = function(theClass) {
+			
+			$(theClass).val('');
+		};
+
+		var deactivateToggleForAccordion = function(selector) {
+			
+			$(selector).collapse({toggle: false});
+		};
+
+		var customToggleForAccordion = function(selector) {
+			
+			$(selector).on('click', function() {
 				
-				$(selector).tooltip(); 
-			},
+				$('div').removeClass('do_not_close');
 
-			// Activates button and input field so that their respective events 
-			// trigger the given f(x)
-			activateSearchField: function(buttonID, inputID, func) {
+				$(this).closest('.panel-heading').next().addClass('do_not_close');
+
+				$('.collapse:not(.do_not_close)').collapse('hide');
+
+			});
+		};
+
+		var openAccordionSegment = function(segmentID) {
+			
+			$(segmentID).collapse('show');
+		};
+
+		var displayOptions = function(optionsID) {
+			
+			revealOptionsCollapse();
+			hideAllButOne('.options', optionsID);
+			$(optionsID).fadeIn(3000);
+		};
+
+		var attachLinks = function(selectorsAndURLs) {
+			
+			selectorsAndURLs.forEach(function(obj) {
 				
-				$(buttonID).on('click', function() {
-					func();
-				});
-
-				makeEnterKeyDoSomething(inputID, function() {
-					func();
-				});
-			},
-
-			scrollDownTo: function(selector, milliseconds) {
-				
-				$('html, body').animate({
-
-					scrollTop: $(selector).offset().top
-				}, milliseconds);
-			},
-
-			scrollUpToTop: function(milliseconds) {
-				
-				$('html, body').animate({scrollTop: 0}, milliseconds);
-			},
-
-			eraseAllFieldsButOne: function(theClass, theID) {
-				
-				$(theClass).not(theID).val('');
-			},
-
-			eraseAllFields: function(theClass) {
-				
-				$(theClass).val('');
-			},
-
-			deactivateToggleForAccordion: function(selector) {
-				
-				$(selector).collapse({toggle: false});
-			},
-
-			customToggleForAccordion: function(selector) {
-				
-				$(selector).on('click', function() {
+				$(obj.selector).on('click', function() {
 					
-					$('div').removeClass('do_not_close');
-
-					$(this).closest('.panel-heading').next().addClass('do_not_close');
-
-					$('.collapse:not(.do_not_close)').collapse('hide');
-
+					window.open(obj.url);
 				});
-			},
+			});
+		};
 
-			openAccordionSegment: function(segmentID) {
-				
-				$(segmentID).collapse('show');
-			},
+		var activatePopover = function(popoverID) {
 
-			displayOptions: function(optionsID) {
-				
-				revealOptionsCollapse();
-				hideAllButOne('.options', optionsID);
-				$(optionsID).fadeIn(3000);
-			},
+			$(popoverID).popover({content: 'Thanks for reaching out!'}, 'click');
+		};
 
-			attachLinks: function(selectorsAndURLs) {
-				
-				selectorsAndURLs.forEach(function(obj) {
+		var emailModalAJAX = function() {
+			
+			$('#send_email_btn').on('click', function(event) {
+
+				var firstName = getVal('#first_name');
+				var lastName = getVal('#last_name');
+				var email = getVal('#email');
+				var comments = getVal('#comments');
+				var url = '/shared/send_form_email.php';
+
+				var request = $.ajax({
+
+					type: "POST",
+					url: url,
+					data: {
+						first_name: firstName,
+						last_name: lastName,
+						email: email,
+						comments: comments
+					}
+				});
+
+				request.done(function() {
 					
-					$(obj.selector).on('click', function() {
-						
-						window.open(obj.url);
-					});
+					$('#emailModal').modal('hide');
+					clearField(['#first_name', '#last_name', '#email', '#comments']);
+					$('#send_email_btn').popover('hide');
 				});
-			},
 
-			activatePopover: function(popoverID) {
-
-				$(popoverID).popover({content: 'Thanks for reaching out!'}, 'click');
-			},
-
-			emailModalAJAX: function() {
-				
-				$('#send_email_btn').on('click', function(event) {
-
-					var firstName = getVal('#first_name');
-					var lastName = getVal('#last_name');
-					var email = getVal('#email');
-					var comments = getVal('#comments');
-					var url = '/shared/send_form_email.php';
-
-					var request = $.ajax({
-
-						type: "POST",
-						url: url,
-						data: {
-							first_name: firstName,
-							last_name: lastName,
-							email: email,
-							comments: comments
-						}
-					});
-
-					request.done(function() {
-						
-						$('#emailModal').modal('hide');
-						clearField(['#first_name', '#last_name', '#email', '#comments']);
-						$('#send_email_btn').popover('hide');
-					});
-
-					request.fail(function() {
-						
-						alert('Sorry, AJAX was unable to process that request!');
-					});
-
-					event.preventDefault();
+				request.fail(function() {
+					
+					alert('Sorry, AJAX was unable to process that request!');
 				});
-			}			
-		}
+
+				event.preventDefault();
+			});
+		};
+
+		return {
+			jqueryCheckLoad: jqueryCheckLoad,
+			
+			activateTooltip: activateTooltip,
+			activateSearchField: activateSearchField,
+			
+			scrollDownTo: scrollDownTo, 
+			scrollUpToTop: scrollUpToTop,
+			
+			eraseAllFieldsButOne: eraseAllFieldsButOne,
+			eraseAllFields: eraseAllFields, 
+			
+			deactivateToggleForAccordion: deactivateToggleForAccordion, 
+			customToggleForAccordion: customToggleForAccordion, 
+			openAccordionSegment: openAccordionSegment, 
+			displayOptions: displayOptions, 
+			
+			attachLinks: attachLinks, 
+			activatePopover: activatePopover, 
+			emailModalAJAX: emailModalAJAX
+		};
 	
 	})();
 
