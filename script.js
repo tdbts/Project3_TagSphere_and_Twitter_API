@@ -10,6 +10,25 @@ $(document).ready(function() {
 			return $(selector).val();
 		}
 
+		function clearField(selectors) {
+					
+			selectors.forEach(function(fieldID) {
+				
+				$(fieldID).val("");
+			});
+		}
+
+		function revealOptionsCollapse() {
+				
+				$('.collapse:not(#collapseThree)').collapse('hide');
+				$('#collapseThree').collapse('show');
+		}
+
+		function hideAllButOne(theClass, theID) {
+				
+			$(theClass).not(theID).fadeOut();
+		}
+
 		return {
 			
 			// Check to make sure jQuery loaded properly
@@ -61,11 +80,6 @@ $(document).ready(function() {
 				$('html, body').animate({scrollTop: 0}, milliseconds);
 			},
 
-			hideAllButOne: function(theClass, theID) {
-				
-				$(theClass).not(theID).fadeOut();
-			},
-
 			eraseAllFieldsButOne: function(theClass, theID) {
 				
 				$(theClass).not(theID).val('');
@@ -99,16 +113,10 @@ $(document).ready(function() {
 				$(segmentID).collapse('show');
 			},
 
-			revealOptionsCollapse: function() {
-				
-				$('.collapse:not(#collapseThree)').collapse('hide');
-				$('#collapseThree').collapse('show');
-			},
-
 			displayOptions: function(optionsID) {
 				
-				this.revealOptionsCollapse();
-				this.hideAllButOne('.options', optionsID);
+				revealOptionsCollapse();
+				hideAllButOne('.options', optionsID);
 				$(optionsID).fadeIn(3000);
 			},
 
@@ -126,14 +134,6 @@ $(document).ready(function() {
 			activatePopover: function(popoverID) {
 
 				$(popoverID).popover({content: 'Thanks for reaching out!'}, 'click');
-			},
-
-			clearField: function(selectors) {
-				
-				selectors.forEach(function(fieldID) {
-					
-					$(fieldID).val("");
-				});
 			},
 
 			emailModalAJAX: function() {
@@ -161,7 +161,7 @@ $(document).ready(function() {
 					request.done(function() {
 						
 						$('#emailModal').modal('hide');
-						domModule.clearField(['#first_name', '#last_name', '#email', '#comments']);
+						clearField(['#first_name', '#last_name', '#email', '#comments']);
 						$('#send_email_btn').popover('hide');
 					});
 
