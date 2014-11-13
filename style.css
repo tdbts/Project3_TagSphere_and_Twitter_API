@@ -58,6 +58,10 @@ span:not(.bootstrapSpan) {
 	margin-right: 5px;
 }
 
+#image_container {
+	overflow: hidden;
+}
+
 #tweet_image {
 	display: block;
 	margin: auto;
