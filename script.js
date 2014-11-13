@@ -597,6 +597,7 @@ $(document).ready(function() {
 
 	})();
 
+	// IMPLEMENTATION
 	function createArrayOfSameElement(param, length) {
 
 		var result = [];
@@ -614,7 +615,12 @@ $(document).ready(function() {
 		return module[method](param);
 	}
 
-	function invokeMultipleModuleMethods(objectOfParams) {
+	function invokeThisCriticalMethod(module, method, params) {
+
+		return module[method].apply(module, params);
+	}
+
+	function invokeMultipleModuleMethods(objectOfParams, functionToApply) {
 
 		var modules = objectOfParams.modules,
 			methods = objectOfParams.methods,
@@ -626,7 +632,7 @@ $(document).ready(function() {
 
 			for (var i = 0; i < guageOfLength; i++) {
 				
-				callModuleMethod(modules[i], methods[i], params[i]);
+				functionToApply(modules[i], methods[i], params[i]);
 			}
 		}
 
@@ -641,18 +647,26 @@ $(document).ready(function() {
 			]]
 	};
 
-	invokeMultipleModuleMethods(methodInvocationObj);
+	invokeMultipleModuleMethods(methodInvocationObj, callModuleMethod);
 
-	// IMPLEMENTATION
+	var thisCriticalMethodInvocationObj = {
+		modules: [domModule, domModule, cloudModule, cloudModule, domModule], 
+		methods: ['activateSearchField', 'activateSearchField', 'activateTenMoreTweetsButton', 'activateModalCloseButtons', 'emailModalAJAX'], 
+		params: [
+			['#createTwitterFeedCloud', '#twitterHandle', searchModule.executeTwitterAccountSearch.bind(searchModule)],
+			['#createTweetSearchCloud', '#search_term', searchModule.executeTwitterTermSearch.bind(searchModule)],
+			[],
+			['.modal_close'],
+			[]
+			]
+	};	
+
+	invokeMultipleModuleMethods(thisCriticalMethodInvocationObj, invokeThisCriticalMethod);
+
 	// Check that jQuery is working properly
 	domModule.jqueryCheckLoad('#header', 1000);
 	
 	activateClearTagsButton();
-	domModule.activateSearchField.call(domModule, '#createTwitterFeedCloud', '#twitterHandle', searchModule.executeTwitterAccountSearch.bind(searchModule));
-	domModule.activateSearchField.call(domModule, '#createTweetSearchCloud', '#search_term', searchModule.executeTwitterTermSearch.bind(searchModule));
-	cloudModule.activateTenMoreTweetsButton.call(cloudModule);
-	cloudModule.activateModalCloseButtons.call(cloudModule, '.modal_close');
-	domModule.emailModalAJAX.call(domModule);
 
 
 
