@@ -1,7 +1,3 @@
-#clouder {
-	
-}
-
 /* NAVBAR CSS */
 .navbar {
 	margin-bottom: 0px;
@@ -50,10 +46,6 @@ span:not(.bootstrapSpan) {
 	display: none;
 }
 
-/*#searchCloudOptions {
-	display: none;
-}*/
-
 .inputField {
 	margin-right: 5px;
 }
@@ -66,4 +58,12 @@ span:not(.bootstrapSpan) {
 	display: block;
 	margin: auto;
 	max-height: 500px;
+}
+
+#cloudParent {
+	position: absolute;
+}
+
+#clouder {
+	margin-bottom: 50px;
 }

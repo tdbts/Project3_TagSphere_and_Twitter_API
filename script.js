@@ -401,16 +401,18 @@ $(document).ready(function() {
 				var parentRect = parent.getBoundingClientRect();
 
 				clouder.style.width = (w * 3 / 4).toString() + "px";
-				clouder.style.height = (h * 1.1).toString() + "px";
-				clouder.style.position = "absolute";
+				clouder.style.height = (h * 0.9).toString() + "px";
+				clouder.style.position = "relative";
 				clouder.style.left = (w / 6).toString() + "px";
-				clouder.style.top = (parentRect.y + window.pageYOffset).toString() + "px";
+				clouder.style.top = "0px";
+				// clouder.style.top = (parentRect.y + window.pageYOffset).toString() + "px";
 
 				window.clouder = new Clouder({
 					container: clouder,
 					tags: variableContainingTags,
 					nonSense: 0.3,
 					interval: 10,
+					yScale: 0.7,
 					callback: this.urlCallback.bind(cloudModule)
 				});
 			},
