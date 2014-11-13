@@ -5,29 +5,42 @@ $(document).ready(function() {
 
 	var domModule = (function() {
 		
-		function getVal(selector) {
+		// Private f(x)'s
+		var getVal = function(selector) {
 
 			return $(selector).val();
-		}
+		};
 
-		function clearField(selectors) {
+		var clearField = function(selectors) {
 					
 			selectors.forEach(function(fieldID) {
 				
 				$(fieldID).val("");
 			});
-		}
+		};
 
-		function revealOptionsCollapse() {
+		var revealOptionsCollapse = function() {
 				
 				$('.collapse:not(#collapseThree)').collapse('hide');
 				$('#collapseThree').collapse('show');
-		}
+		};
 
-		function hideAllButOne(theClass, theID) {
+		var hideAllButOne = function(theClass, theID) {
 				
 			$(theClass).not(theID).fadeOut();
-		}
+		};
+
+		// Make input fields responsive to enter key
+		var makeEnterKeyDoSomething = function(selector, func) {
+			
+			$(selector).keydown(function(e) {
+				
+				if (e.keyCode === 13) {
+
+					func();
+				}
+			});
+		};
 
 		return {
 			
@@ -42,18 +55,6 @@ $(document).ready(function() {
 				$(selector).tooltip(); 
 			},
 
-			// Make input fields responsive to enter key
-			makeEnterKeyDoSomething: function(selector, func) {
-				
-				$(selector).keydown(function(e) {
-					
-					if (e.keyCode === 13) {
-
-						func();
-					}
-				});
-			},
-
 			// Activates button and input field so that their respective events 
 			// trigger the given f(x)
 			activateSearchField: function(buttonID, inputID, func) {
@@ -62,7 +63,7 @@ $(document).ready(function() {
 					func();
 				});
 
-				this.makeEnterKeyDoSomething(inputID, function() {
+				makeEnterKeyDoSomething(inputID, function() {
 					func();
 				});
 			},
