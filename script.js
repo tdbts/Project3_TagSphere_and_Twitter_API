@@ -177,6 +177,7 @@ $(document).ready(function() {
 		};
 
 		return {
+
 			jqueryCheckLoad: jqueryCheckLoad,
 			
 			activateTooltip: activateTooltip,
@@ -196,141 +197,146 @@ $(document).ready(function() {
 			attachLinks: attachLinks, 
 			activatePopover: activatePopover, 
 			emailModalAJAX: emailModalAJAX
+		
 		};
 	
 	})();
 
 	var tagModule = (function() {
 	
+		// Takes military time and formats it into clock time
+		var formatAMPM = function(date) {
+			
+			var hours = date.getHours();
+			var minutes = date.getMinutes();
+			var AMorPM = hours >= 12 ? 'pm' : 'am';
+
+			hours = hours % 12;
+			hours = hours ? hours : 12;
+
+			minutes = minutes < 10 ? '0' + minutes : minutes;
+
+			var strTime = hours + ':' + minutes + ' ' + AMorPM;
+
+			return strTime;
+		};
+
+		// Takes 'created_at' values from tweet objects and turns them 
+		// into a date format that the tags can use
+		// If 'withTime' is true, it adds the time to the result as well
+		var createDate = function(theGivenDate, withTime) {
+			
+			var tempDate, date;
+			var ms = Date.parse(theGivenDate);
+
+			tempDate = new Date(ms);
+			date = tempDate.toString().slice(0, 10);
+
+			if (withTime) {
+
+				time = formatAMPM(tempDate);
+				date += " " + time;
+			}
+
+			return date;
+		};
+
+		// Generates an ID for the new object based upon the number of tags already 
+		// in the tag array.  The first ten tags take thenumbers (as strings) 0-9, 
+		// the next ten 00, 01, 02...09, the next ten 000, 001, 002...009, and so on.
+		var createID = function(arr) {
+			
+			var tagLength = arr.length;
+			var subtractor = 0;
+
+			// Starting from zero, subtract from the number of elements in the array, 
+			// until the result is evenly divisible by 10
+			while ((tagLength - subtractor)%10 > 0) {
+				subtractor++;
+			}
+
+			// The first digit of the tag is equal to the amount that had to be 
+			// subtracted to get a number evenly divisible by 10
+			var myFirstDigit = subtractor;
+			// The number of zeroes is equal to the amount of times 10 goes 
+			// into the result of tagLength minus the subtractor
+			var myNumberOfZeroes = (tagLength - subtractor)/10;
+
+			function output(firstDigit, numberOfZeroes) {
+
+				var zeroes = "";
+
+				if (numberOfZeroes === 0) {
+					return firstDigit.toString();
+				}
+				else {
+					while (numberOfZeroes !== 0) {
+						zeroes += "0";
+						numberOfZeroes--;
+					}
+					return firstDigit.toString() + zeroes;
+				}
+			}
+			// Invoke the 'output' f(x)
+			return output(myFirstDigit, myNumberOfZeroes); 	
+		};
+
+		// For input, instantiations of the Clouder class accept an array 
+		// of "little objects" of the form: {text: theText, id: theID, weight: theWeight}.
+		// This f(x) creates a single "little object" for the cloud
+		var createObjectForCloud = function(theText, theURL, cloudTags, imageInTweet) {
+			
+			var theID = createID(cloudTags);
+
+			return {text: theText, id: theID, weight: 0.1, url: theURL, isImage: imageInTweet};
+		};
+
+		// Adds tweet tag objects to the array of tweet tags
+		// Formatting of the text depends upon which search URL is invoked
+		var addTweetTags = function(arrayOfTweetObjects, variableToSaveTo, whichResults) {
+			
+			var tweetText, tweetDate, url, displayText;
+
+			for (var i = 0; i < arrayOfTweetObjects.length; i++) {
+				
+				var tweet = arrayOfTweetObjects[i];
+
+				tweetText = tweet.text;
+				url = tweet.url;
+				imageInTweet = tweet.isImage;
+
+				if (whichResults === "twitter_timeline_search.php") {
+
+					tweetDate = createDate(tweet.date, false);
+
+					displayText = tweetText + " \n" + tweetDate;
+				}
+
+				if (whichResults === "twitter_keyword_search.php") {
+
+					var userName = "- @" + tweet.screen_name;
+					tweetDate = createDate(tweet.date, true);
+
+					displayText = "\n" + tweetText + "\n" + userName + "\n" + tweetDate;
+				}
+
+				var newTweetTagObject = createObjectForCloud(displayText, url, variableToSaveTo, imageInTweet);
+				console.log(newTweetTagObject);
+
+				variableToSaveTo.push(newTweetTagObject);
+			}
+		};
+
+		var clearTweetTags = function() {
+			
+			twitterCloudTags = [];
+		};		
+
 		return {
 
-			// Takes military time and formats it into clock time
-			formatAMPM: function(date) {
-				
-				var hours = date.getHours();
-				var minutes = date.getMinutes();
-				var AMorPM = hours >= 12 ? 'pm' : 'am';
-
-				hours = hours % 12;
-				hours = hours ? hours : 12;
-
-				minutes = minutes < 10 ? '0' + minutes : minutes;
-
-				var strTime = hours + ':' + minutes + ' ' + AMorPM;
-
-				return strTime;
-			},
-
-			// Takes 'created_at' values from tweet objects and turns them 
-			// into a date format that the tags can use
-			// If 'withTime' is true, it adds the time to the result as well
-			createDate: function(theGivenDate, withTime) {
-				
-				var tempDate, date;
-				var ms = Date.parse(theGivenDate);
-
-				tempDate = new Date(ms);
-				date = tempDate.toString().slice(0, 10);
-
-				if (withTime) {
-
-					time = this.formatAMPM.call(tagModule, tempDate);
-					date += " " + time;
-				}
-
-				return date;
-			},
-
-			// Generates an ID for the new object based upon the number of tags already 
-			// in the tag array.  The first ten tags take thenumbers (as strings) 0-9, 
-			// the next ten 00, 01, 02...09, the next ten 000, 001, 002...009, and so on.
-			createID: function(arr) {
-				
-				var tagLength = arr.length;
-				var subtractor = 0;
-
-				// Starting from zero, subtract from the number of elements in the array, 
-				// until the result is evenly divisible by 10
-				while ((tagLength - subtractor)%10 > 0) {
-					subtractor++;
-				}
-
-				// The first digit of the tag is equal to the amount that had to be 
-				// subtracted to get a number evenly divisible by 10
-				var myFirstDigit = subtractor;
-				// The number of zeroes is equal to the amount of times 10 goes 
-				// into the result of tagLength minus the subtractor
-				var myNumberOfZeroes = (tagLength - subtractor)/10;
-
-				function output(firstDigit, numberOfZeroes) {
-
-					var zeroes = "";
-
-					if (numberOfZeroes === 0) {
-						return firstDigit.toString();
-					}
-					else {
-						while (numberOfZeroes !== 0) {
-							zeroes += "0";
-							numberOfZeroes--;
-						}
-						return firstDigit.toString() + zeroes;
-					}
-				}
-				// Invoke the 'output' f(x)
-				return output(myFirstDigit, myNumberOfZeroes); 	
-			},
-
-			// For input, instantiations of the Clouder class accept an array 
-			// of "little objects" of the form: {text: theText, id: theID, weight: theWeight}.
-			// This f(x) creates a single "little object" for the cloud
-			createObjectForCloud: function(theText, theURL, cloudTags, imageInTweet) {
-				
-				var theID = this.createID(cloudTags);
-
-				return {text: theText, id: theID, weight: 0.1, url: theURL, isImage: imageInTweet};
-			},
-
-			// Adds tweet tag objects to the array of tweet tags
-			// Formatting of the text depends upon which search URL is invoked
-			addTweetTags: function(arrayOfTweetObjects, variableToSaveTo, whichResults) {
-				
-				var tweetText, tweetDate, url, displayText;
-
-				for (var i = 0; i < arrayOfTweetObjects.length; i++) {
-					
-					var tweet = arrayOfTweetObjects[i];
-
-					tweetText = tweet.text;
-					url = tweet.url;
-					imageInTweet = tweet.isImage;
-
-					if (whichResults === "twitter_timeline_search.php") {
-
-						tweetDate = this.createDate(tweet.date, false);
-
-						displayText = tweetText + " \n" + tweetDate;
-					}
-
-					if (whichResults === "twitter_keyword_search.php") {
-
-						var userName = "- @" + tweet.screen_name;
-						tweetDate = this.createDate(tweet.date, true);
-
-						displayText = "\n" + tweetText + "\n" + userName + "\n" + tweetDate;
-					}
-
-					var newTweetTagObject = this.createObjectForCloud(displayText, url, variableToSaveTo, imageInTweet);
-					console.log(newTweetTagObject);
-
-					variableToSaveTo.push(newTweetTagObject);
-				}
-			},
-
-			clearTweetTags: function() {
-				
-				twitterCloudTags = [];
-			}
+			addTweetTags: addTweetTags,
+			clearTweetTags: clearTweetTags
+		
 		}
 	
 	})();
