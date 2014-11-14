@@ -342,80 +342,80 @@ $(document).ready(function() {
 	})();
 
 	var cloudModule = (function() {
-	
-		return {
+		
+		// Displays dialog box that shows tweet text and asks the user if they would 
+		// like to navigate to the link contained within the tweet 
+		var urlConfirmAssignment = function(theText, theURL) {
+			
+			var question = confirm(theText + 
+				"\n\n Are you sure you want to navigate to the link contained in the highlighted tweet?");
 
-			// Displays dialog box that shows tweet text and asks the user if they would 
-			// like to navigate to the link contained within the tweet 
-			urlConfirmAssignment: function(theText, theURL) {
-				
-				var question = confirm(theText + 
-					"\n\n Are you sure you want to navigate to the link contained in the highlighted tweet?");
+			if (question) {
+				window.open(theURL);
+			} else return;
+		};
 
-				if (question) {
-					window.open(theURL);
-				} else return;
-			},
+		var displayImageModal = function(imageModalID, options) {
 
-			displayImageModal: function(imageModalID, options) {
+			$(imageModalID).modal(options);
+		};
 
-				$(imageModalID).modal(options);
-			},
+		var setImageSource = function(imgID, url) {
+			
+			$(imgID).attr('src', url);
+		};
 
-			setImageSource: function(imgID, url) {
-				
-				$(imgID).attr('src', url);
-			},
+		var setImageModalTitle = function(titlePlacementID, theText) {
+			
+			$(titlePlacementID).text(theText);
+		};
 
-			setImageModalTitle: function(titlePlacementID, theText) {
-				
-				$(titlePlacementID).text(theText);
-			},
+		var clearImageModal = function(labelID, imageID) {
+			
+			$(labelID).text("");
 
-			clearImageModal: function(labelID, imageID) {
-				
-				$(labelID).text("");
+			$(imageID).attr('src', "#");
+		};
 
-				$(imageID).attr('src', "#");
-			},
+		// Callback f(x) for when tweet tags are clicked upon
+		// Checks to see whether tags exist, and if so, loops through the tag array 
+		// until it finds the "little object" with the matching id, and then invokes 
+		// 'urlConfirmAssignment', passing it the tweet text and url
+		var urlCallback = function(id) {
+			
+			if (twitterCloudTags.length !== 0) {
+				for (var i = 0; i < twitterCloudTags.length; i++) {
+					
+					var theTweet = twitterCloudTags[i];
 
-			activateModalCloseButtons: 	function(modalCloseButtonClass) {
-				
-				$(modalCloseButtonClass).on('click', cloudModule.clearImageModal.bind(cloudModule, '#imageModalLabel', '#tweet_image'));
-			},
+					if (theTweet.id === id) {
+						if (theTweet.url && theTweet.isImage) {
+							
+							setImageModalTitle('#imageModalLabel', theTweet.text);
 
-			// Callback f(x) for when tweet tags are clicked upon
-			// Checks to see whether tags exist, and if so, loops through the tag array 
-			// until it finds the "little object" with the matching id, and then invokes 
-			// 'urlConfirmAssignment', passing it the tweet text and url
-			urlCallback: function(id) {
-				
-				if (twitterCloudTags.length !== 0) {
-					for (var i = 0; i < twitterCloudTags.length; i++) {
+							setImageSource('#tweet_image', theTweet.url);
+
+							displayImageModal('#imageModal', {
+								keyboard: true
+							});
 						
-						var theTweet = twitterCloudTags[i];
+						} else if (theTweet.url && !theTweet.isImage) {
 
-						if (theTweet.id === id) {
-							if (theTweet.url && theTweet.isImage) {
-								
-								this.setImageModalTitle('#imageModalLabel', theTweet.text);
-
-								this.setImageSource('#tweet_image', theTweet.url);
-
-								this.displayImageModal('#imageModal', {
-									keyboard: true
-								});
-							
-							} else if (theTweet.url && !theTweet.isImage) {
-
-								this.urlConfirmAssignment(theTweet.text, theTweet.url);
-							
-							} else {
-								alert(theTweet.text);
-							}
+							urlConfirmAssignment(theTweet.text, theTweet.url);
+						
+						} else {
+							alert(theTweet.text);
 						}
 					}
 				}
+			}
+		};
+
+		return {
+
+			activateModalCloseButtons: 	function(modalCloseButtonClass) {
+				
+				$(modalCloseButtonClass).on('click', clearImageModal('#imageModalLabel', '#tweet_image'));
 			},
 
 			killCloud: function() {
@@ -447,7 +447,6 @@ $(document).ready(function() {
 				clouder.style.position = "relative";
 				clouder.style.left = (w / 6).toString() + "px";
 				clouder.style.top = "0px";
-				// clouder.style.top = (parentRect.y + window.pageYOffset).toString() + "px";
 
 				window.clouder = new Clouder({
 					container: clouder,
@@ -455,7 +454,7 @@ $(document).ready(function() {
 					nonSense: 0.3,
 					interval: 10,
 					yScale: 0.9,
-					callback: this.urlCallback.bind(cloudModule)
+					callback: urlCallback.bind(cloudModule)
 				});
 			},
 
