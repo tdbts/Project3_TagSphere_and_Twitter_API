@@ -415,7 +415,10 @@ $(document).ready(function() {
 
 			activateModalCloseButtons: 	function(modalCloseButtonClass) {
 				
-				$(modalCloseButtonClass).on('click', clearImageModal('#imageModalLabel', '#tweet_image'));
+				$(modalCloseButtonClass).on('click', function() {
+					
+					clearImageModal('#imageModalLabel', '#tweet_image');
+				});
 			},
 
 			killCloud: function() {
