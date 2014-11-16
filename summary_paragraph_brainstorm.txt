@@ -1,1 +1,5 @@
-Welcome to the Tag Cloud.  This simple web app uses Twitter's API 
+Welcome to the Tag Cloud.  This simple web app uses Twitter's API to get tweets from Twitter's database.  But instead of displaying the tweets in a vertical "timeline" as you may be used to seeing, the tag cloud renders the tweets as a collection of floating <span> elements.  
+
+The tweet cloud responds to the movements of your mouse (mobile interactivity will be coming soon), and will highlight one tweet at a time depending on the position of the cursor.  When you click the screen, the page will alert the text located in the highlighted tag, and if there is a link contained in the tweet, the page will ask you whether you'd like to navigate to the location of the URL.  
+
+Currently, there are two kinds of tweet clouds you can create.  With the search field on the left, you can create a tweet cloud with your (or anyone's) twitter screen name.  On the right, you can create a cloud by searching for any term you desire.  The tag cloud will display ten tweets at any given time, and the Feed Cloud will allow you to manually refresh the cloud with the ten previous tweets, while the Search Cloud will automatically refresh with more tweets.  Have fun! 

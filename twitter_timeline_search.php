@@ -39,7 +39,8 @@ if (!empty($_GET['q'])) {
 
 		// Checks tweet object for urls, and if one exists, 
 		// returns it.  Else, it checks for media urls, and 
-		// if one exists, it returns it.  Else, null.
+		// if one exists, it returns it.  Else null.  Specifies 
+		// whether URL is an image or not via boolean.  Else, null.
 		function getURL($theTweet) {
 
 			$url_location = $theTweet['entities']['urls'][0];
