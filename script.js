@@ -133,6 +133,7 @@ $(document).ready(function() {
 			});
 		};
 
+		// Email modal: After submission
 		var activatePopover = function(popoverID) {
 
 			$(popoverID).popover({content: 'Thanks for reaching out!'}, 'click');
@@ -698,7 +699,6 @@ $(document).ready(function() {
 	domModule.jqueryCheckLoad('#header', 1000);
 	
 	activateClearTagsButton();
-
 
 
 });
