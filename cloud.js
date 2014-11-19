@@ -289,6 +289,7 @@ function Clouder(params) {
             
             if (!o.span) {
                 o.span = document.createElement("span");
+                o.span.className = "cloud_span";
                 o.width = 0;
                 o.height = 0;
                 o.span.innerHTML = o.text;
