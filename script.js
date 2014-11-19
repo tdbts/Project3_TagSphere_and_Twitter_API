@@ -505,7 +505,11 @@ $(document).ready(function() {
 
 						tagModule.addTweetTags(parsedData, twitterCloudTags, searchURL);
 						setOfTenTweets.init(twitterCloudTags);
+
 						cloudModule.init(setOfTenTweets.returnTenTweets());
+						console.log("THE CURRENT TWEETS ARE: ");
+						setOfTenTweets.getCurrentTweets();
+						
 						domModule.scrollDownTo('#clouder', 500);
 					},
 
@@ -572,6 +576,7 @@ $(document).ready(function() {
 
 		var counter;
 		var arrayOfSetsOfTen;
+		var currentTweets;
 
 		function incrementCounter() {
 			return counter++;
@@ -604,6 +609,17 @@ $(document).ready(function() {
 	    	counter = 0;
 		}
 
+		function getCurrentTweets() {
+
+			if (!currentTweets) {
+
+				console.log("There are no current tweets!");
+			} else {
+
+				console.log(currentTweets);
+			}
+		}
+
 		// Returns 10 of the tweet objects at a time
 		// If the counter has reached the length of the array of arrays, 
 		// the counter resets to 0 and indicates this in the console
@@ -617,6 +633,8 @@ $(document).ready(function() {
 		    if (!(counter < arrayOfSetsOfTen.length)) {
 		      resetCounter();
 		    }
+
+		    currentTweets = setOfTen;
 	    
 			return setOfTen;
 		}
@@ -624,7 +642,8 @@ $(document).ready(function() {
 		return {
 			init: init,
 			returnTenTweets: returnTenTweets,
-			resetCounter: resetCounter
+			resetCounter: resetCounter,
+			getCurrentTweets: getCurrentTweets
 		};
 
 	})();
@@ -699,6 +718,5 @@ $(document).ready(function() {
 	domModule.jqueryCheckLoad('#header', 1000);
 	
 	activateClearTagsButton();
-
 
 });
