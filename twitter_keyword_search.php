@@ -51,7 +51,6 @@ if (!empty($_GET['q'])) {
 
 			if (!(empty($url_location))) {
 
-				// return $url_location['expanded_url'];
 				return array(
 					'theURL' => $url_location['expanded_url'], 
 					'isImage' => false);

@@ -563,7 +563,7 @@ $(document).ready(function() {
 		});
 	}
 
-	// Module that is initialized with the array of "little tweetobjects"
+	// Module that is initialized with the array of "little tweet objects".
 	// The module takes that array and breaks the objects up into arrays
 	// of length 10, and pushes them to an array which holds them all.
 	// The module then returns 10 tweet objects at a time, and when it has 
