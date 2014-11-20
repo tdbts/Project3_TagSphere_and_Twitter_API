@@ -620,6 +620,8 @@ $(document).ready(function() {
 
 				console.log(currentTweets);
 			}
+
+			return currentTweets;
 		}
 
 		// Returns 10 of the tweet objects at a time
@@ -649,6 +651,32 @@ $(document).ready(function() {
 		};
 
 	})();
+
+	// Constructor used to get information about the currently displayed tweets
+	var CurrentTweets = function(prop) {
+	
+		var theTweets = setOfTenTweets.getCurrentTweets();
+		var result = [];
+		var argLength = arguments.length;
+		console.log("# of arguments passed to CurrentTweets: ");
+		console.log(argLength);
+
+		if (argLength === 0) {
+			return theTweets;
+		
+		} else if (argLength === 1) {
+			theTweets.forEach(function(tweet) {
+				
+				result.push(tweet[prop]);
+			});
+		
+		} else {
+			console.log("Too many arguments passed to CurrentTweets!");
+		}
+
+		return result; 
+	
+	};
 
 	// IMPLEMENTATION
 	function createArrayOfSameElement(param, length) {
@@ -720,5 +748,7 @@ $(document).ready(function() {
 	domModule.jqueryCheckLoad('#header', 1000);
 	
 	activateClearTagsButton();
+
+
 
 });
