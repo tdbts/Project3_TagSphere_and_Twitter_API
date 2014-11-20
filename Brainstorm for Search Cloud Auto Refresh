@@ -1,4 +1,14 @@
 Brainstorm for Search Cloud Auto Refresh - 
 
+November 19th, 2014 - 10:11 PM
 Trying to figure out the best way to have the search cloud automatically 
 refresh.  This is going to be complex at best, hell at worst.
+
+First, altered cloud.js file so that the tag spans would be rendered 
+with classes attached to them.  Also created a f(x) that gives each 
+tweet cloud an ID that matches its 'little object' id.  
+
+The reason I didn't get as far as I would have liked to today is that 
+I though it'd be cool if the search cloud tweets disappeared one by one, 
+and then reappeared one by one upon loading each new set of ten tweets to 
+display.  But I'm finding this much more difficult to accomplish than I though I would.  I'm going to call it a night, and maybe I'll do better when I come back here tomorrow with a clear head and a fresh pair of eyes.
