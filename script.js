@@ -243,43 +243,13 @@ $(document).ready(function() {
 		};
 
 		// Generates an ID for the new object based upon the number of tags already 
-		// in the tag array.  The first ten tags take thenumbers (as strings) 0-9, 
-		// the next ten 00, 01, 02...09, the next ten 000, 001, 002...009, and so on.
+		// in the tag array.  
 		var createID = function(arr) {
 			
 			var tagLength = arr.length;
-			var subtractor = 0;
 
-			// Starting from zero, subtract from the number of elements in the array, 
-			// until the result is evenly divisible by 10
-			while ((tagLength - subtractor)%10 > 0) {
-				subtractor++;
-			}
-
-			// The first digit of the tag is equal to the amount that had to be 
-			// subtracted to get a number evenly divisible by 10
-			var myFirstDigit = subtractor;
-			// The number of zeroes is equal to the amount of times 10 goes 
-			// into the result of tagLength minus the subtractor
-			var myNumberOfZeroes = (tagLength - subtractor)/10;
-
-			function output(firstDigit, numberOfZeroes) {
-
-				var zeroes = "";
-
-				if (numberOfZeroes === 0) {
-					return firstDigit.toString();
-				}
-				else {
-					while (numberOfZeroes !== 0) {
-						zeroes += "0";
-						numberOfZeroes--;
-					}
-					return firstDigit.toString() + zeroes;
-				}
-			}
-			// Invoke the 'output' f(x)
-			return output(myFirstDigit, myNumberOfZeroes); 	
+			var id = tagLength.toString();
+			return id; 	
 		};
 
 		// For input, instantiations of the Clouder class accept an array 
