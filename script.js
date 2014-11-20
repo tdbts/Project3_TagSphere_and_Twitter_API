@@ -465,6 +465,8 @@ $(document).ready(function() {
 			getTenMoreTweets: function() {
 				
 				this.init.call(cloudModule, setOfTenTweets.returnTenTweets.call(setOfTenTweets));
+				console.log("THE CURRENT TWEETS ARE: ");
+				console.log(setOfTenTweets.getCurrentTweets());
 			},
 
 			activateTenMoreTweetsButton: function() {

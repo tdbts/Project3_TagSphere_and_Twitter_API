@@ -303,7 +303,7 @@ function Clouder(params) {
                 o.span.style.backgroundColor = "#" + randomColor;
                 o.span.style.color = "#" + invertHex(randomColor);
                 container.appendChild(o.span);
-                o.span.descriptor = o;
+                o.span.id = o.id;
             } // if
             
             var size = fontSize + o.z * fontShift;
