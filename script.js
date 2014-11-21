@@ -235,7 +235,7 @@ $(document).ready(function() {
 
 			if (withTime) {
 
-				time = formatAMPM(tempDate);
+				var time = formatAMPM(tempDate);
 				date += " " + time;
 			}
 
@@ -348,6 +348,36 @@ $(document).ready(function() {
 			$(imageID).attr('src', "#");
 		};
 
+		var setCloudAutoRefreshInterval = function(theSearchURL) {
+						
+			function cloudAutoRefreshClosure(array) {
+
+				return function refreshCloud() {
+
+					cloudModule.init(array);
+				}
+			}
+
+			function activateCloudAutoRefresh(url) {
+
+				var refreshSearchCloud = cloudAutoRefreshClosure(setOfTenTweets.returnTenTweets());
+
+				return refreshSearchCloud();
+			}	
+
+			var searchCloudInterval = setInterval(function() {
+				
+				activateCloudAutoRefresh(theSearchURL);
+				setOfTenTweets.getCurrentTweets();
+
+			}, 20000);
+
+			$('.clearAll').on('click', function() {
+				clearInterval(searchCloudInterval);
+			});
+
+		};
+
 		// Callback f(x) for when tweet tags are clicked upon
 		// Checks to see whether tags exist, and if so, loops through the tag array 
 		// until it finds the "little object" with the matching id, and then invokes 
@@ -441,7 +471,9 @@ $(document).ready(function() {
 
 			activateTenMoreTweetsButton: function() {
 				$('#getTenPreviousTweets').click(this.getTenMoreTweets.bind(cloudModule));
-			}
+			},
+
+			setCloudAutoRefreshInterval: setCloudAutoRefreshInterval
 		}
 	
 	})();
@@ -481,6 +513,11 @@ $(document).ready(function() {
 						cloudModule.init(setOfTenTweets.returnTenTweets());
 						console.log("THE CURRENT TWEETS ARE: ");
 						setOfTenTweets.getCurrentTweets();
+
+						if (searchURL === 'twitter_keyword_search.php') {
+
+							cloudModule.setCloudAutoRefreshInterval(searchURL);
+						}
 						
 						domModule.scrollDownTo('#clouder', 500);
 					},
@@ -645,8 +682,39 @@ $(document).ready(function() {
 		}
 
 		return result; 
-	
 	};
+
+	// Constructor used to create a counter
+	function Counter(highestValueForCounter) {
+
+		var counterModule = (function() {
+		
+			var counter = 0;
+
+			function incrementCounter() {
+
+				if (counter < highestValueForCounter) {
+					counter++;
+
+				} else {
+					counter = 0;
+				}
+			}
+
+			function getCounter() {
+
+				return counter;
+			}
+
+			return {
+				incrementCounter: incrementCounter,
+				getCounter: getCounter
+			}
+		
+		})();
+
+		return counterModule;
+	}
 
 	// IMPLEMENTATION
 	function createArrayOfSameElement(param, length) {
@@ -718,7 +786,6 @@ $(document).ready(function() {
 	domModule.jqueryCheckLoad('#header', 1000);
 	
 	activateClearTagsButton();
-
 
 
 });
