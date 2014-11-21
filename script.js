@@ -369,11 +369,19 @@ $(document).ready(function() {
 				
 				activateCloudAutoRefresh(theSearchURL);
 				setOfTenTweets.getCurrentTweets();
+				progressButtonHandler.init('#progress_button');
 
 			}, 20000);
 
+			var progressButtonInterval = setInterval(function() {
+				
+				progressButtonHandler.fireAction();
+			}, 1000);
+
 			$('.clearAll').on('click', function() {
 				clearInterval(searchCloudInterval);
+				clearInterval(progressButtonInterval);
+				progressButtonHandler.clear();
 			});
 
 		};
@@ -517,6 +525,8 @@ $(document).ready(function() {
 						if (searchURL === 'twitter_keyword_search.php') {
 
 							cloudModule.setCloudAutoRefreshInterval(searchURL);
+							progressButtonHandler.init('#progress_button');
+							progressButtonHandler.fireAction();
 						}
 						
 						domModule.scrollDownTo('#clouder', 500);
@@ -706,15 +716,90 @@ $(document).ready(function() {
 				return counter;
 			}
 
+			function clearCounter() {
+
+				return counter = 0;
+			}
+
 			return {
 				incrementCounter: incrementCounter,
-				getCounter: getCounter
+				getCounter: getCounter,
+				clearCounter: clearCounter
 			}
 		
 		})();
 
 		return counterModule;
 	}
+
+	var progressButtonHandler = (function() {
+
+		// Private Stuff
+		var buttonID;
+		var progressButtonCounter;
+		var progressButton;
+
+		function displayTime(timeInSeconds) {
+			
+			$(buttonID).text(timeInSeconds); 
+		};
+
+		function changeColor(classToRemove, classToAdd) {
+
+			$(buttonID).removeClass(classToRemove).addClass(classToAdd);
+		};
+
+		function fireAction() {
+			var progressCounterState = progressButtonCounter.getCounter();
+
+		 	var timeToDisplay = (20 - progressCounterState).toString();
+		 	displayTime(timeToDisplay);
+
+			if (progressCounterState === 0) {
+				if (!(progressButton.hasClass('btn-success'))) {
+
+					changeColor('btn-danger', 'btn-success');
+				}
+			}
+
+			if (progressCounterState === 10) {
+				changeColor('btn-success', 'btn-warning');	
+			}
+
+			if (progressCounterState === 17) {
+				changeColor('btn-warning', 'btn-danger');
+			}
+
+			progressButtonCounter.incrementCounter();
+		}
+
+		// Public methods
+		var init = function(progressButtonID) {
+			buttonID = progressButtonID;
+			progressButton = $(buttonID);
+			progressButtonCounter = new Counter(19);
+		};
+
+		var clear = function() {
+
+			if (progressButton.hasClass('btn-danger')) {
+				changeColor('btn-danger', 'btn-success');
+			
+			} else if (progressButton.hasClass('btn-warning')) {
+				changeColor('btn-warning', 'btn-success');
+			}
+
+			$(buttonID).text('Seconds Left');
+			progressButtonCounter.clearCounter(); 
+		};
+
+		return {
+			init: init,
+			fireAction: fireAction,
+			clear: clear
+		};
+
+	})();
 
 	// IMPLEMENTATION
 	function createArrayOfSameElement(param, length) {
