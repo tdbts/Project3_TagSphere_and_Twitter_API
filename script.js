@@ -378,10 +378,27 @@ $(document).ready(function() {
 				progressButtonHandler.fireAction();
 			}, 1000);
 
-			$('.clearAll').on('click', function() {
+			function clearCloudIntervals() {
+
 				clearInterval(searchCloudInterval);
-				clearInterval(progressButtonInterval);
+				clearInterval(progressButtonInterval);				
+			}
+
+			$('.clearAll').on('click', function() {
+
+				clearCloudIntervals();
 				progressButtonHandler.clear();
+
+				if ($('#progress_button, #stopCloudAutoRefresh').hasClass('disabled')) {
+
+					$('#progress_button, #stopCloudAutoRefresh').removeClass('disabled');
+				}
+			});
+
+			$('#stopCloudAutoRefresh').on('click', function() {
+
+				clearCloudIntervals();	
+				$('#progress_button, #stopCloudAutoRefresh').addClass('disabled');			
 			});
 
 		};
