@@ -323,6 +323,7 @@ $(document).ready(function() {
 
 			if (question) {
 				window.open(theURL);
+
 			} else return;
 		};
 
@@ -448,6 +449,7 @@ $(document).ready(function() {
 			},
 
 			killCloud: function() {
+				
 				window.clouder.kill();
 			},
 
