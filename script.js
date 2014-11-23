@@ -449,7 +449,7 @@ $(document).ready(function() {
 			},
 
 			killCloud: function() {
-				
+
 				window.clouder.kill();
 			},
 
@@ -671,6 +671,7 @@ $(document).ready(function() {
 			incrementCounter();
 	  
 		    if (!(counter < arrayOfSetsOfTen.length)) {
+		      
 		      resetCounter();
 		    }
 
@@ -680,6 +681,7 @@ $(document).ready(function() {
 		}
 
 		return {
+			
 			init: init,
 			returnTenTweets: returnTenTweets,
 			resetCounter: resetCounter,
