@@ -463,6 +463,11 @@ $(document).ready(function() {
 				}
 			},
 
+			asPixels: function(number) {
+				
+				return number.toString().concat("px");
+			},
+
 			// Initialize tag cloud
 			init: function(variableContainingTags) {
 				
@@ -473,10 +478,10 @@ $(document).ready(function() {
 				var parent = document.getElementById('cloudParent');
 				var parentRect = parent.getBoundingClientRect();
 
-				clouder.style.width = (w * 3 / 4).toString() + "px";
-				clouder.style.height = (h * 0.8).toString() + "px";
+				clouder.style.width = this.asPixels(w * 3 / 4);
+				clouder.style.height = this.asPixels(h * 0.8);
 				clouder.style.position = "relative";
-				clouder.style.left = (w / 6).toString() + "px";
+				clouder.style.left = this.asPixels(w / 6);
 				clouder.style.top = "0px";
 
 				window.clouder = new Clouder({
@@ -523,7 +528,7 @@ $(document).ready(function() {
 
 				$.ajax({
 
-					// Create URL for tweet search
+					// Create URL for tweet searching
 					url: searchURL + "?q=" + searchTerms,
 
 					success: function(data) {
@@ -681,7 +686,7 @@ $(document).ready(function() {
 		}
 
 		return {
-			
+
 			init: init,
 			returnTenTweets: returnTenTweets,
 			resetCounter: resetCounter,
